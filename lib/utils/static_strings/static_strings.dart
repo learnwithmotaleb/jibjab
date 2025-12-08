@@ -1,104 +1,214 @@
 class AppStrings {
-  static const String signInAsWorker = "signInAsWorker";
-  static const String signInAsClient = "signInAsClient";
-  static const String signUp = "signUp";
-  static const String email = "email";
-  static const String screen = "screen";
-  static const String chooseARole = "chooseARole";
-  static const String enterValidEmail = "enterValidEmail";
-  static const String password = "password";
-  static const String passWordMustBeAtLeast = "passWordMustBeAtLeast";
-  static const String fieldCantNotBeEmpty = "fieldCantNotBeEmpty";
-  static const String passwordLengthAndContain = "passwordLengthAndContain";
-  static const String confirmPassword = "confirmPassword";
-  static const String byRegistering = "byRegistering";
-  static const String termsOfUse = "termsOfUse";
-  static const String and = "and";
-  static const String privacyPolicy = "privacyPolicy";
-  static const String login = "login";
-  static const String phnNumber = "phnNumber";
-  static const String forgot = "forgot";
-  static const String alreadyHaveaAccount = "alreadyHaveaAccount";
-  static const String verification = "verification";
-  static const String client = "client";
-  static const String worker = "worker";
-  static const String workingTime = "workingTime";
-  static const String enterVerificationCode = "enterVerificationCode";
-  static const String resend = "resend";
-  static const String didntRecieveAnyCode = "didntRecieveAnyCode";
-  static const String go = "go";
-  static const String rememberMe = "rememberMe";
-  static const String forgotPassword = "forgotPassword";
-  static const String dontWorryItOccurs = "dontWorryItOccurs";
-  static const String sendCode = "sendCode";
-  static const String verify = "verify";
+
+  //======================Onboard/Loading Bar =====================
+  static const String mentorYourPackageTitle = "Monitor your package's journey at every stage.";
+  static const String mentorYourPackageSubTitle = "Keep track of your package's location in real-time.";
+  static const String nextButton = "Next";
+  static const String continueButton = "Continue";
+  static const String joinUSButton = "Join Us";
+  static const String userButton = "User";
+  static const String welcomeToJibJab = "Welcome to JibJab!";
+  static const String welcomeTo = "Welcome to ";//not translate arabic
+  static const String everythingYouNeedTitle = "Everything you need, in one app – Jibjab!";
+  static const String everythingYouNeedSubTitle = "Keep track of your package's location in real-time.";
+  static const String selectYourLanguage = "Select Your Language";
+  static const String english = "English";
+  static const String arabic = "العربية";
+
+
+
+  //====================Sign In=======================
+
+  static const String signIn = "Sign In";
+  static const String signInSubTitle = "Welcome Back, You’ve been missed.";
+  static const String email = "Email";
+  static const String enterYourEmail = "Enter your email";
+  static const String password = "Password";
+  static const String enterYourPassword = "Enter your password";
+  static const String forgotPassword = "Forgot password?";
+  static const String signInWith = "Sign In with";
+  static const String dontHaveAnAccountSign = "Don’t have an account? Sign Up";
+
+
+  //=====================User Authentication=====================
+  static const String signup = "Sign Up";
+  static const String signupSubTitle = "Let's get you set up and ready to go.";
+  static const String fullName = "Full Name";
+  static const String enterYourName = "Enter your name";
+  static const String confirmPassword = "Confirm Password";
+  static const String dontHaveAnAccount = "Don’t have an account?";
+  static const String verification = "Verification";
+  static const String verifyYourAccount = "Verify Your Account";
+  static const String verifyYourAccountSubTitle = "We've sent a verification code to your email/phone. Please check and enter it below.";
+  static const String dontGetCode = "Didn’t get a code?  Resend Code";
+  static const String resendCode = "Resend Code";
+  static const String verifyCode = "Verify Code";
+  static const String forgetPassword = "Forgot password";
+  static const String forgetPasswordSubTitle = "Enter your email and we will send you a verification code";
+  static const String sendCode = "Send Code";
+  static const String resetPassword = "Reset Password";
+  static const String enterNewPassword = "Enter New Password";
+  static const String enterYourNewPassword = "Enter your new password";
+  static const String confirmNewPassword = "Confirm New Password";
+  static const String confirmYourNewPassword = "Confirm your new password";
+
+
+
+
+
+
+  //============================Home=====================
+  static const String appName = " Jibjab!";
+  static const String averageResponse = "Average response";
+  static const String deliveriesResponse = "Deliveries response";
+  static const String reducedCarRides = "Reduced car rides";
+  static const String activePostInYourArea = "Active post in your area";
+  static const String lastestNews = "Lastest news";
+  static const String readMore = "Read more";
+  static const String earnCreditsByInvitingFriends = "Earn credits by inviting friends";
+  static const String inviteAndEarn = "Invite & earn";
+  static const String howExplainIn20 = "How explain in 20 sec.";
+  static const String advertiser = "Advertiser";
+  static const String positiveRating = "Positive rating";
+  static const String nearby  = "Near by";
+  static const String share  = "Share";
+  static const String reportAdToJibjab = "report ad to Jibjab!";
+  static const String picUp = "Pic up";
+  static const String importantTerms = "Important Terms";
+  static const String verifyWithBank = "Verify with Bank";
+  static const String inviteButton = "Invite";
+  static const String advertiserProfile = "Advertiser profile";
+
+
+
+
+  //========================================Post===============================
+  static const String post = "Post";
+  static const String newest = "Newest";
+  static const String sortedBy = "Sorted by";
+  static const String distance = "Distance";
+  static const String showAvailablePostOnly  = "Show available post only";
+  static const String onlyPostRequiring1Person  = "Only post requiring 1 person";
+  static const String showOnlyPostWithOutRequests   = "Show only post without requests";
+  static const String onlyPostOfSelectedSize  = "Only post of selected  size";
+  static const String postType  = "Post type";
+  static const String moveDeliver  = "Move/Deliver";
+  static const String buyDeliver  = "Buy/Deliver";
+  static const String recycle  = "Recycle";
+  static const String freeGiveaway  = "Free Giveaway";
+
+
+  //=============================My Post===============================
+  static const String myPost  = "My post";
+  static const String pendingPost  = "Pending Post";
+  static const String activePost  = "Active Post";
+  static const String completedPost  = "Completed Post";
+  static const String myAccepted  = "My Accepted";
+  static const String customerReview  = "Customer Review";
+  static const String reviews  = "Reviews";
+  static const String viewMore  = "View More";
+
+
+
+
+  //=====================================Add New Order===========================
+
+  static const String allCategories  = "all Categories";
+  static const String whatDoYouNeedHelpWith  = "What do you need help with?";
+  static const String categories  = "Categories";
+  static const String moveAndDelivery  = "Move and delivery";
+  static const String moveAnythingFromAToB  = "Move anything from A to B";
+  static const String sameDayDelivery   = "Same day delivery ";
+  static const String addNewPost = "Add New Post";
+  static const String secureInAppPaymentOnceYouConfirmTheJobDone = "Secure in app payment once you confirm the job done";
+
+  //============================Buy/Deliver===============================
+  static const String selectStore = "Select store";
+  static const String storeName = "Store name";
+  static const String recentlyUsedAddresses = "Recently Used Addresses";
+  static const String shoppingList = "Shopping list";
+
+
+  static const String cancelButton = "Cancel";
+  static const String cancelButtonTitle = "Select time slot(s) for pick-up";
+  static const String cancelButtonSubTitle = "Deliveries are usually done as soon possible after the pick-up time ";
+  static const String pickupNow = "Pickup now";
+  static const String pickupLater = "Pickup Later";
+  static const String hideExactTimeSlots = "Hide exact time slots";
+
+
+  static const String pickUp = "Pic-Up ";
+  static const String dropLocation = "Drop Location";
+  static const String searchAddress = "Search Address..";
+  static const String canHelpCarryAtPickUp = "Can help carry at pick -up";
+  static const String titleAndDescription = "Title & Description";
+  static const String title = "Title";
+  static const String enterTitle = "Enter title";
+  static const String description = "Description";
+  static const String enterDescription = "Enter description";
+  static const String howBigIsTheCollection = "How big is the collection ?";
+  static const String thereAreAFewThings = "There are a few things we strongly recommend against when using Jibjab!";
+  static const String learnMore = "Learn more";
+  static const String iWillPay = "I will pay";
+  static const String iWillPaySubTitle = "Other users have paid around \$28-\$42";
+  static const String yourPayment = "Your payment";
+  static const String enterPrice = "Enter price ";
+  static const String doYouHaveCampaignCode = "Do you have a campaign code?";
+  static const String detailsPage = "Details page";
+  static const String publishPost = "Publish post";
+  static const String wallet = "Wallet";
+  static const String stripe = "Stripe";
   static const String submit = "submit";
-  static const String dontHaveAAccount = "dontHaveAAccount";
-  static const String subscription = "subscription";
-  static const String mySubscription = "mySubscription";
-  static const String subscriptionPackages = "subscriptionPackages";
-  static const String buyNow = "buyNow";
-  static const String payment = "payment";
-  static const String paymentOptions = "paymentOptions";
-  static const String applePay = "applePay";
-  static const String pay = "pay";
-  static const String confirmPayment = "confirmPayment";
-  static const String couponCode = "couponCode";
-  static const String applyCouponCode = "applyCouponCode";
-  static const String enterYourCouponCode = "enterYourCouponCode";
-  static const String applyCouponCodeAndPay = "applyCouponCodeAndPay";
-  static const String dontHaveACouponCode = "dontHaveACouponCode";
-  static const String apply = "apply";
-  static const String location = "location";
-  static const String mapView = "mapView";
-  static const String subsCriptionBuying = "subsCriptionBuying";
-  static const String subsCriptionEnding = "subsCriptionEnding";
-  static const String package = "package";
-  static const String service = "service";
-  static const String orderHistory = "orderHistory";
-  static const String language = "language";
-  static const String chooseALanguage = "chooseALanguage";
-  static const String searchhere = "searchhere";
-  static const String newOrder = "newOrder";
-  static const String reload = "reload";
-  static const String spam = "spam";
-  static const String total = "total";
-  static const String taken = "taken";
-  static const String remains = "remains";
-  static const String upcomingDate = "upcomingDate";
-  static const String current = "current";
-  static const String completed = "completed";
-  static const String reqService = "reqService";
-  static const String request = "request";
-  static const String logOut = "logOut";
-  static const String nextDate = "nextDate";
-  static const String time = "time";
-  static const String addDate = "addDate";
-  static const String noDataFound = "noDataFound";
-  static const String history = "history";
-  static const String english = "english";
-  static const String arabic = "arabic";
-  static const String readAll = "readAll";
-  static const String carWashingService = "carWashingService";
-  static const String cancel = "cancel";
-  static const String start = "start";
-  static const String date = "date";
-  static const String contactNumber = "contactNumber";
-  static const String address = "address";
-  static const String dateOfBirth = "dateOfBirth";
-  static const String description = "description";
-  static const String startWork = "startWork";
-  static const String startTime = "startTime";
-  static const String endTime = "endTime";
-  static const String beforeCleaning = "beforeCleaning";
-  static const String afterCleaning = "afterCleaning";
-  static const String endWork = "endWork";
-  static const String subscribeToGetStarted = "subscribeToGetStarted";
-  static const String profile = "profile";
-  static const String name = "name";
-  static const String updateProfile = "updateProfile";
-  static const String editProfile = "editProfile";
-  static const String notification = "notification";
-  static const String roleCLIENT = "roleCLIENT";
-  static const String roleWORKER = "roleWORKER";
+  static const String transactionHistory = "Transaction History";
+
+
+
+
+  //========================Profile====================================
+  static const String profile = "Profile";
+  static const String editProfile = "EditProfile";
+  static const String accountSetting = "Account Setting";
+  static const String publicProfileInfo = "Public profile info";
+  static const String history = "History";
+  static const String language = "Language";
+  static const String more = "More";
+  static const String faq = "FAQ";
+  static const String contactUs = "Contact us";
+  static const String termsAndCondition = "Terms & Condition";
+  static const String privacyPolicy = "Privacy policy";
+  static const String logOut = "Log Out";
+  static const String login = "Login";
+  static const String name = "Name";
+  static const String contactNumber = "Contact number";
+  static const String update = "Update";
+  static const String hello = "Hello!";
+  static const String howCanWeHelp = "How can we help ?";
+  static const String supportEmail = "Support@jabjab.com";
+  static const String messageUs = "Message Us";
+  static const String enterYourEmailHere = "Enter your email here";
+  static const String phoneNumber = "Phone Number";
+  static const String enterYourPhoneNumberHere = "Enter your number here";
+  static const String descriptionOfTheIssue = "Description of the issue";
+  static const String enterYourDescriptionHere = "Enter your description here";
+  static const String moreInfo = "More info";
+  static const String save = "Save";
+
+
+
+
+  //==================================Account Setting===========================
+ // static const String accountSetting = "Account Setting";
+ static const String changePassword = "Change Password";
+ static const String deleteAccount = "Delete Account";
+ static const String newPassword = "New password";
+ static const String newConfirmPassword = "New Confirm password";
+ static const String faqs = "FAQs";
+ static const String needMoreHelp = "Need More Help?";
+ static const String notification = "Notification";
+
+
+
+
+
+
 }

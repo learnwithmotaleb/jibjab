@@ -1,10 +1,18 @@
+
+// lib/core/routes/route_path.dart
 class RoutePath {
-  static const String basePath = '/';
+  static const String splash = '/splash';
+  static const String error = '/error';
 
-  //=================== General screens ===================
-  static const String splashScreen = 'splashScreen';
-  static const String errorScreen = 'errorScreen';
+  // Onboarding
+  static const String onboard = '/onboard';
+  static const String welcome = '/WelcomeScreen';
+  static const String language = '/LanguageScreen';
 
-  //=================== Auth screens ===================
-  static const String login = 'login';
+
+  //=======================Authentication ===================
+  static const String login = '/LoginScreen';
+  static const String signup = '/SignupScreen';
+  static const String verify = '/VerifyScreen';
+
 }

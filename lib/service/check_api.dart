@@ -9,7 +9,7 @@ import '../helper/tost_message/show_snackbar.dart';
 void checkApi({required Response response, BuildContext? context}) async {
   if (response.statusCode == 401) {
     //await SharePrefsHelper.remove(AppConstants.bearerToken);
-    AppRouter.route.replaceNamed(RoutePath.login);
+   // AppRouter..replaceNamed(RoutePath.login);
   } else if (response.statusCode == 503 && context != null) {
     showSnackBar(
       context: context,

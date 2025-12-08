@@ -39,7 +39,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final fontSizeValue =
-        fontSize ?? Dimensions.getFontSizeDefault(Get.context ?? context);
+        fontSize ?? Dimensions.getFontSize(Get.width);
 
     return Padding(
       padding: EdgeInsets.only(

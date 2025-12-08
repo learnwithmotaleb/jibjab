@@ -112,7 +112,7 @@ class ApiClient {
           context: context,
           content: 'Error Alert on Socket Exception',
         );
-        context.pushNamed(RoutePath.errorScreen);
+        context.pushNamed(RoutePath.error);
       }
       return const Response(
         body: {},
@@ -138,7 +138,7 @@ class ApiClient {
 
       log.e(stackrace.toString());
       if (context != null && context.mounted) {
-        context.pushNamed(RoutePath.errorScreen);
+        context.pushNamed(RoutePath.error);
       }
       return const Response(
         body: {},

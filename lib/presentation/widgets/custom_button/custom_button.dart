@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     this.height = 48,
     this.width = double.maxFinite,
     required this.onTap,
-    this.title = AppStrings.login,
+    this.title = AppStrings.signIn,
     this.marginVerticel = 0,
     this.marginHorizontal = 0,
     this.fillColor = AppColors.primaryColor,

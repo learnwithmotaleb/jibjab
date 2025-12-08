@@ -15,4 +15,11 @@ Future<void> initDependencies() async {
 
   /// ================= Api client ================
   serviceLocator.registerFactory<ApiClient>(() => ApiClient());
+
+
+
+
+
+
+
 }

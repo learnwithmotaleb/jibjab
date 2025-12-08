@@ -1,40 +1,39 @@
-// File: utils/dimensions/dimensions.dart
+// utils/dimensions/dimensions.dart
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Dimensions {
-  // Default font size if none provided
-  static double getFontSizeDefault(BuildContext context) {
-    // You can customize this based on screen size or theme
-    final screenWidth = MediaQuery.of(context).size.width;
+  // Dynamic values (they update on rotation too!)
+  static double get screenWidth => Get.width;
+  static double get screenHeight => Get.height;
 
-    if (screenWidth < 360) {
-      return 12.0;
-    } else if (screenWidth < 480) {
-      return 14.0;
-    } else if (screenWidth < 720) {
-      return 16.0;
-    } else {
-      return 18.0;
-    }
+  // Base design size (your UI design reference)
+  static const double baseWidth = 390;   // iPhone 12 width
+  static const double baseHeight = 844;  // iPhone 12 height
+
+  static double getFontSize(double size) {
+    final shortestSide = Get.width < Get.height ? Get.width : Get.height;
+    return size * (shortestSide / baseWidth);
   }
 
-  // Safe method to get font size with optional override
-  static double getFontSize(BuildContext context, {double? fontSize}) {
-    return fontSize ?? getFontSizeDefault(Get.context ?? context);
+
+  // 📌 Scale width
+  static double w(double value) => value * (screenWidth / baseWidth);
+
+  // 📌 Scale height
+  static double h(double value) => value * (screenHeight / baseHeight);
+
+  // 📌 Responsive font — best for orientation changes
+  static double f(double size) {
+    double shortestSide = screenWidth < screenHeight ? screenWidth : screenHeight;
+    return size * (shortestSide / baseWidth);
   }
 
-  // Example: You can also add default padding/margin sizes
-  static double getPaddingSmall(BuildContext context) {
-    return 8.0;
-  }
+  // 📌 Radius
+  static double r(double radius) => radius * (screenWidth / baseWidth);
 
-  static double getPaddingMedium(BuildContext context) {
-    return 16.0;
-  }
-
-  static double getPaddingLarge(BuildContext context) {
-    return 24.0;
-  }
+  // 📌 Padding / Margin
+  static double pSmall = w(8);
+  static double pMedium = w(16);
+  static double pLarge = w(24);
 }

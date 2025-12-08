@@ -6,7 +6,7 @@ import '../../core/routes/route_path.dart';
 
 extension RouteBasePathExt on String {
   String get addBasePath {
-    return RoutePath.basePath + this;
+    return RoutePath.error + this;
   }
 }
 
