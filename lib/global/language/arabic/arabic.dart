@@ -22,7 +22,6 @@ Map<String, String> arabic = {
   AppStrings.enterYourPassword: "أدخل كلمة المرور",
   AppStrings.forgotPassword: "نسيت كلمة المرور؟",
   AppStrings.signInWith: "تسجيل الدخول باستخدام",
-  AppStrings.dontHaveAnAccountSign: "ليس لديك حساب؟ سجل الآن",
 
   //=============================User Authentication=====================
   AppStrings.signupSubTitle: "لنعدك ونكون جاهزين للانطلاق.",
@@ -38,7 +37,7 @@ Map<String, String> arabic = {
   AppStrings.enterYourNewPassword: "أدخل كلمة المرور الجديدة",
   AppStrings.confirmNewPassword: "تأكيد كلمة المرور الجديدة",
   AppStrings.confirmYourNewPassword: "تأكيد كلمة المرور الجديدة",
-  AppStrings.dontHaveAnAccount: "ليس لديك حساب؟ تسجيل الدخول",
+  AppStrings.dontHaveAnAccount: "ليس لديك حساب؟",
 
   //=============================Home=============================
   AppStrings.appName: "جيب جاب!",

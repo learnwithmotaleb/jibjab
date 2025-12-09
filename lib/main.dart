@@ -12,7 +12,6 @@ import 'global/language/controller/language_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -21,47 +20,42 @@ void main() async {
     ),
   );
 
-  // Initialize your DI (register services/controllers used app-wide)
   initGetx();
 
-  // Initialize language controller and load saved language
-  final languageController = Get.put(LanguageController(), permanent: true);
-  await languageController.getLanguageType(); // loads locale from SharedPreferences
+  final LanguageController languageController = Get.put(LanguageController());
+  await languageController.loadLanguage();
 
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final LanguageController lc = Get.put(LanguageController());
+
     return ScreenUtilInit(
       designSize: const Size(393, 852),
       minTextAdapt: true,
       useInheritedMediaQuery: true,
-      builder: (context, _) => GetBuilder<LanguageController>(
-        builder: (controller) {
+      builder: (context, _) {
+        return Obx(() {
+          Locale locale = lc.isEnglish.value
+              ? const Locale('en', 'US')
+              : const Locale('ar', 'SA');
+
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: lightTheme,
-            // Use Locale from controller (not hard-coded)
-            locale:Locale(controller.selectedLanguage.value),
-            // Fallback if key is missing
+            locale: locale,
             fallbackLocale: const Locale('en', 'US'),
-            // Your Translations impl
             translations: Language(),
-            // Define routes
             getPages: AppRouter.pages,
-            // Start at Splash (or onboarding)
             initialRoute: RoutePath.splash,
-            // DO NOT register widgets in initialBinding. Use it for services/controllers only.
-            // initialBinding: BindingsBuilder(() {
-            //   Get.lazyPut(() => SplashController());
-            // }),
           );
-        },
-      ),
+        });
+      },
     );
   }
 }

@@ -34,7 +34,7 @@ Map<String, String> basicHeaderInfo() {
 }
 
 Future<Map<String, String>> bearerHeaderInfo() async {
-  final token = await SharePrefsHelper.getString(AppConstants.token!);
+  final token ="";//await SharePrefsHelper.getString(AppConstants.token!);
   debugPrint("Token _________ $token");
   return {
     HttpHeaders.acceptHeader: "application/json",

@@ -23,7 +23,6 @@ Map<String, String> english = {
   AppStrings.enterYourPassword: "Enter your password",
   AppStrings.forgotPassword: "Forgot password?",
   AppStrings.signInWith: "Sign In with",
-  AppStrings.dontHaveAnAccountSign: "Don't have an account? Sign Up",
 
   //=============================User Authentication=====================
   AppStrings.signupSubTitle: "Let's get you set up and ready to go.",
@@ -39,7 +38,7 @@ Map<String, String> english = {
   AppStrings.enterYourNewPassword: "Enter your new password",
   AppStrings.confirmNewPassword: "Confirm New Password",
   AppStrings.confirmYourNewPassword: "Confirm your new password",
-  AppStrings.dontHaveAnAccount: "Don't have an account? Sign In",
+  AppStrings.dontHaveAnAccount: "Don't have an account?",
 
   //=============================Home=============================
   AppStrings.appName: "Jibjab!",

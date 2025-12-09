@@ -18,7 +18,7 @@ class SocketApi {
   ///<------------------------- Socket Initialization with dynamic User ID ---------------->
 
   static void init() async {
-    String userId = await SharePrefsHelper.getString(AppConstants.userID!);
+    String userId = "";// await SharePrefsHelper.getString(AppConstants.userID!);
     if (userId.isEmpty || userId == "null") {
       debugPrint('Socket Connected >>>>>>>>>>>> FALSE <<<<<<<<<<<<');
       return;

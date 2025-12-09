@@ -27,7 +27,6 @@ class AppStrings {
   static const String enterYourPassword = "Enter your password";
   static const String forgotPassword = "Forgot password?";
   static const String signInWith = "Sign In with";
-  static const String dontHaveAnAccountSign = "Don’t have an account? Sign Up";
 
 
   //=====================User Authentication=====================

@@ -14,5 +14,14 @@ class RoutePath {
   static const String login = '/LoginScreen';
   static const String signup = '/SignupScreen';
   static const String verify = '/VerifyScreen';
+  static const String forget = '/ForgetScreen';
+  static const String verification = '/VerificationScreen';
+  static const String reset = '/ResetScreen';
+
+
+  //======================Home=====================
+  static const String navigation = '/NavigationBarScreen';
+
+
 
 }
