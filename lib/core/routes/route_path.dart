@@ -21,6 +21,8 @@ class RoutePath {
 
   //======================Home=====================
   static const String navigation = '/NavigationBarScreen';
+  static const String home = '/HomeScreen';
+  static const String readMore = '/ReadMoreScreen';
 
 
 

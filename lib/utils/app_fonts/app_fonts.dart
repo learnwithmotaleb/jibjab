@@ -17,6 +17,13 @@ class AppFonts {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle mediumBlack20 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500, // Regular
+    fontSize: 20,
+    color: AppColors.blackColor,
+  );
+
 
 
   // ================= MEDIUM =================
@@ -25,6 +32,13 @@ class AppFonts {
     fontWeight: FontWeight.w500, // Medium
     fontSize: 16,
     color: AppColors.blackColor,
+  );
+
+  static const TextStyle mediumPrimary16 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500, // Medium
+    fontSize: 16,
+    color: AppColors.primaryColor,
   );
 
   // ================= MEDIUM =================
@@ -46,7 +60,14 @@ class AppFonts {
   static const TextStyle medium20 = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500, // Medium
-    fontSize: 25,
+    fontSize: 20,
+    color: AppColors.primaryColor,
+  );
+
+  static const TextStyle mediumBold20 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700, // Medium
+    fontSize: 20,
     color: AppColors.primaryColor,
   );
 
@@ -112,6 +133,23 @@ class AppFonts {
     height: 1, // line-height 100%
     letterSpacing: 0,
     color: AppColors.blackColorOrginal, // opacity or gray
+  );
+  static const TextStyle regular12 = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    height: 1, // line-height 100%
+    letterSpacing: 0, // opacity or gray
+  );
+
+  static const TextStyle regularSubTitle12 = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    height: 1, // line-height 100%
+    letterSpacing: 0, // opacity or gray
   );
 
   // ================= BUTTON =================

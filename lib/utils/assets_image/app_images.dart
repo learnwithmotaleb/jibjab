@@ -34,7 +34,17 @@ class AppImages {
   static const String profile = "assets/icons/profile.png";
 
 
+  //=======================
+  static const String timer = "assets/icons/timer.png";
+  static const String deliver = "assets/icons/delivery.png";
+  static const String reduced = "assets/icons/reduced.png";
+  static const String imageActive = "assets/icons/image_active_post.png";
 
+
+
+  //=============================================
+  static const String lastestNews = "assets/icons/lastest_news_image.png";
+  static const String earnImage = "assets/icons/earn_credits_image.png";
 
 
 

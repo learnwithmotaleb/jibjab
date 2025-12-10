@@ -9,8 +9,12 @@ import 'package:jibjab/presentation/screens/auth/signup/screen/signup_screen.dar
 import 'package:jibjab/presentation/screens/auth/verification/screen/verification_screen.dart';
 import 'package:jibjab/presentation/screens/auth/verify/controller/verify_controller.dart';
 import 'package:jibjab/presentation/screens/auth/verify/screen/verify_screen.dart';
+import 'package:jibjab/presentation/screens/home/controller/home_controller.dart';
+import 'package:jibjab/presentation/screens/home/screen/home_screen.dart';
 import 'package:jibjab/presentation/screens/navigationbar/controller/navigationbar_controller.dart';
 import 'package:jibjab/presentation/screens/onboarding/screen/onboarding_screen.dart';
+import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
+import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:jibjab/presentation/screens/welcome/screen/welcome_screen.dart';
 
@@ -125,6 +129,25 @@ class AppRouter {
         Get.put(NavigationBarController());
       }),
     ),
+
+    GetPage(
+      name: RoutePath.home,
+      page: () =>  HomeScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(HomeController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.readMore,
+      page: () =>  ReadMoreScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ReadMoreController());
+      }),
+    ),
+
 
 
 
