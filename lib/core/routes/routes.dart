@@ -9,6 +9,8 @@ import 'package:jibjab/presentation/screens/auth/signup/screen/signup_screen.dar
 import 'package:jibjab/presentation/screens/auth/verification/screen/verification_screen.dart';
 import 'package:jibjab/presentation/screens/auth/verify/controller/verify_controller.dart';
 import 'package:jibjab/presentation/screens/auth/verify/screen/verify_screen.dart';
+import 'package:jibjab/presentation/screens/details/controller/details_controller.dart';
+import 'package:jibjab/presentation/screens/details/screen/details_screen.dart';
 import 'package:jibjab/presentation/screens/home/controller/home_controller.dart';
 import 'package:jibjab/presentation/screens/home/screen/home_screen.dart';
 import 'package:jibjab/presentation/screens/navigationbar/controller/navigationbar_controller.dart';
@@ -149,7 +151,14 @@ class AppRouter {
     ),
 
 
-
+    GetPage(
+      name: RoutePath.details,
+      page: () =>  DetailsScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(DetailsController());
+      }),
+    ),
 
 
 

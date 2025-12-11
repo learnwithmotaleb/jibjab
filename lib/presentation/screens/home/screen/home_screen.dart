@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 303,
                     height: 48,
                     onPressed: () {
-                      Get.toNamed(RoutePath.readMore);
+                      Get.toNamed(RoutePath.details);
                     },
                     label: AppStrings.inviteAndEarn,
                   ),
@@ -274,7 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (context, index) {
           final item = items[index];
           return Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsets.only(right: 1),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(5),
               child: Stack(
@@ -291,7 +291,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                     width: 110,
                     height: 70,
-                    color: Colors.black.withOpacity(0.15),
+
                   ),
 
                   BackdropFilter(

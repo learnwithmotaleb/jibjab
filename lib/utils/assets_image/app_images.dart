@@ -48,6 +48,16 @@ class AppImages {
 
 
 
+  //=======================Details=====================
+  static const String detailsImage = "assets/icons/details_image.jpg";
+  static const String nearByImage = "assets/icons/nearby2.jpg";
+  static const String motalebProfile = "assets/icons/motaleb.png";
+  static const String mapPicture = "assets/icons/map.png";
+
+
+
+
+
 
 
 

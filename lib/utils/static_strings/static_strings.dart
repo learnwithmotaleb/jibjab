@@ -206,6 +206,14 @@ class AppStrings {
  static const String notification = "Notification";
 
 
+ //===================================No Translate for Arabic Only just Text=====================
+  static const String orderPriority = "Order Priority :";
+  static const String deliveryAddress = "Delivery address : ";
+  static const String deliveryAddressBody = "Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat vo";
+  static const String pickupAddress = "Pickup Address : ";
+  static const String pickupAddressBody = "901 Thornridge Cir. Shiloh, Hawaii 81063";
+  static const String advertiserWillNotBeAb = "Advertiser will not be able to help you carry any items";
+
 
 
 
