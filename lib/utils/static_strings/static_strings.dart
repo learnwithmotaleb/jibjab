@@ -216,6 +216,43 @@ class AppStrings {
 
 
 
+  //=======================================
+  static const String becomeAHelper = "Become a helper";
+  static const String becomeAHelperSubTitle = "Earn an extra income by helping others with moving, delivering and recycling things. You use your own vehicle, and choose who and when to offer your help.";
+
+  static const String trueFlexibility = "True flexibility";
+  static const String trueFlexibilitySubTitle = "You decide how much you drive and earn with Task app.";
+
+  static const String superEasyToGetStarted = "Super easy to get started";
+  static const String superEasyToGetStartedSubTitle = "You can get started today and earn your first income.";
+
+
+  static const String becauseEarthLovesIt = "Because earth loves it";
+  static const String becauseEarthLovesItSubTitle = "Through helping others help reduce cars on our roads.";
+
+  static const String importantTermSubTitle = "Important Terms Before you can become a Helper on our platform";
+
+
+  //=========================================Invite Screen =============================
+  static const String invite = "Invite";
+
+  static const String inviteSubTitle1 = "Give a frienf \$100 in credite to use for their ";
+  static const String inviteSubTitle2 = "When they v=have done  a post you will also get \$100";
+  static const String inviteImageTile = "A PAIR OF HELPING HANIDS!";
+  static const String inviteUrl = "https://jibjab.app/download";
+  static const String inviteTextCenter = "You can also tap this URL to copy it and paste somewhere";
+
+
+  //=============================AdviserProfile==============================
+  static const String adviserProfile = "Advertiser profile";
+  static const String moreInfoAdviser = "Registration Date: 12 Aug 2025 \nCampaigns: 24 \nActive Campaigns: 3 \nCompleted Campaigns: 21 \nTotal earn: \$15,200";
+
+
+
+
+
+
+
 
 
 }

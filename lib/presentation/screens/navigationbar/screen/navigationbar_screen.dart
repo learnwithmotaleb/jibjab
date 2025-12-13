@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
 import '../../home/screen/home_screen.dart';
 import '../controller/navigationbar_controller.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
@@ -12,7 +13,7 @@ class NavigationBarScreen extends StatelessWidget {
 
   final List<Widget> pages = [
     HomeScreen(),
-    Container(color: Colors.red),
+    PostScreen(),
     Container(color: Colors.blue),
     Container(color: Colors.green),
   ];

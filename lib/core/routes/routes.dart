@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:jibjab/core/routes/route_path.dart';
+import 'package:jibjab/presentation/screens/adviser/controller/adviser_controller.dart';
+import 'package:jibjab/presentation/screens/adviser/screen/adviser_screen.dart';
 import 'package:jibjab/presentation/screens/auth/forget/controller/forget_controller.dart';
 import 'package:jibjab/presentation/screens/auth/forget/screen/forget_screen.dart';
 import 'package:jibjab/presentation/screens/auth/reset/controller/reset_controller.dart';
@@ -13,8 +15,16 @@ import 'package:jibjab/presentation/screens/details/controller/details_controlle
 import 'package:jibjab/presentation/screens/details/screen/details_screen.dart';
 import 'package:jibjab/presentation/screens/home/controller/home_controller.dart';
 import 'package:jibjab/presentation/screens/home/screen/home_screen.dart';
+import 'package:jibjab/presentation/screens/important/controller/important_controller.dart';
+import 'package:jibjab/presentation/screens/important/screen/important_screen.dart';
+import 'package:jibjab/presentation/screens/invite/controller/invite_controller.dart';
+import 'package:jibjab/presentation/screens/invite/screen/invite_screen.dart';
 import 'package:jibjab/presentation/screens/navigationbar/controller/navigationbar_controller.dart';
 import 'package:jibjab/presentation/screens/onboarding/screen/onboarding_screen.dart';
+import 'package:jibjab/presentation/screens/pay/controller/pay_controller.dart';
+import 'package:jibjab/presentation/screens/pay/screen/pay_screen.dart';
+import 'package:jibjab/presentation/screens/post/controller/post_controller.dart';
+import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
 import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
 import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
@@ -159,6 +169,66 @@ class AppRouter {
         Get.put(DetailsController());
       }),
     ),
+
+
+
+
+    //================================
+    GetPage(
+      name: RoutePath.pay,
+      page: () =>  PayScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(PayController());
+      }),
+    ),
+
+
+
+    //================================
+    GetPage(
+      name: RoutePath.important,
+      page: () =>  ImportantScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ImportantController());
+      }),
+    ),
+
+
+    //================================
+    GetPage(
+      name: RoutePath.invite,
+      page: () =>  InviteScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(InviteController());
+      }),
+    ),
+
+
+    //================================Adviser Profile Screen =================
+    GetPage(
+      name: RoutePath.adviser,
+      page: () =>  AdviserScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(AdviserController());
+      }),
+    ),
+
+
+  //================================Post Screen =================
+    GetPage(
+      name: RoutePath.post,
+      page: () =>  PostScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(PostController());
+      }),
+    ),
+
+
 
 
 

@@ -58,7 +58,7 @@ Map<String, String> english = {
   AppStrings.share: "Share",
   AppStrings.reportAdToJibjab: "report ad to Jibjab!",
   AppStrings.picUp: "Pick up",
-  AppStrings.importantTerms: "Important Terms",
+  AppStrings.importantTerms: "important",
   AppStrings.verifyWithBank: "Verify with Bank",
   AppStrings.inviteButton: "Invite",
   AppStrings.advertiserProfile: "Advertiser profile",

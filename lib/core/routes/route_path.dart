@@ -27,4 +27,31 @@ class RoutePath {
 
 
 
+  //=============================Pay Screen===================
+  static const String pay = '/PayScreen';
+
+
+
+  //=============================ImportantScreen Screen===================
+  static const String important = '/ImportantScreen';
+
+
+  //====================Invite Screen ====================
+
+  static const String invite = '/InviteScreen';
+
+
+  //====================Adviser Profile Screen ====================
+
+  static const String adviser = '/AdviserScreen';
+
+  //=======================PostScreen================
+  static const String post = '/PostScreen';
+
+
+
+
+
+
+
 }

@@ -143,6 +143,8 @@ class AppFonts {
     letterSpacing: 0, // opacity or gray
   );
 
+
+
   static const TextStyle regularSubTitle12 = TextStyle(
     fontFamily: 'Poppins',
     fontSize: 12,

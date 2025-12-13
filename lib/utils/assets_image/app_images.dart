@@ -55,6 +55,42 @@ class AppImages {
   static const String mapPicture = "assets/icons/map.png";
 
 
+  //====================================================
+  static const String helperImage = "assets/icons/helper_image.jpg";
+
+  static const String trueFlexibilityImage = "assets/icons/trueflexibility_image.png";
+  static const String superEasyImage = "assets/icons/super_easy_icon.png";
+  static const String becauseEarthImage = "assets/icons/because_earth_image.png";
+
+
+
+  //=====================Important Terms=================
+
+  static const String importImage1 = "assets/icons/persion.png";
+  static const String importImage2 = "assets/icons/info_important.png";
+  static const String importImage3 = "assets/icons/medi_for_important.png";
+  static const String importImage4 = "assets/icons/multi.png";
+
+  //=======================Invite Image===============
+
+
+  static const String inviteImage = "assets/icons/invite_image.jpg";
+
+
+  //===========================Home==============
+  static const String homeItem1 = "assets/icons/home_item1.png";
+  static const String homeItem2 = "assets/icons/home_item2.png";
+  static const String homeItem3 = "assets/icons/home_item3.png";
+  static const String homeItem4 = "assets/icons/home_item4.png";
+  static const String homeItem7 = "assets/icons/setting_adjust.png";
+
+
+
+
+
+
+
+
 
 
 
