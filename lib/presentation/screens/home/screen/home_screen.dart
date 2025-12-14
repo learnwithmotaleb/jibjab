@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 303,
                     height: 48,
                     onPressed: () {
-                      Get.toNamed(RoutePath.details);
+                      // Get.toNamed(RoutePath.details);
                     },
                     label: AppStrings.inviteAndEarn,
                   ),

@@ -49,6 +49,17 @@ class RoutePath {
   static const String post = '/PostScreen';
 
 
+  //=======================PostScreen================
+  static const String postSetting = '/PostSettingScreen';
+
+  //===============================MyPost Screen===============
+  static const String myPostScreen = '/MyPostScreen';
+
+  //===============================MyPost Screen===============
+  static const String customerReview = '/CustomerReviewScreen';
+
+
+
 
 
 

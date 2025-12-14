@@ -11,6 +11,8 @@ import 'package:jibjab/presentation/screens/auth/signup/screen/signup_screen.dar
 import 'package:jibjab/presentation/screens/auth/verification/screen/verification_screen.dart';
 import 'package:jibjab/presentation/screens/auth/verify/controller/verify_controller.dart';
 import 'package:jibjab/presentation/screens/auth/verify/screen/verify_screen.dart';
+import 'package:jibjab/presentation/screens/customerReview/controller/customer_review_controller.dart';
+import 'package:jibjab/presentation/screens/customerReview/screen/customer_review_screen.dart';
 import 'package:jibjab/presentation/screens/details/controller/details_controller.dart';
 import 'package:jibjab/presentation/screens/details/screen/details_screen.dart';
 import 'package:jibjab/presentation/screens/home/controller/home_controller.dart';
@@ -19,12 +21,16 @@ import 'package:jibjab/presentation/screens/important/controller/important_contr
 import 'package:jibjab/presentation/screens/important/screen/important_screen.dart';
 import 'package:jibjab/presentation/screens/invite/controller/invite_controller.dart';
 import 'package:jibjab/presentation/screens/invite/screen/invite_screen.dart';
+import 'package:jibjab/presentation/screens/myPost/controller/mypost_controller.dart';
+import 'package:jibjab/presentation/screens/myPost/screen/mypost_screen.dart';
 import 'package:jibjab/presentation/screens/navigationbar/controller/navigationbar_controller.dart';
 import 'package:jibjab/presentation/screens/onboarding/screen/onboarding_screen.dart';
 import 'package:jibjab/presentation/screens/pay/controller/pay_controller.dart';
 import 'package:jibjab/presentation/screens/pay/screen/pay_screen.dart';
 import 'package:jibjab/presentation/screens/post/controller/post_controller.dart';
 import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
+import 'package:jibjab/presentation/screens/postSetting/controller/post_setting_controller.dart';
+import 'package:jibjab/presentation/screens/postSetting/screen/post_setting_screen.dart';
 import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
 import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
@@ -225,6 +231,39 @@ class AppRouter {
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
         Get.put(PostController());
+      }),
+    ),
+
+    //================================Post Setting Screen =================
+    GetPage(
+      name: RoutePath.postSetting,
+      page: () =>  PostSettingScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(PostSettingController());
+      }),
+    ),
+
+
+    //====================MyPost Screen===============
+
+    GetPage(
+      name: RoutePath.myPostScreen,
+      page: () =>  MyPostScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(MyPostController());
+      }),
+    ),
+
+    //====================Customer Review===============
+
+    GetPage(
+      name: RoutePath.customerReview,
+      page: () =>  CustomerReviewScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(CustomerReviewController());
       }),
     ),
 

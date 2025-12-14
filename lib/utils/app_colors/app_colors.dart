@@ -14,10 +14,19 @@ class AppColors {
   static const Color containerBackground = Color(0xFFF0F0F0);
 
 
+
+  //==========================Home screen for ==============
+  static const Color pendingBackground = Color(0xFFEAD24B);
+  static const Color activeBackground = Color(0xFF726EF5);
+  static const Color completedBackground = Color(0xFF108C80);
+
+
   // Whites / Blacks
   static const Color whiteColor = Colors.white;
   static const Color blackColor = Color(0xFF353535);
   static const Color blackColorOrginal = Color(0xFF000000);
+  static const Color inactiveSwitchColor = Color(0xFF6B6B6B);
+  static const Color inactiveTrackerSwitchColor = Color(0xffD9D9D9);
   static const Color blackLightColor = Color(0xFF333333); // Dark text
   static const Color blackSecondary = Color(0xFF666666);
 

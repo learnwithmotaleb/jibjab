@@ -85,6 +85,14 @@ class AppImages {
   static const String homeItem7 = "assets/icons/setting_adjust.png";
 
 
+  //===========================Post/Post Setting
+  static const String switchIcon = "assets/icons/switch_icon.png";
+
+
+  //===========================Post/Post Setting
+  static const String homeScreenAllStatus = "assets/icons/home_screen_all_post.png";
+
+
 
 
 

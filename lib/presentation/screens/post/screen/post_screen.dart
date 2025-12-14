@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:jibjab/core/routes/route_path.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
 
 import '../../../../utils/static_strings/static_strings.dart';
 import '../../details/widget/top_bar.dart';
+import '../../postSetting/widget/chip_widget.dart';
+import '../../postSetting/widget/circle_icon_widget.dart';
 
 class PostScreen extends StatefulWidget {
   const PostScreen({super.key});
@@ -25,6 +30,15 @@ class _PostScreenState extends State<PostScreen> {
     },
   );
 
+  final List<String> iconItems = [
+    AppImages.homeItem1,
+    AppImages.homeItem2,
+    AppImages.homeItem3,
+    AppImages.homeItem4,
+  ];
+  String distance = "50 km";
+  String sortBy = "Newest";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,137 +50,75 @@ class _PostScreenState extends State<PostScreen> {
             children: [
               TopBar(title: AppStrings.post.tr),
               SizedBox(height: 30),
-              // Row of 7 items
-              Row(
-                children: [
-                  // 1st Item
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(AppImages.homeItem1,),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
 
-                  // 2nd Item
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(AppImages.homeItem2),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
 
-                  // 3rd Item
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(AppImages.homeItem3, width: 30, height: 30),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8), // 🔹 row padding
+                child: Row(
+                  children: [
 
-                  // 4th Item
-                  Expanded(
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(AppImages.homeItem4),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-
-                  // 5th Item (Text)
-                  Expanded(
-                    child: Container(
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "50km",
-                          style: AppFonts.regular12.copyWith(color: AppColors.whiteColor),
+                    /// 1–4 : Icon widgets
+                    ...List.generate(
+                      iconItems.length,
+                          (index) => Padding(
+                        padding: const EdgeInsets.only(right: 6),
+                        child: CircleIconWidget(
+                          image: iconItems[index],
+                          size: 48, // 🔹 slightly bigger icon box
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 5),
 
-                  // 6th Item (Text)
-                  Expanded(
-                    child: Container(
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: AppColors.primaryColor,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Newest",
-                          style: AppFonts.regular12.copyWith(color: AppColors.whiteColor),
+                    /// 5 : Distance chip
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 6),
+                        child: TextChipWidget(
+                          text: distance,
+                          height: 30,
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 5),
 
-                  // 7th Item (Icon)
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: (){
+                    /// 6 : Sort chip
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 6),
+                        child: TextChipWidget(
+                          text: sortBy,
+                          height: 30,
+                        ),
+                      ),
+                    ),
 
-
-
-
+                    /// 7 : Clickable icon
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(RoutePath.postSetting);
                       },
                       child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: AppColors.whiteColor,
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Image.asset(
-                            AppImages.homeItem7,
-                            width: 24,
-                            height: 24,
-                          ),
-                        ),
+                      height: 48,
+                      width: 48,
+                      decoration: BoxDecoration(
+                        color: AppColors.whiteColor,
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      padding: const EdgeInsets.all(8),
+                      child: Image.asset(
+                        AppImages.homeItem7,
+                        width: 16,
+                        height: 16,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                  ),
-                ],
+
               ),
+                  ],
+                ),
+              ),
+
 
               //===================================================
               SizedBox(height: 20),
