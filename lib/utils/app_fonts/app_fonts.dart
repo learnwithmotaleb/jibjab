@@ -89,6 +89,14 @@ class AppFonts {
     color: AppColors.blackColor,
   );
 
+  static const TextStyle  medium10 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500, // Medium
+    fontSize: 10,
+    color: AppColors.blackColor,
+  );
+
+
 
   // ================= SEMI-BOLD =================
   static const TextStyle semiBold16 = TextStyle(
@@ -97,6 +105,15 @@ class AppFonts {
     fontSize: 16,
     color: AppColors.blackColor,
   );
+
+  // ================= SEMI-BOLD =================
+  static const TextStyle semiBold14 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600, // SemiBold
+    fontSize: 16,
+    color: AppColors.blackColor,
+  );
+
 
 
   static const TextStyle semiBold20 = TextStyle(

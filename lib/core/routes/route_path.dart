@@ -60,6 +60,58 @@ class RoutePath {
 
 
 
+  //===============================All Categories Screen ===============
+  static const String allCategories = '/AllCategoriesScreen';
+
+
+
+
+
+
+
+
+  //===============================Profile Screen ===============
+  static const String profile = '/ProfileScreen';
+
+
+  //===============================EditProfileScreen ===============
+
+
+  static const String editProfile = '/EditProfileScreen';
+
+
+
+
+
+  //===============================ContactusScreen ===============
+
+
+  static const String contactUs = '/ContactusScreen';
+
+
+
+
+  //===============================LanguageScreen ===============
+
+
+  static const String languagesSetting = '/LanguageSettingScreen';
+
+
+  //===============================PublicProfileScreen ===============
+  static const String publicProfile = '/PublicProfileScreen';
+
+
+
+  //===============================AccountSettingScreen ===============
+  static const String accountSetting = '/AccountSettingScreen';
+
+
+  //===============================ChangePasswordScreen ===============
+  static const String changePassword = '/ChangePasswordScreen';
+
+
+
+
 
 
 

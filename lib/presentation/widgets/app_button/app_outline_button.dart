@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
+import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 
 class AppOutlinedButton extends StatelessWidget {
   final String label;
@@ -63,7 +64,10 @@ class AppOutlinedButton extends StatelessWidget {
           child: Text(
             label,
             overflow: TextOverflow.ellipsis,
-            style: effectiveTextStyle?.copyWith(color: effectiveForeground),
+            style: AppFonts.semiBold20.copyWith(
+              color: AppColors.primaryColor,
+
+            ),
           ),
         ),
       ],

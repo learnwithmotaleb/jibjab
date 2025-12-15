@@ -165,7 +165,7 @@ class AppStrings {
 
   //========================Profile====================================
   static const String profile = "Profile";
-  static const String editProfile = "EditProfile";
+  static const String editProfile = "Edit Profile";
   static const String accountSetting = "Account Setting";
   static const String publicProfileInfo = "Public profile info";
   static const String history = "History";

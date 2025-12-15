@@ -20,6 +20,12 @@ class AppColors {
   static const Color activeBackground = Color(0xFF726EF5);
   static const Color completedBackground = Color(0xFF108C80);
 
+  //========================================
+  static const Color profileColor = Color(0xFFE8F9F8);
+  static const Color languageSettingCheckUnCheckColor = Color(0xFF8C8C8C);
+  static const Color redColor = Colors.red;
+
+
 
   // Whites / Blacks
   static const Color whiteColor = Colors.white;

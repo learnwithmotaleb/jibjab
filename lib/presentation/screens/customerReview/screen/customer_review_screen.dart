@@ -39,7 +39,10 @@ class CustomerReviewScreen extends StatelessWidget {
               /// 🔹 Reviews Title
               Text(
                 "Reviews",
-                style: AppFonts.semiBold16,
+                style: AppFonts.regular20.copyWith(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold
+                ),
               ),
 
               SizedBox(height: Dimensions.h(12)),
@@ -68,14 +71,13 @@ class CustomerReviewScreen extends StatelessWidget {
                 review: "The Motaleb Code Queen! 👑",
               ),
 
-              SizedBox(height: Dimensions.h(24)),
 
               Divider(
                 thickness: 1,
                 color: AppColors.blackColor.withOpacity(0.1),
               ),
 
-              SizedBox(height: Dimensions.h(24)),
+              SizedBox(height: Dimensions.h(40)),
 
               /// 🔹 View More Button
               AppOutlinedButton(
@@ -98,7 +100,10 @@ class CustomerReviewScreen extends StatelessWidget {
   Widget _ratingSummary() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+
+        /// LEFT SIDE (Ratings + Stars)
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -106,19 +111,30 @@ class CustomerReviewScreen extends StatelessWidget {
               "234 Ratings",
               style: AppFonts.medium16.copyWith(
                 color: AppColors.pendingBackground,
+                fontWeight: FontWeight.bold
               ),
             ),
-            SizedBox(height: Dimensions.h(6)),
-            CustomerReviewRating(rating: 4.0),
+            const SizedBox(height: 6),
+            CustomerReviewRating(
+              rating: 4.0,
+              color: AppColors.primaryColor,
+              size: 30,
+            ),
           ],
         ),
+
+        /// RIGHT SIDE (Average Rating)
         Text(
           "4.0",
-          style: AppFonts.bold16,
+          style: AppFonts.mediumBold24.copyWith(
+            fontWeight: FontWeight.w700,
+            color: AppColors.pendingBackground
+          ),
         ),
       ],
     );
   }
+
 
   /// 📝 Review Item Widget
   Widget _reviewItem({
@@ -158,17 +174,22 @@ class CustomerReviewScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 /// Name + Date
+                      Text(
+                                      name,
+                                      style: AppFonts.medium20,
+                                    ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      name,
-                      style: AppFonts.medium20,
-                    ),
+
+                    /// Rating
+                    CustomerReviewRating(rating: rating,color: AppColors.pendingBackground,size: 20,),
+
+
                     Text(
                       date,
-                      style: AppFonts.regular12.copyWith(
-                        color: AppColors.pendingBackground,
+                      style: AppFonts.regular16.copyWith(
+                        color: AppColors.blackColor,
                         fontWeight: FontWeight.bold
                       ),
                     ),
@@ -177,8 +198,6 @@ class CustomerReviewScreen extends StatelessWidget {
 
                 SizedBox(height: Dimensions.h(6)),
 
-                /// Rating
-                CustomerReviewRating(rating: rating),
 
                 SizedBox(height: Dimensions.h(6)),
 

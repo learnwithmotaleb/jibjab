@@ -93,6 +93,12 @@ class AppImages {
   static const String homeScreenAllStatus = "assets/icons/home_screen_all_post.png";
 
 
+  static const String englishImage = "assets/icons/english_image.png";
+  static const String arabicImage = "assets/icons/arabic_image.jpg";
+
+
+
+
 
 
 

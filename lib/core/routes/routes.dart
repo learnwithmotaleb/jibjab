@@ -1,7 +1,13 @@
 import 'package:get/get.dart';
 import 'package:jibjab/core/routes/route_path.dart';
+import 'package:jibjab/presentation/screens/account_setting/accountSetting/controller/account_setting_controller.dart';
+import 'package:jibjab/presentation/screens/account_setting/accountSetting/screen/account_setting_screen.dart';
+import 'package:jibjab/presentation/screens/account_setting/changePassword/controller/change_password_controller.dart';
+import 'package:jibjab/presentation/screens/account_setting/changePassword/screen/change_password_screen.dart';
 import 'package:jibjab/presentation/screens/adviser/controller/adviser_controller.dart';
 import 'package:jibjab/presentation/screens/adviser/screen/adviser_screen.dart';
+import 'package:jibjab/presentation/screens/allCategories/controller/all_categoriesController.dart';
+import 'package:jibjab/presentation/screens/allCategories/screen/all_categories.dart';
 import 'package:jibjab/presentation/screens/auth/forget/controller/forget_controller.dart';
 import 'package:jibjab/presentation/screens/auth/forget/screen/forget_screen.dart';
 import 'package:jibjab/presentation/screens/auth/reset/controller/reset_controller.dart';
@@ -31,6 +37,15 @@ import 'package:jibjab/presentation/screens/post/controller/post_controller.dart
 import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
 import 'package:jibjab/presentation/screens/postSetting/controller/post_setting_controller.dart';
 import 'package:jibjab/presentation/screens/postSetting/screen/post_setting_screen.dart';
+import 'package:jibjab/presentation/screens/profile/contactUs/screen/contactus_screen.dart';
+import 'package:jibjab/presentation/screens/profile/editProfile/controller/edit_profile_controller.dart';
+import 'package:jibjab/presentation/screens/profile/editProfile/screen/edit_profile_screen.dart';
+import 'package:jibjab/presentation/screens/profile/languages/controller/language_setting_controller.dart';
+import 'package:jibjab/presentation/screens/profile/languages/screen/language_setting_screen.dart';
+import 'package:jibjab/presentation/screens/profile/profile/controller/profile_controller.dart';
+import 'package:jibjab/presentation/screens/profile/profile/screen/profile_screen.dart';
+import 'package:jibjab/presentation/screens/profile/publicProfile/controller/public_profile_controller.dart';
+import 'package:jibjab/presentation/screens/profile/publicProfile/screen/public_profile_screen.dart';
 import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
 import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
@@ -43,6 +58,7 @@ import '../../presentation/screens/auth/verification/controller/vefication_contr
 import '../../presentation/screens/language/screen/language_screen.dart';
 import '../../presentation/screens/navigationbar/screen/navigationbar_screen.dart';
 import '../../presentation/screens/onboarding/controller/onboarding_controller.dart';
+import '../../presentation/screens/profile/contactUs/controller/contactus_controller.dart';
 import '../../presentation/screens/welcome/controller/welcome_controller.dart';
 
 
@@ -264,6 +280,106 @@ class AppRouter {
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
         Get.put(CustomerReviewController());
+      }),
+    ),
+
+
+
+    //====================All Categories Screen===============
+
+    GetPage(
+      name: RoutePath.allCategories,
+      page: () =>  AllCategoriesScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(AllCategoriesController());
+      }),
+    ),
+
+
+
+
+    //====================Profile Screen===============
+
+    GetPage(
+      name: RoutePath.profile,
+      page: () =>  ProfileScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ProfileController());
+      }),
+    ),
+
+
+
+
+    //====================Edit Profile===============
+
+    GetPage(
+      name: RoutePath.editProfile,
+      page: () =>  EditProfileScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(EditProfileController());
+      }),
+    ),
+
+    //====================Contract Us===============
+
+    GetPage(
+      name: RoutePath.contactUs,
+      page: () =>  ContactusScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ContactusController());
+      }),
+    ),
+
+
+  //====================LanguageScreen ===============
+
+    GetPage(
+      name: RoutePath.languagesSetting,
+      page: () =>  LanguageSettingScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(LanguageSettingController());
+      }),
+    ),
+
+
+//====================PublicProfileScreen ===============
+
+    GetPage(
+      name: RoutePath.publicProfile,
+      page: () =>  PublicProfileScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(PublicProfileController());
+      }),
+    ),
+
+//====================AccountSettingScreen ===============
+
+    GetPage(
+      name: RoutePath.accountSetting,
+      page: () =>  AccountSettingScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(AccountSettingController());
+      }),
+    ),
+
+
+
+//====================ChangePasswordScreen ===============
+
+    GetPage(
+      name: RoutePath.changePassword,
+      page: () =>  ChangePasswordScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ChangePasswordController());
       }),
     ),
 
