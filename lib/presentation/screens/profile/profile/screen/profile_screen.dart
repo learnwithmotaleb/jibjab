@@ -12,6 +12,7 @@ import 'package:jibjab/utils/assets_image/app_images.dart';
 import 'package:jibjab/utils/static_strings/static_strings.dart';
 
 import '../../../../../utils/dimensions/dimensions.dart';
+import '../../../../widgets/customAlertDialog/custome_alert_dialog.dart';
 import '../../../adviser/widget/info_row.dart';
 import '../controller/profile_controller.dart';
 import '../widget/profile_menu_item.dart';
@@ -47,18 +48,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       color: AppColors.blackColorOrginal,
                       fontWeight: FontWeight.w500,
                     )),
-                    Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: AppColors.whiteColor,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: Center(
-                        child: Icon(
-                          Icons.notifications,
-                          color: AppColors.primaryColor,
-                          size: 30,
+                    GestureDetector(
+                      onTap: (){
+
+                        Get.toNamed(RoutePath.notification);
+                      },
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: AppColors.whiteColor,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.notifications,
+                            color: AppColors.primaryColor,
+                            size: 30,
+                          ),
                         ),
                       ),
                     ),
@@ -165,7 +172,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.post_add,
                   title: AppStrings.myPost.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.myPostScreen);
+                  },
                 ),
 
                 SizedBox(height: Dimensions.h(10)),
@@ -173,7 +182,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.timer,
                   title: AppStrings.myAccepted.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.myPostScreen);
+
+                  },
                 ),
 
                 SizedBox(height: Dimensions.h(10)),
@@ -199,7 +211,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.notifications,
                   title: AppStrings.notification.tr,
-                  onTap: () {},
+                  onTap: () {
+
+                    Get.toNamed(RoutePath.notification);
+
+
+                  },
                 ),
 
                 SizedBox(height: Dimensions.h(10)),
@@ -221,7 +238,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.question_mark_rounded,
                   title: AppStrings.faq.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.faqs);
+                  },
                 ),
                 SizedBox(height: Dimensions.h(10)),
 
@@ -237,21 +256,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.library_books_sharp,
                   title: AppStrings.termsAndCondition.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.termsCondition);
+                  },
                 ),
                 SizedBox(height: Dimensions.h(10)),
 
                 ProfileMenuTile(
                   icon: Icons.privacy_tip_outlined,
                   title: AppStrings.privacyPolicy.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.privacyPolicyScreen);
+                  },
                 ),
                 SizedBox(height: Dimensions.h(10)),
 
                 ProfileMenuTile(
                   icon: Icons.logout,
                   title: AppStrings.logOut.tr,
-                  onTap: () {},
+                  onTap: () {
+                    CustomAlertDialog.show(
+                      context: context,
+                      title: AppStrings.logOut,
+                      body: "Are you sure you want to log out?",
+                      onYes: () {
+                        Get.toNamed(RoutePath.login);
+                        // logout logic
+                      },
+                      onNo: () {
+                       Get.back();
+                      },
+                    );
+
+                  },
                 ),
               ],
             ),

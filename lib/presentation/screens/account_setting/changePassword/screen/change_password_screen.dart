@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/src/extension_instance.dart';
-import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:get/get.dart';
 
 import '../../../../../utils/app_colors/app_colors.dart';
 import '../../../../../utils/app_fonts/app_fonts.dart';
@@ -51,8 +49,11 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       _passwordField(
                         controller: controller.typePasswordController,
                         focusNode: controller.typePasswordFocus,
-                        hint: AppStrings.password.tr,
-                        onSubmit: () => controller.newPasswordFocus.requestFocus(),
+                        hint: AppStrings.enterYourPassword.tr,
+                        isHidden: controller.isCurrentPasswordHidden,
+                        onToggle: controller.toggleCurrentPassword,
+                        onSubmit: () =>
+                            controller.newPasswordFocus.requestFocus(),
                       ),
 
                       SizedBox(height: Dimensions.h(16)),
@@ -62,8 +63,11 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                       _passwordField(
                         controller: controller.newPasswordController,
                         focusNode: controller.newPasswordFocus,
-                        hint: AppStrings.newPassword.tr,
-                        onSubmit: () => controller.confirmPasswordFocus.requestFocus(),
+                        hint: AppStrings.enterYourNewPassword.tr,
+                        isHidden: controller.isNewPasswordHidden,
+                        onToggle: controller.toggleNewPassword,
+                        onSubmit: () =>
+                            controller.confirmPasswordFocus.requestFocus(),
                       ),
 
                       SizedBox(height: Dimensions.h(16)),
@@ -74,15 +78,16 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                         controller: controller.confirmPasswordController,
                         focusNode: controller.confirmPasswordFocus,
                         hint: AppStrings.confirmPassword.tr,
+                        isHidden: controller.isConfirmPasswordHidden,
+                        onToggle: controller.toggleConfirmPassword,
                         onSubmit: controller.changePassword,
                         isConfirm: true,
                       ),
 
                       SizedBox(height: Dimensions.h(40)),
 
-                      /// Button
                       AppButton(
-                        text: AppStrings.changePassword.tr,
+                        text: AppStrings.update.tr,
                         onPressed: controller.changePassword,
                       ),
 
@@ -106,42 +111,59 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
     );
   }
 
-  /// Reusable password field
+  /// Reusable password field (with eye icon)
   Widget _passwordField({
     required TextEditingController controller,
     required FocusNode focusNode,
     required String hint,
+    required RxBool isHidden,
+    required VoidCallback onToggle,
     required VoidCallback onSubmit,
     bool isConfirm = false,
   }) {
-    return TextFormField(
-      controller: controller,
-      focusNode: focusNode,
-      obscureText: true,
-      textInputAction: TextInputAction.next,
-      decoration: InputDecoration(
-        hintText: hint,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: AppColors.primaryColor),
+    return Obx(
+          () => TextFormField(
+        controller: controller,
+        focusNode: focusNode,
+        obscureText: isHidden.value,
+        textInputAction: TextInputAction.next,
+        decoration: InputDecoration(
+          hintText: hint,
+          contentPadding:
+          const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(color: AppColors.primaryColor),
+          ),
+          suffixIcon: IconButton(
+            splashRadius: 20,
+            icon: Icon(
+              isHidden.value
+                  ? CupertinoIcons.eye_slash
+                  : CupertinoIcons.eye,
+              color: AppColors.primaryColor,
+            ),
+            onPressed: onToggle,
+          ),
         ),
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return "Password cannot be empty";
+          }
+          if (value.length < 6) {
+            return "Password must be at least 6 characters";
+          }
+          if (isConfirm &&
+              value != this.controller.newPasswordController.text) {
+            return "Passwords do not match";
+          }
+          return null;
+        },
+        onFieldSubmitted: (_) => onSubmit(),
       ),
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return "Password cannot be empty";
-        }
-        if (value.length < 6) {
-          return "Password must be at least 6 characters";
-        }
-        if (isConfirm &&
-            value != this.controller.newPasswordController.text) {
-          return "Passwords do not match";
-        }
-        return null;
-      },
-      onFieldSubmitted: (_) => onSubmit(),
     );
   }
 }

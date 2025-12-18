@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jibjab/presentation/screens/allCategories/screen/all_categories.dart';
 import 'package:jibjab/presentation/screens/customerReview/screen/customer_review_screen.dart';
 import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
 import 'package:jibjab/presentation/screens/profile/profile/screen/profile_screen.dart';
@@ -16,9 +17,9 @@ class NavigationBarScreen extends StatelessWidget {
 
   final List<Widget> pages = [
     HomeScreen(),
-    PostScreen(),
     MyPostScreen(),
-    //CustomerReviewScreen(),
+    AllCategoriesScreen(),
+    //PostScreen(),
     ProfileScreen()
   ];
 

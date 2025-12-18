@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
+
+import '../../../../../utils/app_fonts/app_fonts.dart';
+import '../../../../../utils/dimensions/dimensions.dart';
+import '../../../../../utils/static_strings/static_strings.dart';
+import '../../../details/widget/top_bar.dart';
+import '../widget/privacy_item_widget.dart';
+
+class PrivacyPolicyScreen extends StatelessWidget {
+  const PrivacyPolicyScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: Dimensions.h(24)),
+
+              /// Top Bar
+              TopBar(title: AppStrings.privacyPolicy.tr),
+
+              SizedBox(height: Dimensions.h(32)),
+
+              /// Scrollable Content
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      /// Title
+                      Text(
+                        AppStrings.privacyPolicy.tr,
+                        style: AppFonts.regular12,
+                      ),
+
+                      SizedBox(height: Dimensions.h(12)),
+
+                      /// Subtitle
+                      Text(
+                        AppStrings.termsAndConditionSubTitle.tr,
+                        style: AppFonts.regular12,
+                      ),
+
+                      SizedBox(height: Dimensions.h(24)),
+
+                      /// Privacy Policy List
+                      ListView.separated(
+                        itemCount: 6,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        separatorBuilder: (_, __) =>
+                            SizedBox(height: Dimensions.h(12)),
+                        itemBuilder: (context, index) {
+                          return PrivacyItemWidget(
+                            index: '${index + 1}',
+                            text:
+                            'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+                          );
+                        },
+                      ),
+
+                      SizedBox(height: Dimensions.h(80)),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

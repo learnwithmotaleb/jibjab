@@ -99,6 +99,49 @@ class AppImages {
 
 
 
+  //===========================FAQS================================
+
+  static const String needMoreHelp = "assets/icons/need_more_help.png";
+
+
+
+
+
+
+  //===========================All Categories================================
+
+  static const String moveDeliver = "assets/icons/move.png";
+  static const String buyDeliver = "assets/icons/buy.png";
+  static const String removeAndRecycle = "assets/icons/remove_recycler.png";
+  static const String giveAway = "assets/icons/remove_recycler.png";
+
+  //==================================Show alert all icons==============
+
+  static const String smallMove = "assets/icons/move.png";
+  static const String secondHandStand = "assets/icons/second_hand_stand.png";
+  static const String store = "assets/icons/store.png";
+  static const String pickup = "assets/icons/pickup.png";
+
+
+
+  //=============================Add New Post====================
+  static const String cameraFocusImage = "assets/icons/new_post_camera_focouse.jpg";  //=============================Add New Post====================
+  static const String cameraOverlay = "assets/icons/new_post_camera_over.png";
+
+
+
+
+
+  //=============================Add New Post====================
+
+  static const String pickupLocationImage = "assets/icons/locationPick.png";
+
+
+
+
+
+
+
 
 
 

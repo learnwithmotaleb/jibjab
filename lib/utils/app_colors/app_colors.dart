@@ -9,6 +9,7 @@ class AppColors {
 
   // Backgrounds
   static const Color grayColor = Color(0xFFF5F5F5);
+  static const Color grayColorAddNewPostScreen = Color(0xFFD9D9D9);
   static const Color scaffoldBackgroundColor = Colors.white;
   static const Color cardBackgroundColor = Colors.white;
   static const Color containerBackground = Color(0xFFF0F0F0);

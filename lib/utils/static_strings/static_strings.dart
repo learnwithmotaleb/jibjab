@@ -251,6 +251,21 @@ class AppStrings {
 
 
 
+  //==============================TermsAndCodition======================
+   static const String termsAndConditionSubTitle = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
+
+
+
+
+
+  //==============================TermsAndCodition======================
+   static const String selectTimeSlotTitle = "Select time slot(s) for pick-up";
+   static const String selectTimeSlotSubTitle = "Deliveries are usally done as soonas possible after the pick-up time";
+   static const String asSoonAsPossible = "As soon as\npossible";
+   static const String anyTime = "Any time";
+   static const String hideExactTimeSlot = "Hide exact time slots";
+
+
 
 
 

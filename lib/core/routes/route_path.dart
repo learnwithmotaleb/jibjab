@@ -65,6 +65,63 @@ class RoutePath {
 
 
 
+  //===============================AddNewPostScreen ===============
+  static const String addNewPostScreen = '/AddNewPostScreen';
+
+
+
+
+  //===============================SelectTimeSlotScreen ===============
+  static const String selectTimeSlot = '/SelectTimeSlotScreen';
+
+
+
+
+
+
+
+
+
+  //===============================class PicUpScreen extends StatefulWidget { ===============
+  static const String pickup = '/PicUpScreen';
+
+
+
+
+  //===============================class PicUpScreen extends StatefulWidget { ===============
+  static const String addLocation = '/AddLocationScreen';
+
+
+
+
+
+
+  //===============================class PicUpScreen extends StatefulWidget { ===============
+  static const String pickUpLocation = '/PickupLocationScreen';
+
+
+
+
+
+
+  //===============================cDropLocationScreen ===============
+  static const String dropLocation = '/DropLocationScreen';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,6 +165,25 @@ class RoutePath {
 
   //===============================ChangePasswordScreen ===============
   static const String changePassword = '/ChangePasswordScreen';
+
+
+
+  //===============================TermsConditionScreen ===============
+  static const String termsCondition = '/TermsConditionScreen';
+
+
+  //===============================PrivacyPolicyScreen ===============
+  static const String privacyPolicyScreen = '/PrivacyPolicyScreen';
+
+
+//===============================FaqsScreen ===============
+  static const String faqs = '/FaqsScreen';
+
+
+
+
+//===============================NotificationScreen ===============
+  static const String notification = '/NotificationScreen';
 
 
 

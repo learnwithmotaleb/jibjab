@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 303,
                     height: 48,
                     onPressed: () {
-                      // Get.toNamed(RoutePath.details);
+                      Get.toNamed(RoutePath.invite);
                     },
                     label: AppStrings.inviteAndEarn,
                   ),
@@ -288,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
 
                   /// --- Overlay ---
-                  Container(
+                  SizedBox(
                     width: 110,
                     height: 70,
 

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_navigation/src/snackbar/snackbar.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class ChangePasswordController extends GetxController {
@@ -17,18 +18,27 @@ class ChangePasswordController extends GetxController {
   /// Form key
   final formKey = GlobalKey<FormState>();
 
-  /// Change password action
+  /// Password visibility
+  final isCurrentPasswordHidden = true.obs;
+  final isNewPasswordHidden = true.obs;
+  final isConfirmPasswordHidden = true.obs;
+
+  void toggleCurrentPassword() {
+    isCurrentPasswordHidden.toggle();
+  }
+
+  void toggleNewPassword() {
+    isNewPasswordHidden.toggle();
+  }
+
+  void toggleConfirmPassword() {
+    isConfirmPasswordHidden.toggle();
+  }
+
   void changePassword() {
     if (!formKey.currentState!.validate()) return;
 
     FocusManager.instance.primaryFocus?.unfocus();
-
-    final currentPassword = typePasswordController.text.trim();
-    final newPassword = newPasswordController.text.trim();
-
-    /// TODO: API call here
-    /// Example:
-    /// authRepository.changePassword(currentPassword, newPassword);
 
     Get.snackbar(
       "Success",
@@ -45,6 +55,6 @@ class ChangePasswordController extends GetxController {
     typePasswordFocus.dispose();
     newPasswordFocus.dispose();
     confirmPasswordFocus.dispose();
-
+    super.onClose();
   }
 }

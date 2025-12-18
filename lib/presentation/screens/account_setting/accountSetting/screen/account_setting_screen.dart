@@ -7,6 +7,7 @@ import 'package:jibjab/utils/app_colors/app_colors.dart';
 
 import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../../../utils/static_strings/static_strings.dart';
+import '../../../../widgets/customAlertDialog/custome_alert_dialog.dart';
 import '../../../details/widget/top_bar.dart';
 import '../widget/account_setting_widget.dart';
 
@@ -59,7 +60,20 @@ class AccountSettingScreen extends StatelessWidget {
                 color: AppColors.whiteColor,
                 iconColor: AppColors.redColor,
                 textColor: AppColors.redColor,
-                onTap: () {},
+                onTap: () {
+                  CustomAlertDialog.show(
+                    context: context,
+                    title: AppStrings.deleteAccount,
+                    body: "Are you sure delete account?",
+                    onYes: () {
+                      Get.toNamed(RoutePath.login);
+
+                    },
+                    onNo: () {
+                      Get.back();
+                    },
+                  );
+                },
               ),
             ],
           ),
