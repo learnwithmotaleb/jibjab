@@ -58,6 +58,8 @@ import 'package:jibjab/presentation/screens/profile/publicProfile/screen/public_
 import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
 import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
+import 'package:jibjab/presentation/screens/wallet/controller/wallet_controller.dart';
+import 'package:jibjab/presentation/screens/wallet/screen/wallet_screen.dart';
 import 'package:jibjab/presentation/screens/welcome/screen/welcome_screen.dart';
 
 import '../../global/language/controller/language_controller.dart';
@@ -633,6 +635,19 @@ class AppRouter {
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
         Get.put(DetailsOrderController());
+      }),
+    ),
+
+
+
+//====================RecommendScreen ===============
+
+    GetPage(
+      name: RoutePath.walletScreen,
+      page: () => WalletScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(WalletController());
       }),
     ),
 

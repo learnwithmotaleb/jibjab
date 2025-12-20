@@ -157,6 +157,13 @@ class RoutePath {
 
 
 
+  //===============================DetailsOrderScreen ===============
+  static const String walletScreen = '/WalletScreen';
+
+
+
+
+
 
 
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:jibjab/core/routes/route_path.dart';
 
 import '../../../../../utils/app_colors/app_colors.dart';
 import '../../../../../utils/app_fonts/app_fonts.dart';
@@ -97,7 +100,7 @@ class _DetailsOrderScreenState extends State<DetailsOrderScreen> {
                   ),
                   Expanded(
                     child: Text(
-                      "Gaming Chair",
+                      "Remove 20 paint tine",
                       style: AppFonts.medium16.copyWith(
                         color: AppColors.blackColor,
                       ),
@@ -126,16 +129,37 @@ class _DetailsOrderScreenState extends State<DetailsOrderScreen> {
                 ),
               ),
 
-              SizedBox(height: Dimensions.h(12)),
+              SizedBox(height: Dimensions.h(20)),
 
               /// 🔹 Payment Info
-              infoPriceRow("Payment", "30"),
-              infoPriceRow("Total", "30"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Payment"),
+                  Text("30"),
+
+
+                ],
+              ),
+              SizedBox(height: Dimensions.h(10)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                children: [
+                  Text("Total"),
+                  Text("30"),
+
+
+                ],
+              ),
+
 
               SizedBox(height: Dimensions.h(20)),
 
               /// 🔹 Size Selector
-              HorizontalImageSelector(sizeList: sizeList),
+              Padding(
+                padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+                  child: HorizontalImageSelector(sizeList: sizeList)),
 
               SizedBox(height: Dimensions.h(20)),
 
@@ -208,8 +232,21 @@ class _DetailsOrderScreenState extends State<DetailsOrderScreen> {
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
+                        SizedBox(height: Dimensions.h(16)),
                         Text(
                           "description in the post",
+                          style: AppFonts.regular14,
+                          softWrap: true,
+                        ),
+                        SizedBox(height: Dimensions.h(16)),
+                        Text(
+                          "Does not contain anything toxic or harmful",
+                          style: AppFonts.regular14,
+                          softWrap: true,
+                        ),
+                        SizedBox(height: Dimensions.h(16)),
+                        Text(
+                          "will be available at the time for pick up",
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
@@ -225,7 +262,9 @@ class _DetailsOrderScreenState extends State<DetailsOrderScreen> {
               /// 🔹 Action Button
               AppButton(
                 text: AppStrings.publishPost,
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(RoutePath.walletScreen);
+                },
               ),
 
               SizedBox(height: Dimensions.h(80)),
