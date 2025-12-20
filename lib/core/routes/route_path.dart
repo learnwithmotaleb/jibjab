@@ -113,6 +113,52 @@ class RoutePath {
 
 
 
+  //===============================DropOffScreen ===============
+  static const String dropOffScreen = '/DropOffScreen';
+
+
+
+
+  //===============================DropOffScreen ===============
+  static const String dropOffMap = '/DropOffMapScreen';
+
+
+
+
+
+  //===============================DropOffScreen ===============
+  static const String titleDescription = '/TitleDescriptionScreen';
+
+
+
+
+
+
+
+
+
+  //===============================DropOffScreen ===============
+  static const String recommendScreen = '/RecommendScreen';
+
+
+
+  //===============================DropOffScreen ===============
+  static const String willPay = '/WillPayScreen';
+
+
+
+
+
+
+  //===============================DetailsOrderScreen ===============
+  static const String detailsOrder = '/DetailsOrderScreen';
+
+
+
+
+
+
+
 
 
 

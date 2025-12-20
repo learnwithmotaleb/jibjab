@@ -136,6 +136,10 @@ class AppImages {
 
   static const String pickupLocationImage = "assets/icons/locationPick.png";
 
+  //=============================title and description Page===============
+
+  static const String recommendImage = "assets/icons/recommend_image.png";
+
 
 
 

@@ -1,18 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:jibjab/core/routes/route_path.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/details_order/controller/details_order_controller.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/dropOff/controller/drop_off_controller.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/dropOffMap/controller/drop_off_map_controller.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/recommand/controller/recommend_controller.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/recommand/screen/recommend_screen.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/titleDescription/controller/title_description_controller.dart';
+import 'package:jibjab/presentation/screens/AddNewOrder/wilPay/controller/will_pay_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/controller/account_setting_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/screen/account_setting_screen.dart';
 import 'package:jibjab/presentation/screens/account_setting/changePassword/controller/change_password_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/changePassword/screen/change_password_screen.dart';
 import 'package:jibjab/presentation/screens/account_setting/faqs/controller/faqs_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/privacyPolicy/controller/privacy_policy_controller.dart';
-import 'package:jibjab/presentation/screens/addLocation/controller/add_location_controller.dart';
-import 'package:jibjab/presentation/screens/addLocation/screen/add_location_screen.dart';
 import 'package:jibjab/presentation/screens/adviser/controller/adviser_controller.dart';
 import 'package:jibjab/presentation/screens/adviser/screen/adviser_screen.dart';
-import 'package:jibjab/presentation/screens/allCategories/controller/all_categoriesController.dart';
-import 'package:jibjab/presentation/screens/allCategories/screen/all_categories.dart';
 import 'package:jibjab/presentation/screens/auth/forget/controller/forget_controller.dart';
 import 'package:jibjab/presentation/screens/auth/forget/screen/forget_screen.dart';
 import 'package:jibjab/presentation/screens/auth/reset/controller/reset_controller.dart';
@@ -26,8 +29,6 @@ import 'package:jibjab/presentation/screens/customerReview/controller/customer_r
 import 'package:jibjab/presentation/screens/customerReview/screen/customer_review_screen.dart';
 import 'package:jibjab/presentation/screens/details/controller/details_controller.dart';
 import 'package:jibjab/presentation/screens/details/screen/details_screen.dart';
-import 'package:jibjab/presentation/screens/dropLocation/controller/drop_location_controller.dart';
-import 'package:jibjab/presentation/screens/dropLocation/screen/drop_location_screen.dart';
 import 'package:jibjab/presentation/screens/home/controller/home_controller.dart';
 import 'package:jibjab/presentation/screens/home/screen/home_screen.dart';
 import 'package:jibjab/presentation/screens/important/controller/important_controller.dart';
@@ -37,13 +38,10 @@ import 'package:jibjab/presentation/screens/invite/screen/invite_screen.dart';
 import 'package:jibjab/presentation/screens/myPost/controller/mypost_controller.dart';
 import 'package:jibjab/presentation/screens/myPost/screen/mypost_screen.dart';
 import 'package:jibjab/presentation/screens/navigationbar/controller/navigationbar_controller.dart';
-import 'package:jibjab/presentation/screens/newPost/controller/add_new_post_controller.dart';
 import 'package:jibjab/presentation/screens/onboarding/screen/onboarding_screen.dart';
 import 'package:jibjab/presentation/screens/pay/controller/pay_controller.dart';
 import 'package:jibjab/presentation/screens/pay/screen/pay_screen.dart';
-import 'package:jibjab/presentation/screens/pickupLocation/controller/pickup_location_controller.dart';
-import 'package:jibjab/presentation/screens/pickupLocation/screen/pickup_location_screen.dart';
-import 'package:jibjab/presentation/screens/picup/screen/pickup_screen.dart';
+
 import 'package:jibjab/presentation/screens/post/controller/post_controller.dart';
 import 'package:jibjab/presentation/screens/post/screen/post_screen.dart';
 import 'package:jibjab/presentation/screens/postSetting/controller/post_setting_controller.dart';
@@ -59,12 +57,30 @@ import 'package:jibjab/presentation/screens/profile/publicProfile/controller/pub
 import 'package:jibjab/presentation/screens/profile/publicProfile/screen/public_profile_screen.dart';
 import 'package:jibjab/presentation/screens/readmore/controller/readmore_controller.dart';
 import 'package:jibjab/presentation/screens/readmore/screen/readmore_screen.dart';
-import 'package:jibjab/presentation/screens/selectTimeSlot/controller/select_time_slot_controller.dart';
-import 'package:jibjab/presentation/screens/selectTimeSlot/screen/select_time_slot_screen.dart';
 import 'package:jibjab/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:jibjab/presentation/screens/welcome/screen/welcome_screen.dart';
 
 import '../../global/language/controller/language_controller.dart';
+import '../../presentation/screens/AddNewOrder/allCategories/controller/all_categoriesController.dart';
+import '../../presentation/screens/AddNewOrder/allCategories/screen/all_categories.dart';
+import '../../presentation/screens/AddNewOrder/details_order/screen/details_order_screen.dart';
+import '../../presentation/screens/AddNewOrder/dropLocation/controller/drop_location_controller.dart';
+import '../../presentation/screens/AddNewOrder/dropLocation/screen/drop_location_screen.dart';
+import '../../presentation/screens/AddNewOrder/dropOff/screen/drop_off_screen.dart';
+import '../../presentation/screens/AddNewOrder/dropOffMap/screen/drop_off_map_screen.dart';
+import '../../presentation/screens/AddNewOrder/newPost/controller/add_new_post_controller.dart';
+import '../../presentation/screens/AddNewOrder/newPost/screen/add_new_post_screen.dart';
+import '../../presentation/screens/AddNewOrder/pickLocation/controller/pickup_location_controller.dart';
+import '../../presentation/screens/AddNewOrder/pickLocation/screen/pickup_location_screen.dart';
+import '../../presentation/screens/AddNewOrder/pickOff/controller/pick_off_controller.dart';
+import '../../presentation/screens/AddNewOrder/pickOff/screen/pick_off_screen.dart';
+import '../../presentation/screens/AddNewOrder/pickUpMap/controller/pickup_map_controller.dart' hide PickupLocationController;
+import '../../presentation/screens/AddNewOrder/pickUpMap/screen/pickup_map_screen.dart';
+
+import '../../presentation/screens/AddNewOrder/selectTimeSlot/controller/select_time_slot_controller.dart';
+import '../../presentation/screens/AddNewOrder/selectTimeSlot/screen/select_time_slot_screen.dart';
+import '../../presentation/screens/AddNewOrder/titleDescription/screen/title_description_screen.dart';
+import '../../presentation/screens/AddNewOrder/wilPay/screen/will_pay_screen.dart';
 import '../../presentation/screens/account_setting/faqs/screen/faqs_screen.dart';
 import '../../presentation/screens/account_setting/privacyPolicy/screen/privacy_policy_screen.dart';
 import '../../presentation/screens/account_setting/termsCondition/controller/terms_condition_controller.dart';
@@ -74,9 +90,8 @@ import '../../presentation/screens/auth/login/screen/login_screen.dart';
 import '../../presentation/screens/auth/verification/controller/vefication_controller.dart';
 import '../../presentation/screens/language/screen/language_screen.dart';
 import '../../presentation/screens/navigationbar/screen/navigationbar_screen.dart';
-import '../../presentation/screens/newPost/screen/add_new_post_screen.dart';
 import '../../presentation/screens/onboarding/controller/onboarding_controller.dart';
-import '../../presentation/screens/picup/controller/pickup_controller.dart';
+
 import '../../presentation/screens/profile/contactUs/controller/contactus_controller.dart';
 import '../../presentation/screens/profile/notification/controller/notification_controller.dart';
 import '../../presentation/screens/profile/notification/screen/notification_screen.dart';
@@ -498,10 +513,10 @@ class AppRouter {
 
     GetPage(
       name: RoutePath.pickup,
-      page: () =>  PickUpScreen(),
+      page: () =>  PickUpLocationScreen(),
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
-        Get.put(PickupController());
+        Get.put(PickupLocationController());
       }),
     ),
 
@@ -511,10 +526,10 @@ class AppRouter {
 
     GetPage(
       name: RoutePath.addLocation,
-      page: () =>  AddLocationScreen(),
+      page: () =>  PickOffScreen(),
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
-        Get.put(AddLocationController());
+        Get.put(PickOffController());
       }),
     ),
 
@@ -540,6 +555,84 @@ class AppRouter {
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
         Get.put(DropLocationController());
+      }),
+    ),
+
+
+
+
+//====================DropLocationScreen ===============
+
+    GetPage(
+      name: RoutePath.dropOffScreen,
+      page: () =>  DropOffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(DropOffController());
+      }),
+    ),
+
+
+//====================DropOffMapScreen ===============
+
+    GetPage(
+      name: RoutePath.dropOffMap,
+      page: () =>  DropOffMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(DropOffMapController());
+      }),
+    ),
+
+
+
+
+//====================titleDescription ===============
+
+    GetPage(
+      name: RoutePath.titleDescription,
+      page: () =>  TitleDescriptionScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(TitleDescriptionController());
+      }),
+    ),
+
+
+
+//====================RecommendScreen ===============
+
+    GetPage(
+      name: RoutePath.recommendScreen,
+      page: () =>  RecommendScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RecommendController());
+      }),
+    ),
+
+
+
+//====================RecommendScreen ===============
+
+    GetPage(
+      name: RoutePath.willPay,
+      page: () =>  WillPayScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(WillPayController());
+      }),
+    ),
+
+
+//====================RecommendScreen ===============
+
+    GetPage(
+      name: RoutePath.detailsOrder,
+      page: () => DetailsOrderScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(DetailsOrderController());
       }),
     ),
 

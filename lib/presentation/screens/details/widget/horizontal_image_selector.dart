@@ -25,7 +25,7 @@ class HorizontalImageSelector extends StatelessWidget {
                     width: 70, height: 60, fit: BoxFit.cover),
               ),
               Positioned(
-                bottom: 4,
+                bottom: 20,
                 left: 4,
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),

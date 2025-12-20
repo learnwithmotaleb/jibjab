@@ -266,6 +266,54 @@ class AppStrings {
    static const String hideExactTimeSlot = "Hide exact time slots";
 
 
+     //==============================TermsAndCodition======================
+
+   static const String pickOff = "Pick Off";
+  static const String dropOff = "Drop Off";
+
+
+  //=============================title and description Page===============
+  static const String itsQuickSmall = "It’s quite small .Just some light weight thing that easyily fits into a small hatchback car.(Note: This is not a selection of a vehicle ,it is estimationfor any person thatwant to help. ";
+  static const String thereAreAFewThingsWe = "There are a few things we strongly recommend against when using Jibjab!";
+
+
+
+
+
+  //=============================recommend Page===============
+  static const String recommend = "recommend";
+  static const String thingsWeStronglyRecommend = "Things we strongly recommend against  ";
+  static const String weAdviceYouNot = "We advices you not  to use Jibjab! when moving or getting rid of extremely heavy ";
+  static const String exampleOfSuchItemsAre = "Examples of such items are ";
+  static const String pianos = "-pianos";
+  static const String safetyBoxes = "-safety boxes";
+  static const String bouldersGravelSoil = "-boulders, gravel, soil or other large piles of rubble.";
+
+
+
+
+
+
+
+
+
+
+
+
+  //============================================Will Pay screen=======================
+  static const String otherUsersHavePaidAround = "Other users have paid around \$28-\$42";
+  static const String redeem = "Redeem";
+
+
+
+
+
+
+
+
+
+
+
 
 
 
