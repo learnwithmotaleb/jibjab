@@ -8,6 +8,12 @@ import 'package:jibjab/presentation/screens/AddNewOrder/recommand/controller/rec
 import 'package:jibjab/presentation/screens/AddNewOrder/recommand/screen/recommend_screen.dart';
 import 'package:jibjab/presentation/screens/AddNewOrder/titleDescription/controller/title_description_controller.dart';
 import 'package:jibjab/presentation/screens/AddNewOrder/wilPay/controller/will_pay_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/PickOffB/controller/b_pickoff_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/pickUpB/controller/b_pickup_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/selectStore/controller/select_store_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/selectTimeSlotB/controller/b_select_time_slot_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/shoppingList/controller/shopping_list_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/titleDesciptionB/controller/b_title_description_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/controller/account_setting_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/screen/account_setting_screen.dart';
 import 'package:jibjab/presentation/screens/account_setting/changePassword/controller/change_password_controller.dart';
@@ -83,6 +89,12 @@ import '../../presentation/screens/AddNewOrder/selectTimeSlot/controller/select_
 import '../../presentation/screens/AddNewOrder/selectTimeSlot/screen/select_time_slot_screen.dart';
 import '../../presentation/screens/AddNewOrder/titleDescription/screen/title_description_screen.dart';
 import '../../presentation/screens/AddNewOrder/wilPay/screen/will_pay_screen.dart';
+import '../../presentation/screens/BuyDeliver/PickOffB/screen/b_pickoff_screen.dart';
+import '../../presentation/screens/BuyDeliver/pickUpB/screen/b_pickup_screen.dart';
+import '../../presentation/screens/BuyDeliver/selectStore/screen/select_store_screen.dart';
+import '../../presentation/screens/BuyDeliver/selectTimeSlotB/screen/b_select_time_slot_screen.dart';
+import '../../presentation/screens/BuyDeliver/shoppingList/screen/shopping_list_screen.dart';
+import '../../presentation/screens/BuyDeliver/titleDesciptionB/screen/b_title_description_screen.dart';
 import '../../presentation/screens/account_setting/faqs/screen/faqs_screen.dart';
 import '../../presentation/screens/account_setting/privacyPolicy/screen/privacy_policy_screen.dart';
 import '../../presentation/screens/account_setting/termsCondition/controller/terms_condition_controller.dart';
@@ -648,6 +660,79 @@ class AppRouter {
       transition: Transition.rightToLeft,
       binding: BindingsBuilder(() {
         Get.put(WalletController());
+      }),
+    ),
+
+
+//====================SelectStoreScreen ===============
+
+    GetPage(
+      name: RoutePath.selectStore,
+      page: () => SelectStoreScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(SelectStoreController());
+      }),
+    ),
+
+
+//====================SelectStoreScreen ===============
+
+    GetPage(
+      name: RoutePath.shoppingList,
+      page: () => ShoppingListScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(ShoppingListController());
+      }),
+    ),
+
+
+
+//====================SelectStoreScreen ===============
+
+    GetPage(
+      name: RoutePath.bTitleDescription,
+      page: () => BTitleDescriptionScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BTitleDescriptionController());
+      }),
+    ),
+
+//====================SelectStoreScreen ===============
+
+    GetPage(
+      name: RoutePath.bSelectTimeSlot,
+      page: () => BSelectTimeSlotScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BSelectTimeSlotController());
+      }),
+    ),
+
+
+//====================BPickupScreen ===============
+
+    GetPage(
+      name: RoutePath.bPickUpScreen,
+      page: () => BPickupScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BPickupController());
+      }),
+    ),
+
+
+
+//====================BPickoffScreen ===============
+
+    GetPage(
+      name: RoutePath.bPickOffScreen,
+      page: () => BPickoffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BPickoffController());
       }),
     ),
 

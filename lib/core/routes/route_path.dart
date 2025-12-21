@@ -164,6 +164,63 @@ class RoutePath {
 
 
 
+  //===============================SelectStoreScreen ===============
+  static const String selectStore = '/SelectStoreScreen';
+
+
+
+
+
+
+
+
+
+  //===============================ShoppingListScreen ===============
+  static const String shoppingList = '/ShoppingListScreen';
+
+
+
+
+
+
+
+
+
+
+
+  //===============================BTitleDescriptionScreen ===============
+  static const String bTitleDescription = '/BTitleDescriptionScreen';
+
+
+
+
+
+
+
+
+  //===============================BSelectTimeSlotScreen ===============
+  static const String bSelectTimeSlot = '/BSelectTimeSlotScreen';
+
+
+
+
+
+
+  //===============================BPickupScreen ===============
+  static const String bPickUpScreen = '/BPickupScreen';
+
+
+
+
+
+
+  //===============================BPickupScreen ===============
+  static const String bPickOffScreen = '/BPickoffScreen';
+
+
+
+
+
 
 
 

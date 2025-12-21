@@ -80,7 +80,7 @@ final Map<CategoryType, CategoryAlertData> categoryAlertMap = {
     icon4: AppImages.pickup,
     text4: 'General\ndeclutter', onContinue: () {
     Get.back();
-    Get.toNamed(RoutePath.publicProfile);
+    Get.toNamed(RoutePath.selectStore);
 
   },
   ),
