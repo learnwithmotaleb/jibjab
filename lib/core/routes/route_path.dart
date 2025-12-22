@@ -223,6 +223,61 @@ class RoutePath {
 
 
 
+  //===============================BPickupMapScreen ===============
+  static const String bPickupMap = '/BPickupMapScreen';
+
+
+
+
+  //===============================BDropLocationScreen ===============
+  static const String bDropLocation = '/BDropLocationScreen';
+
+
+
+
+  //===============================BDropoffScreen ===============
+  static const String bDropOffScreen = '/BDropoffScreen';
+
+
+
+
+
+
+
+
+
+  //===============================BDropoffMapScreen ===============
+  static const String bDropOffMap = '/BDropoffMapScreen';
+
+
+
+
+
+
+  //===============================BWillPayScreen ===============
+  static const String bWillPayScreen = '/BWillPayScreen';
+
+
+
+
+
+
+
+  //===============================BDetailsOrderScreen ===============
+  static const String bDetailsOrderScreen = '/BDetailsOrderScreen';
+
+
+
+
+  //===============================BWalletScreen ===============
+  static const String bWallet = '/BWalletScreen';
+
+
+
+
+
+
+
 
 
 
@@ -294,6 +349,58 @@ class RoutePath {
 
 //===============================NotificationScreen ===============
   static const String notification = '/NotificationScreen';
+
+
+
+//===============================TransactionScreen ===============
+  static const String transaction = '/TransactionScreen';
+
+
+
+
+  //==============================================Remove/Recycle==================
+  static const String rNewPost = '/RAddNewPostScreen';
+  static const String rSelectTimeSlot = '/RSelectTimeSlotScreen';
+
+  static const String rPickUp = '/RPickUpLocationScreen';
+  static const String rPickOff = '/RPickOffScreen';
+  static const String rPickOffMap = '/RPickupMapScreen';
+
+  static const String rDropLocation = '/RDropLocationScreen';
+  static const String rDropOff = '/RDropOffScreen';
+  static const String rDropOffMap = '/RDropOffMapScreen';
+
+
+  //=============================Waste type=================
+  static const String rWasteType = '/WasteTypeScreen';
+
+  static const String rTitleDescription = '/RTitleDescriptionScreen';
+  static const String rWillPay = '/RWillPayScreen';
+  static const String rDetails = '/RDetailsOrderScreen';
+  static const String rWallet = '/RWalletScreen';
+
+
+
+
+  //==============================================GiveAway==================
+  static const String gNewPost = '/GAddNewPostScreen';
+  static const String gSelectTimeSlot = '/GSelectTimeSlotScreen';
+
+  static const String gPickUp = '/GPickUpLocationScreen';
+  static const String gPickOff = '/GPickOffScreen';
+  static const String gPickOffMap = '/GPickupMapScreen';
+
+  static const String gDropLocation = '/GDropLocationScreen';
+  static const String gDropOff = '/GDropOffScreen';
+  static const String gDropOffMap = '/GDropOffMapScreen';
+
+
+  static const String gTitleDescription = '/GTitleDescriptionScreen';
+  static const String gWillPay = '/GWillPayScreen';
+  static const String gDetails = '/GDetailsOrderScreen';
+  static const String gWallet = '/GWalletScreen';
+
+
 
 
 

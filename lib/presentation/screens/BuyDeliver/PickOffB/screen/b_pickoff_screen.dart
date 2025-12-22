@@ -127,7 +127,7 @@ class _BPickoffScreenState extends State<BPickoffScreen> {
                   child: AppButton(
                     text: AppStrings.continueButton,
                     onPressed: () {
-                      Get.toNamed(RoutePath.pickUpLocation);
+                      Get.toNamed(RoutePath.bPickupMap);
                     },
                   ),
                 ),

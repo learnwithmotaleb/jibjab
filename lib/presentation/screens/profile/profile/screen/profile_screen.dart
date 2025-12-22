@@ -203,7 +203,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ProfileMenuTile(
                   icon: Icons.history,
                   title: AppStrings.history.tr,
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutePath.transaction);
+                  },
                 ),
 
                 SizedBox(height: Dimensions.h(10)),

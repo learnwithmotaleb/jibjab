@@ -102,7 +102,7 @@ final Map<CategoryType, CategoryAlertData> categoryAlertMap = {
     text4: 'Anything \nof value',
     onContinue: () {
       Get.back();
-      Get.toNamed(RoutePath.signup);
+      Get.toNamed(RoutePath.rNewPost);
 
     },
   ),
@@ -125,7 +125,7 @@ final Map<CategoryType, CategoryAlertData> categoryAlertMap = {
     text4: 'Anything \nof value',
     onContinue: () {
       Get.back();
-      Get.toNamed(RoutePath.profile);
+      Get.toNamed(RoutePath.gNewPost);
 
     },
   ),

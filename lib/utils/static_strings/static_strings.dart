@@ -304,6 +304,9 @@ class AppStrings {
   static const String otherUsersHavePaidAround = "Other users have paid around \$28-\$42";
   static const String redeem = "Redeem";
 
+  static const String confirmAddress = "Confirm Address";
+  static const String transactionItemList = "Transaction List Items";
+
 
 
 

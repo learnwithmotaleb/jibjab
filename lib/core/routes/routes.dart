@@ -9,11 +9,42 @@ import 'package:jibjab/presentation/screens/AddNewOrder/recommand/screen/recomme
 import 'package:jibjab/presentation/screens/AddNewOrder/titleDescription/controller/title_description_controller.dart';
 import 'package:jibjab/presentation/screens/AddNewOrder/wilPay/controller/will_pay_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/PickOffB/controller/b_pickoff_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/bwallet/controller/b_wallet_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/detailsOrderB/controller/b_details_order_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/dropLocationB/controller/b_drop_location_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/dropOffB/controller/b_dropoff_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/dropOffMapB/controller/b_dropoff_map_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/pickUpB/controller/b_pickup_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/pickUpMapB/controller/b_pickup_map_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/selectStore/controller/select_store_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/selectTimeSlotB/controller/b_select_time_slot_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/shoppingList/controller/shopping_list_controller.dart';
 import 'package:jibjab/presentation/screens/BuyDeliver/titleDesciptionB/controller/b_title_description_controller.dart';
+import 'package:jibjab/presentation/screens/BuyDeliver/willPayB/controller/b_willpay_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/details_order_r/controller/r_details_order_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/details_order_r/screen/r_details_order_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropLocation_r/controller/r_drop_location_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropLocation_r/screen/r_drop_location_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropOffMap_r/controller/r_drop_off_map_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropOffMap_r/screen/r_drop_off_map_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropOff_r/controller/r_drop_off_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/dropOff_r/screen/r_drop_off_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/newPost_r/controller/r_add_new_post_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/newPost_r/screen/r_add_new_post_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/pickLocation_r/controller/r_pickup_location_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/pickLocation_r/screen/r_pickup_location_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/pickOff_r/controller/r_pick_off_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/pickOff_r/screen/r_pick_off_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/pickUpMap_r/controller/r_pickup_map_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/rwallet/controller/r_wallet_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/rwallet/screen/r_wallet_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/selectTimeSlot_r/controller/r_select_time_slot_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/selectTimeSlot_r/screen/r_select_time_slot_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/titleDescription_r/controller/r_title_description_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/titleDescription_r/screen/r_title_description_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/wasteType/screen/waste_type_screen.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/wilPay_r/controller/r_will_pay_controller.dart';
+import 'package:jibjab/presentation/screens/RemoveRecycle/wilPay_r/screen/r_will_pay_screen.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/controller/account_setting_controller.dart';
 import 'package:jibjab/presentation/screens/account_setting/accountSetting/screen/account_setting_screen.dart';
 import 'package:jibjab/presentation/screens/account_setting/changePassword/controller/change_password_controller.dart';
@@ -90,11 +121,44 @@ import '../../presentation/screens/AddNewOrder/selectTimeSlot/screen/select_time
 import '../../presentation/screens/AddNewOrder/titleDescription/screen/title_description_screen.dart';
 import '../../presentation/screens/AddNewOrder/wilPay/screen/will_pay_screen.dart';
 import '../../presentation/screens/BuyDeliver/PickOffB/screen/b_pickoff_screen.dart';
+import '../../presentation/screens/BuyDeliver/bwallet/screen/b_wallet_screen.dart';
+import '../../presentation/screens/BuyDeliver/detailsOrderB/screen/b_details_order_screen.dart';
+import '../../presentation/screens/BuyDeliver/dropLocationB/screen/b_drop_location_screen.dart';
+import '../../presentation/screens/BuyDeliver/dropOffB/screen/b_dropoff_screen.dart';
+import '../../presentation/screens/BuyDeliver/dropOffMapB/screen/b_dropoff_map_screen.dart';
 import '../../presentation/screens/BuyDeliver/pickUpB/screen/b_pickup_screen.dart';
+import '../../presentation/screens/BuyDeliver/pickUpMapB/screen/b_pickup_map_screen.dart';
 import '../../presentation/screens/BuyDeliver/selectStore/screen/select_store_screen.dart';
 import '../../presentation/screens/BuyDeliver/selectTimeSlotB/screen/b_select_time_slot_screen.dart';
 import '../../presentation/screens/BuyDeliver/shoppingList/screen/shopping_list_screen.dart';
 import '../../presentation/screens/BuyDeliver/titleDesciptionB/screen/b_title_description_screen.dart';
+import '../../presentation/screens/BuyDeliver/willPayB/screen/b_willpay_screen.dart';
+import '../../presentation/screens/GiveAway/details_order_g/controller/g_details_order_controller.dart';
+import '../../presentation/screens/GiveAway/details_order_g/screen/g_details_order_screen.dart';
+import '../../presentation/screens/GiveAway/dropLocation_g/controller/g_drop_location_controller.dart';
+import '../../presentation/screens/GiveAway/dropLocation_g/screen/g_drop_location_screen.dart';
+import '../../presentation/screens/GiveAway/dropOffMap_g/controller/g_drop_off_map_controller.dart';
+import '../../presentation/screens/GiveAway/dropOffMap_g/screen/g_drop_off_map_screen.dart';
+import '../../presentation/screens/GiveAway/dropOff_g/controller/g_drop_off_controller.dart';
+import '../../presentation/screens/GiveAway/dropOff_g/screen/g_drop_off_screen.dart';
+import '../../presentation/screens/GiveAway/newPost_g/controller/g_add_new_post_controller.dart';
+import '../../presentation/screens/GiveAway/newPost_g/screen/g_add_new_post_screen.dart';
+import '../../presentation/screens/GiveAway/pickLocation_g/controller/g_pickup_location_controller.dart';
+import '../../presentation/screens/GiveAway/pickLocation_g/screen/g_pickup_location_screen.dart';
+import '../../presentation/screens/GiveAway/pickOff_g/controller/g_pick_off_controller.dart';
+import '../../presentation/screens/GiveAway/pickOff_g/screen/g_pick_off_screen.dart';
+import '../../presentation/screens/GiveAway/pickUpMap_g/controller/g_pickup_map_controller.dart';
+import '../../presentation/screens/GiveAway/pickUpMap_g/screen/g_pickup_map_screen.dart';
+import '../../presentation/screens/GiveAway/selectTimeSlot_g/controller/g_select_time_slot_controller.dart';
+import '../../presentation/screens/GiveAway/selectTimeSlot_g/screen/g_select_time_slot_screen.dart';
+import '../../presentation/screens/GiveAway/titleDescription_g/controller/g_title_description_controller.dart';
+import '../../presentation/screens/GiveAway/titleDescription_g/screen/g_title_description_screen.dart';
+import '../../presentation/screens/GiveAway/wallet_g/controller/g_wallet_controller.dart';
+import '../../presentation/screens/GiveAway/wallet_g/screen/g_wallet_screen.dart';
+import '../../presentation/screens/GiveAway/wilPay_g/controller/g_will_pay_controller.dart';
+import '../../presentation/screens/GiveAway/wilPay_g/screen/g_will_pay_screen.dart';
+import '../../presentation/screens/RemoveRecycle/pickUpMap_r/screen/r_pickup_map_screen.dart';
+import '../../presentation/screens/RemoveRecycle/wasteType/controller/waste_type_controller.dart';
 import '../../presentation/screens/account_setting/faqs/screen/faqs_screen.dart';
 import '../../presentation/screens/account_setting/privacyPolicy/screen/privacy_policy_screen.dart';
 import '../../presentation/screens/account_setting/termsCondition/controller/terms_condition_controller.dart';
@@ -109,6 +173,7 @@ import '../../presentation/screens/onboarding/controller/onboarding_controller.d
 import '../../presentation/screens/profile/contactUs/controller/contactus_controller.dart';
 import '../../presentation/screens/profile/notification/controller/notification_controller.dart';
 import '../../presentation/screens/profile/notification/screen/notification_screen.dart';
+import '../../presentation/screens/profile/transaction/screen/transaction_screen.dart';
 import '../../presentation/screens/welcome/controller/welcome_controller.dart';
 
 
@@ -508,6 +573,17 @@ class AppRouter {
       }),
     ),
 
+//====================TransactionScreen ===============
+
+    GetPage(
+      name: RoutePath.transaction,
+      page: () =>  TransactionScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(TransformationController());
+      }),
+    ),
+
 
 
 //====================SelectTimeSlotScreen ===============
@@ -737,6 +813,339 @@ class AppRouter {
     ),
 
 
+
+
+//====================BPickupMapScreen ===============
+
+    GetPage(
+      name: RoutePath.bPickupMap,
+      page: () => BPickupMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BPickupMapController());
+      }),
+    ),
+
+
+
+//====================BDropLocationScreen ===============
+
+    GetPage(
+      name: RoutePath.bDropLocation,
+      page: () => BDropLocationScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BDropLocationController());
+      }),
+    ),
+
+
+//====================BDropoffScreen ===============
+
+    GetPage(
+      name: RoutePath.bDropOffScreen,
+      page: () => BDropoffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BDropoffController());
+      }),
+    ),
+
+
+//====================BDropoffScreen ===============
+
+    GetPage(
+      name: RoutePath.bDropOffMap,
+      page: () => BDropoffMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BDropoffMapController());
+      }),
+    ),
+
+//====================BWillPayScreen ===============
+
+    GetPage(
+      name: RoutePath.bWillPayScreen,
+      page: () => BWillPayScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BWillPayController());
+      }),
+    ),
+
+
+
+//====================BDetailsOrderScreen ===============
+
+    GetPage(
+      name: RoutePath.bDetailsOrderScreen,
+      page: () => BDetailsOrderScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BDetailsOrderController());
+      }),
+    ),
+
+
+//====================BWalletScreen ===============
+
+    GetPage(
+      name: RoutePath.bWallet,
+      page: () => BWalletScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(BWalletController());
+      }),
+    ),
+
+
+    //===========================================================================Remove/Recycle=====================================
+
+    GetPage(
+      name: RoutePath.rNewPost,
+      page: () => RAddNewPostScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RAddNewPostController());
+      }),
+    ),
+
+
+    GetPage(
+      name: RoutePath.rSelectTimeSlot,
+      page: () => RSelectTimeSlotScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RSelectTimeSlotController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rPickUp,
+      page: () => RPickUpLocationScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RPickupLocationController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rPickOff,
+      page: () => RPickOffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RPickOffController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rPickOffMap,
+      page: () => RPickupMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RPickupMapController());
+      }),
+    ),
+
+
+
+    GetPage(
+      name: RoutePath.rDropLocation,
+      page: () => RDropLocationScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RDropLocationController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rDropOff,
+      page: () => RDropOffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RDropOffController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rDropOffMap,
+      page: () => RDropOffMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RDropOffMapController());
+      }),
+    ),
+
+
+
+    GetPage(
+      name: RoutePath.rWasteType,
+      page: () => WasteTypeScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(WasteTypeController());
+      }),
+    ),
+
+
+
+    GetPage(
+      name: RoutePath.rTitleDescription,
+      page: () => RTitleDescriptionScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RTitleDescriptionController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rWillPay,
+      page: () => RWillPayScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RWillPayController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rDetails,
+      page: () => RDetailsOrderScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RDetailsOrderController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.rWallet,
+      page: () => RWalletScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(RWalletController());
+      }),
+    ),
+
+
+
+
+
+
+    //===========================================================================GiveAway=====================================
+
+    GetPage(
+      name: RoutePath.gNewPost,
+      page: () => GAddNewPostScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GAddNewPostController());
+      }),
+    ),
+
+
+    GetPage(
+      name: RoutePath.gSelectTimeSlot,
+      page: () => GSelectTimeSlotScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GSelectTimeSlotController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gPickUp,
+      page: () => GPickUpLocationScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GPickupLocationController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gPickOff,
+      page: () => GPickOffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GPickOffController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gPickOffMap,
+      page: () => GPickupMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GPickupMapController());
+      }),
+    ),
+
+
+
+    GetPage(
+      name: RoutePath.gDropLocation,
+      page: () => GDropLocationScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GDropLocationController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gDropOff,
+      page: () => GDropOffScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GDropOffController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gDropOffMap,
+      page: () => GDropOffMapScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GDropOffMapController());
+      }),
+    ),
+
+
+
+
+    GetPage(
+      name: RoutePath.gTitleDescription,
+      page: () => GTitleDescriptionScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GTitleDescriptionController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gWillPay,
+      page: () => GWillPayScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GWillPayController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gDetails,
+      page: () => GDetailsOrderScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GDetailsOrderController());
+      }),
+    ),
+
+    GetPage(
+      name: RoutePath.gWallet,
+      page: () => GWalletScreen(),
+      transition: Transition.rightToLeft,
+      binding: BindingsBuilder(() {
+        Get.put(GWalletController());
+      }),
+    ),
 
 
 
