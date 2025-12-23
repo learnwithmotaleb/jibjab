@@ -128,7 +128,7 @@ class _DropOffScreenState extends State<DropOffScreen> {
                 Padding(
                   padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                   child: AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
                       Get.toNamed(RoutePath.dropOffMap);
                     },

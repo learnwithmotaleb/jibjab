@@ -172,7 +172,7 @@ class _RAddNewPostScreenState extends State<RAddNewPostScreen> {
 
               /// 🔹 Continue Button
               AppButton(
-                text: AppStrings.continueButton,
+                text: AppStrings.continueButton.tr,
                 onPressed: () {
                   Get.toNamed(RoutePath.rSelectTimeSlot);
                 },

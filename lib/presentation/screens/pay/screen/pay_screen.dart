@@ -50,13 +50,13 @@ class _PayScreenState extends State<PayScreen> {
                 children: [
                   // Title
                   Text(
-                    AppStrings.becomeAHelper,
+                    AppStrings.becomeAHelper.tr,
                     style: AppFonts.medium20.copyWith(color: AppColors.blackColor),
                   ),
                   SizedBox(height: Dimensions.h(16)),
                   // Subtitle
                   Text(
-                    AppStrings.becomeAHelperSubTitle,
+                    AppStrings.becomeAHelperSubTitle.tr,
                     style: AppFonts.regularSubTitle12,
                   ),
                   SizedBox(height: Dimensions.h(24)),
@@ -65,27 +65,27 @@ class _PayScreenState extends State<PayScreen> {
                     children: [
                       FeatureItem(
                         image: AppImages.trueFlexibilityImage,
-                        title: AppStrings.trueFlexibility,
-                        subtitle: AppStrings.trueFlexibilitySubTitle,
+                        title: AppStrings.trueFlexibility.tr,
+                        subtitle: AppStrings.trueFlexibilitySubTitle.tr,
                       ),
                       SizedBox(height: Dimensions.h(16)),
                       FeatureItem(
                         image: AppImages.superEasyImage,
-                        title: AppStrings.superEasyToGetStarted,
-                        subtitle: AppStrings.superEasyToGetStartedSubTitle,
+                        title: AppStrings.superEasyToGetStarted.tr,
+                        subtitle: AppStrings.superEasyToGetStartedSubTitle.tr,
                       ),
                       SizedBox(height: Dimensions.h(16)),
                       FeatureItem(
                         image: AppImages.becauseEarthImage,
-                        title: AppStrings.becauseEarthLovesIt,
-                        subtitle: AppStrings.becauseEarthLovesItSubTitle,
+                        title: AppStrings.becauseEarthLovesIt.tr,
+                        subtitle: AppStrings.becauseEarthLovesItSubTitle.tr,
                       ),
                     ],
                   ),
                   SizedBox(height: Dimensions.h(80)),
                   // Continue Button
                   AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
 
                       Get.toNamed(RoutePath.important);

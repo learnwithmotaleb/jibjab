@@ -25,73 +25,77 @@ class _RDropOffMapScreenState extends State<RDropOffMapScreen> {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            /// 🔹 Top spacing
-            SizedBox(height: Dimensions.h(16)),
-
-            /// 🔹 App Bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: TopBar(title: AppStrings.dropOff.tr),
-            ),
-
-            SizedBox(height: Dimensions.h(16)),
-
-            /// 🔹 Map Section
-            Stack(
-              alignment: Alignment.center,
+        child: SingleChildScrollView(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                /// Map Image
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
-                  child: Image.asset(
-                    AppImages.pickupLocationImage,
-                    width: double.infinity,
-                    height: 600,
-                    fit: BoxFit.fill,
-                  ),
+                /// 🔹 Top spacing
+                SizedBox(height: Dimensions.h(16)),
+
+                /// 🔹 App Bar
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: TopBar(title: AppStrings.dropOff.tr),
                 ),
 
-                /// Pick up marker
-                Column(
-                  mainAxisSize: MainAxisSize.min,
+                SizedBox(height: Dimensions.h(16)),
+
+                /// 🔹 Map Section
+                Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Icon(
-                      Icons.location_on,
-                      color: AppColors.redColor,
-                      size: 32,
-                    ),
-                    SizedBox(height: Dimensions.h(4)),
-                    Text(
-                      AppStrings.dropOff,
-                      style: AppFonts.regular14.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.blackLightColor,
+                    /// Map Image
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.asset(
+                        AppImages.pickupLocationImage,
+                        width: double.infinity,
+                        height: 500,
+                        fit: BoxFit.fill,
                       ),
+                    ),
+
+                    /// Pick up marker
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: AppColors.redColor,
+                          size: 32,
+                        ),
+                        SizedBox(height: Dimensions.h(4)),
+                        Text(
+                          AppStrings.dropOff.tr,
+                          style: AppFonts.regular14.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.blackLightColor,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
+
+                /// 🔹 Bottom Section
+                SizedBox(height: Dimensions.h(16)),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                  child: AppButton(
+                    text: AppStrings.continueButton.tr,
+                    onPressed: () {
+                      Get.toNamed(
+                          RoutePath.rWasteType
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
-
-            /// 🔹 Bottom Section
-            SizedBox(height: Dimensions.h(60)),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-              child: AppButton(
-                text: AppStrings.continueButton,
-                onPressed: () {
-                  Get.toNamed(
-                      RoutePath.rWasteType
-                  );
-                },
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

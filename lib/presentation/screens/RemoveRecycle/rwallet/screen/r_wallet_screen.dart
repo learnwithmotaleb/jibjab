@@ -116,7 +116,7 @@ class _RWalletScreenState extends State<RWalletScreen> {
 
                       // Payment Method Text
                       Text(
-                        AppStrings.stripe,
+                        AppStrings.stripe.tr,
                         style: AppFonts.medium16.copyWith(fontSize: Dimensions.f(16)),
                       ),
 
@@ -124,7 +124,7 @@ class _RWalletScreenState extends State<RWalletScreen> {
 
                       // Amount / Details Placeholder
                       Text(
-                        AppStrings.stripe,
+                        AppStrings.stripe.tr,
                         style: AppFonts.medium20.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -138,13 +138,13 @@ class _RWalletScreenState extends State<RWalletScreen> {
 
               // Submit Button
               AppButton(
-                text: AppStrings.submit,
+                text: AppStrings.submit.tr,
                 onPressed: () {
 
                   SuccessAlert.show(
                     context,
-                    title: 'Success',
-                    message: 'Payment   has been successfully send.',
+                    title: 'Success'.tr,
+                    message: 'Payment   has been successfully send.'.tr,
                   );
 
 

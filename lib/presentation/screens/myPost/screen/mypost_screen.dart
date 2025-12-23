@@ -32,11 +32,11 @@ class MyPostScreen extends StatelessWidget {
               /// 🔹 Tabs
               Obx(() => Row(
                 children: [
-                  _tabItem("Pending Post", 0),
+                  _tabItem("Pending Post".tr, 0),
                   const SizedBox(width: 10),
-                  _tabItem("Accepted Post", 1),
+                  _tabItem("Accepted Post".tr, 1),
                   const SizedBox(width: 10),
-                  _tabItem("Completed Post", 2),
+                  _tabItem("Completed Post".tr, 2),
                 ],
               )),
 
@@ -76,7 +76,7 @@ class MyPostScreen extends StatelessWidget {
           ),
           child: Center(
             child: Text(
-              title,
+              title.tr,
               style: AppFonts.regular12.copyWith(
                 color: controller.selectedIndex.value == index
                     ? AppColors.whiteColor

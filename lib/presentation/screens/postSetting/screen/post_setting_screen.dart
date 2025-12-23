@@ -64,12 +64,12 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                   ),
                   Expanded(
                     flex: 2,
-                    child: TextChipWidget(text: distance),
+                    child: TextChipWidget(text: AppStrings.distance.tr),
                   ),
                   SizedBox(width: Dimensions.w(6)),
                   Expanded(
                     flex: 2,
-                    child: TextChipWidget(text: sortBy),
+                    child: TextChipWidget(text: AppStrings.sortedBy.tr),
                   ),
                 ],
               ),
@@ -92,7 +92,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                   Padding(
                     padding: EdgeInsets.only(right: Dimensions.w(12)),
                     child: Text(
-                      "Sorted By",
+                      AppStrings.sortedBy.tr,
                       style: AppFonts.regular14.copyWith(
                         color: AppColors.blackColor,
                         fontSize: Dimensions.f(14),
@@ -108,7 +108,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        distance,
+                        AppStrings.distance.tr,
                         style: AppFonts.regular12.copyWith(
                           color: AppColors.blackColor,
                           fontSize: Dimensions.f(12),
@@ -131,7 +131,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        sortBy,
+                        AppStrings.sortedBy,
                         style: AppFonts.regular12.copyWith(
                           color: AppColors.whiteColor,
                           fontSize: Dimensions.f(12),
@@ -152,7 +152,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                       size: Dimensions.w(20), color: Colors.black54),
                   SizedBox(width: Dimensions.w(6)),
                   Text(
-                    "Distance",
+                    AppStrings.distance.tr,
                     style: AppFonts.regular14.copyWith(
                         color: Colors.black87, fontSize: Dimensions.f(14)),
                   ),
@@ -250,7 +250,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                   ),
                   Flexible(
                     child: Text(
-                      "Post Type",
+                      AppStrings.postType.tr,
                       style: TextStyle(
                         fontSize: Dimensions.f(16),
                         fontWeight: FontWeight.w500,
@@ -267,7 +267,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                 children: [
                   SettingRow(
                     icon: Icons.local_shipping_outlined,
-                    label: 'Movie/Deliver',
+                    label: AppStrings.moveDeliver.tr,
                     isActive: movieDeliver,
                     onChanged: (value) {
                       setState(() {
@@ -277,7 +277,8 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                   ),
                   SettingRow(
                     icon: Icons.shopping_cart_outlined,
-                    label: 'Buy/Deliver',
+                    //label: 'Buy/Deliver',
+                    label: AppStrings.buyDeliver.tr,
                     isActive: buyDeliver,
                     onChanged: (value) {
                       setState(() {
@@ -287,7 +288,8 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                   ),
                   SettingRow(
                     icon: Icons.recycling_outlined,
-                    label: 'Recycle',
+                    //label: 'Recycle',
+                    label: AppStrings.recycle.tr,
                     isActive: recycle,
                     onChanged: (value) {
                       setState(() {

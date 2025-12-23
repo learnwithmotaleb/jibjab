@@ -113,7 +113,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
                       // Payment Method Text
                       Text(
-                        AppStrings.stripe,
+                        AppStrings.stripe.tr,
                         style: AppFonts.medium16.copyWith(fontSize: Dimensions.f(16)),
                       ),
 
@@ -121,7 +121,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
                       // Amount / Details Placeholder
                       Text(
-                        AppStrings.stripe,
+                        AppStrings.stripe.tr,
                         style: AppFonts.medium20.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -135,7 +135,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
               // Submit Button
               AppButton(
-                text: AppStrings.submit,
+                text: AppStrings.submit.tr,
                 onPressed: () {
 
                   SuccessAlert.show(

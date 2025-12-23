@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:jibjab/core/routes/route_path.dart';
 
 class ResetController extends GetxController {
   /// Text controllers
@@ -32,14 +33,16 @@ class ResetController extends GetxController {
     newPasswordFocus.unfocus();
     confirmPasswordFocus.unfocus();
 
-    if (formKey.currentState!.validate()) {
+    // if (formKey.currentState!.validate()) {
+    //
+    //   String newPassword = newPasswordController.text.trim();
+    //   String confirmPassword = confirmPasswordController.text.trim();
+    //
+    //   print("Reset Password called with: $newPassword / $confirmPassword");
+    //
+    // }
 
-      String newPassword = newPasswordController.text.trim();
-      String confirmPassword = confirmPasswordController.text.trim();
-
-      print("Reset Password called with: $newPassword / $confirmPassword");
-
-    }
+    Get.offAllNamed(RoutePath.login);
   }
 
   @override

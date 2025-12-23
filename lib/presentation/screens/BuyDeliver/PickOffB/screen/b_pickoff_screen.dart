@@ -85,7 +85,7 @@ class _BPickoffScreenState extends State<BPickoffScreen> {
                     child: Row(
                       children: [
                         Text(
-                          "Can help carry at pick-up",
+                          "Can help carry at pick-up".tr,
                           style: AppFonts.regular14.copyWith(
                             color: AppColors.blackColorOrginal,
                           ),
@@ -125,7 +125,7 @@ class _BPickoffScreenState extends State<BPickoffScreen> {
                 Padding(
                   padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                   child: AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
                       Get.toNamed(RoutePath.bPickupMap);
                     },

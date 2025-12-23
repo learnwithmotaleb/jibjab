@@ -72,7 +72,7 @@ class _GTitleDescriptionScreenState extends State<GTitleDescriptionScreen> {
                   ),
                   Obx(
                         () => Text(
-                      "${controller.titleCount.value}/${controller.titleMax}",
+                      "${controller.titleCount.value}/${controller.titleMax}".tr,
                       style: TextStyle(
                         fontSize: Dimensions.f(12),
                         color: Colors.grey,
@@ -88,7 +88,7 @@ class _GTitleDescriptionScreenState extends State<GTitleDescriptionScreen> {
                 controller: controller.titleController,
                 maxLength: controller.titleMax,
                 decoration: InputDecoration(
-                  hintText: AppStrings.enterTitle,
+                  hintText: AppStrings.enterTitle.tr,
                   counterText: "",
                   border: _border(),
                   enabledBorder: _border(),
@@ -113,18 +113,6 @@ class _GTitleDescriptionScreenState extends State<GTitleDescriptionScreen> {
 
               SizedBox(height: Dimensions.h(4)),
 
-              // Obx(
-              //       () => Align(
-              //     alignment: Alignment.centerRight,
-              //     child: Text(
-              //       "${controller.descriptionCount.value}/${controller.descriptionMax}",
-              //       style: TextStyle(
-              //         fontSize: Dimensions.f(12),
-              //         color: Colors.grey,
-              //       ),
-              //     ),
-              //   ),
-              // ),
 
               SizedBox(height: Dimensions.h(8)),
 

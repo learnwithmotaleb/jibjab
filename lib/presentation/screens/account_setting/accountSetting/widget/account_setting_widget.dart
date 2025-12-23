@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 
@@ -44,7 +45,7 @@ class AccountSettingMenuTile extends StatelessWidget {
             Icon(icon, color: iconColor, size: 24),
             const SizedBox(width: 12),
             Text(
-              title,
+              title.tr,
               style: AppFonts.medium16.copyWith(fontSize: fontSize,
               color: textColor),
             ),

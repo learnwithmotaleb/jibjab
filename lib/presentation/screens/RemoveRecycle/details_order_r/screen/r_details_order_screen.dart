@@ -40,13 +40,13 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
       child: Row(
         children: [
           Text(
-            "$label: ",
+            "$label: ".tr,
             style: AppFonts.medium16.copyWith(
               color: AppColors.primaryColor,
             ),
           ),
           Text(
-            value,
+            value.tr,
             style: AppFonts.medium16.copyWith(
               color: AppColors.blackColor,
             ),
@@ -100,7 +100,7 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
                   ),
                   Expanded(
                     child: Text(
-                      "Remove 20 paint tine",
+                      "Remove 20 paint tine".tr,
                       style: AppFonts.medium16.copyWith(
                         color: AppColors.blackColor,
                       ),
@@ -122,7 +122,7 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
               SizedBox(height: Dimensions.h(4)),
 
               Text(
-                "Jibjab is your all-in-one delivery whether you need to move items.",
+                "Jibjab is your all-in-one delivery whether you need to move items.".tr,
                 style: AppFonts.regular14.copyWith(
                   color: AppColors.blackColor,
                   height: 1.4,
@@ -221,7 +221,7 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "I hereby acknowledge that what is being picked up ",
+                          "I hereby acknowledge that what is being picked up ".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
@@ -261,7 +261,7 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
 
               /// 🔹 Action Button
               AppButton(
-                text: AppStrings.publishPost,
+                text: AppStrings.publishPost.tr,
                 onPressed: () {
                   Get.toNamed(RoutePath.rWallet);
                 },

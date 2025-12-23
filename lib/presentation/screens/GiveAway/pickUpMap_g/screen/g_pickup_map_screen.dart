@@ -68,7 +68,7 @@ class _GPickupMapScreenState extends State<GPickupMapScreen> {
                     ),
                     SizedBox(height: Dimensions.h(4)),
                     Text(
-                      "Pick Up",
+                      AppStrings.pickUp.tr,
                       style: AppFonts.regular14.copyWith(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -85,7 +85,7 @@ class _GPickupMapScreenState extends State<GPickupMapScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
               child: AppButton(
-                text: AppStrings.continueButton,
+                text: AppStrings.continueButton.tr,
                 onPressed: () {
                   Get.toNamed(
                     RoutePath.gDropLocation

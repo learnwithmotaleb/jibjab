@@ -11,6 +11,7 @@ import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
 import 'package:jibjab/utils/static_strings/static_strings.dart';
 
+import '../../../../../global/language/controller/language_controller.dart';
 import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../../widgets/customAlertDialog/custome_alert_dialog.dart';
 import '../../../adviser/widget/info_row.dart';
@@ -28,8 +29,13 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   final ProfileController controller = Get.put(ProfileController());
 
+
+
+
   @override
   Widget build(BuildContext context) {
+    final lc = LanguageController.to;
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -44,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       backgroundColor: AppColors.primaryColor,
                       backgroundImage: AssetImage(AppImages.appLogo),
                     ),
-                    Text(AppStrings.profile, style: AppFonts.regular16.copyWith(
+                    Text(AppStrings.profile.tr, style: AppFonts.regular16.copyWith(
                       color: AppColors.blackColorOrginal,
                       fontWeight: FontWeight.w500,
                     )),
@@ -73,8 +79,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 SizedBox(height: Dimensions.h(30)),
                 AppButton(
-                  text: AppStrings.login,
-                  onPressed: () {},
+                  text: AppStrings.login.tr,
+                  onPressed: () {
+                    Get.toNamed(RoutePath.login);
+                  },
                   borderRadius: 20,
                 ),
                 SizedBox(height: Dimensions.h(30)),
@@ -87,9 +95,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: AppColors.profileColor,
                   ),
                   child: Stack(
+
                     children: [
+
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: lc.isEnglish.value ?  MainAxisAlignment.start : MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(AppImages.motalebProfile),
@@ -144,7 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Icon(Icons.edit, color: AppColors.primaryColor),
                                 SizedBox(width: Dimensions.w(10)),
                                 Text(
-                                  AppStrings.editProfile,
+                                  AppStrings.editProfile.tr,
                                   style: AppFonts.medium10.copyWith(
                                     color: AppColors.primaryColor
                                   ),

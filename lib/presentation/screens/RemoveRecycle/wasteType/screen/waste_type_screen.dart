@@ -26,7 +26,6 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       bottomNavigationBar: Container(
@@ -45,7 +44,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
                     SizedBox(width: Dimensions.w(8)),
                     Expanded(
                       child: Text(
-                        'Select all relevant waste types. Select at least one category to continue.',
+                        'Select all relevant waste types. Select at least one category to continue.'.tr,
                         style: AppFonts.regular12,
                       ),
                     ),
@@ -56,7 +55,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: Dimensions.w(18)),
                 child: AppButton(
-                  text: AppStrings.continueButton,
+                  text: AppStrings.continueButton.tr,
                   onPressed: () {
                     Get.toNamed(RoutePath.rTitleDescription);
                   },
@@ -73,7 +72,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: Dimensions.h(5)),
-              const TopBar(title: "Waste Type"),
+               TopBar(title: AppStrings.wasteType.tr),
               SizedBox(height: Dimensions.h(16)),
               const Divider(),
               Padding(
@@ -81,7 +80,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("All waste is sorted", style: AppFonts.regular16),
+                    Text(AppStrings.allWasteIsSorted.tr, style: AppFonts.regular16),
                     Switch(
                       thumbColor: MaterialStateProperty.all(AppColors.grayColor),
                       activeTrackColor: AppColors.primaryColor,
@@ -101,7 +100,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: Dimensions.w(18), vertical: Dimensions.h(5)),
                 child: Text(
-                  'Unsorted collection takes longer to recycle and may cost more.',
+                  AppStrings.unsortedCollectionTakes.tr,
                   style: TextStyle(color: Colors.grey, fontSize: Dimensions.h(12)),
                 ),
               ),

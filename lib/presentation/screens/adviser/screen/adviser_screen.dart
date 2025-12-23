@@ -104,7 +104,7 @@ class AdviserScreen extends StatelessWidget {
 
               /// ---------------- MORE INFO TITLE ----------------
               Text(
-                AppStrings.moreInfo,
+                AppStrings.moreInfo.tr,
                 style: AppFonts.medium16.copyWith(
                   color: AppColors.blackColor,
                 ),
@@ -126,7 +126,7 @@ class AdviserScreen extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  AppStrings.moreInfoAdviser,
+                  AppStrings.moreInfoAdviser.tr,
                   softWrap: true,
                   style: AppFonts.regular14.copyWith(
                     color: AppColors.blackColor,

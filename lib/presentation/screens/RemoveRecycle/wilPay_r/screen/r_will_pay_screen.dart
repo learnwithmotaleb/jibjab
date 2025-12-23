@@ -75,7 +75,7 @@ class _RWillPayScreenState extends State<RWillPayScreen> {
                 onTap: ()async{
                   String? input = await CustomInputDialog.show(
                     context: context,
-                    title: "Redeem",
+                    title: AppStrings.redeem.tr,
                     body: "Enter campaign code to redeem",
                     hintText: "Add campaign code here...",
                   );

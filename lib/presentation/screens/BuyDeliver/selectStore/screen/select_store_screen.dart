@@ -53,7 +53,7 @@ class _SelectStoreScreenState extends State<SelectStoreScreen> {
                 onChanged: controller.onSearchChanged,
                 style: AppFonts.regular16,
                 decoration: InputDecoration(
-                  hintText: AppStrings.searchAddress,
+                  hintText: AppStrings.searchAddress.tr,
                   hintStyle: AppFonts.regular16.copyWith(
                     color: AppColors.grayColorAddNewPostScreen,
                   ),
@@ -86,7 +86,7 @@ class _SelectStoreScreenState extends State<SelectStoreScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    AppStrings.recentlyUsedAddresses,
+                    AppStrings.recentlyUsedAddresses.tr,
                     style: AppFonts.regular16.copyWith(
                       color: AppColors.primaryColor,
                     ),
@@ -101,7 +101,7 @@ class _SelectStoreScreenState extends State<SelectStoreScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        "123",
+                        "123".tr,
                         style: AppFonts.regular16.copyWith(
                           color: AppColors.blackColorOrginal,
                         ),
@@ -128,7 +128,7 @@ class _SelectStoreScreenState extends State<SelectStoreScreen> {
                   itemCount: addresses.length,
                   itemBuilder: (context, index) {
                     return addressCard(
-                      title: addresses[index],
+                      title: addresses[index].tr,
                       isSelected: selectedIndex == index,
                       onTap: () {
                         setState(() {

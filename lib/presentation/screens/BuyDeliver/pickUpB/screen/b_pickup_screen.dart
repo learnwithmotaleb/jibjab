@@ -52,7 +52,7 @@ class _BPickupScreenState extends State<BPickupScreen> {
                 onChanged: controller.onSearchChanged,
                 style: AppFonts.regular16,
                 decoration: InputDecoration(
-                  hintText: AppStrings.searchAddress,
+                  hintText: AppStrings.searchAddress.tr,
                   hintStyle: AppFonts.regular16.copyWith(
                     color: AppColors.grayColorAddNewPostScreen,
                   ),
@@ -84,7 +84,7 @@ class _BPickupScreenState extends State<BPickupScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  AppStrings.recentlyUsedAddresses,
+                  AppStrings.recentlyUsedAddresses.tr,
                   style: AppFonts.regular16.copyWith(
                     color: AppColors.primaryColor,
                   ),
@@ -113,7 +113,7 @@ class _BPickupScreenState extends State<BPickupScreen> {
               Padding(
                 padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                 child: AppButton(
-                  text: AppStrings.continueButton,
+                  text: AppStrings.continueButton.tr,
                   onPressed: () {
                     // if (selectedIndex != -1) {
                     //   // Do something with selected address

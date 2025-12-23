@@ -67,7 +67,7 @@ class _PickOffScreenState extends State<PickOffScreen> {
                         SizedBox(height: Dimensions.h(0)),
                     itemBuilder: (context, index) {
                       return addLocationCardWidget(
-                        title: addresses[index],
+                        title: addresses[index].tr,
                         isSelected: selectedIndex == index,
                         onTap: () {
                           setState(() => selectedIndex = index);
@@ -127,7 +127,7 @@ class _PickOffScreenState extends State<PickOffScreen> {
                 Padding(
                   padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                   child: AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
                      Get.toNamed(RoutePath.pickUpLocation);
                     },

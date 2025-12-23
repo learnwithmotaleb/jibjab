@@ -45,7 +45,7 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
               onAdd: () {},
             ),
             Spacer(),
-            AppButton(text: AppStrings.continueButton, onPressed: (){
+            AppButton(text: AppStrings.continueButton.tr, onPressed: (){
 
               Get.toNamed(RoutePath.bTitleDescription);
 

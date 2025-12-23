@@ -84,7 +84,7 @@ class _BDropoffScreenState extends State<BDropoffScreen> {
                     child: Row(
                       children: [
                         Text(
-                          "Can help carry at pick-up",
+                          "Can help carry at pick-up".tr,
                           style: AppFonts.regular14.copyWith(
                             color: AppColors.blackColorOrginal,
                           ),
@@ -124,7 +124,7 @@ class _BDropoffScreenState extends State<BDropoffScreen> {
                 Padding(
                   padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                   child: AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
                       Get.toNamed(RoutePath.bDropOffMap);
                     },

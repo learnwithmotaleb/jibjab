@@ -75,7 +75,7 @@ class _PostScreenState extends State<PostScreen> {
                       child: Padding(
                         padding: const EdgeInsets.only(right: 6),
                         child: TextChipWidget(
-                          text: distance,
+                          text: distance.tr,
                           height: 30,
                         ),
                       ),
@@ -87,7 +87,7 @@ class _PostScreenState extends State<PostScreen> {
                       child: Padding(
                         padding: const EdgeInsets.only(right: 6),
                         child: TextChipWidget(
-                          text: sortBy,
+                          text: sortBy.tr,
                           height: 30,
                         ),
                       ),
@@ -136,34 +136,39 @@ class _PostScreenState extends State<PostScreen> {
                     final item = items[index];
                     return Stack(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: Image.asset(
-                                item['image']!,
-                                fit: BoxFit.cover,
-                                width: double.infinity,
-                              ),
-                            ),
-                            SizedBox(height: 5),
-                            Text(
-                              item['title']!,
-                              style: AppFonts.regular12
-                            ),
-                            SizedBox(height: 5),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Icon(Icons.shopping_cart_outlined,size: 12),
-                                Text(
-                                  item['price']!,
-                                  style: AppFonts.regular12,
+                        GestureDetector(
+                          onTap:(){
+                            Get.toNamed(RoutePath.details);
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Image.asset(
+                                  item['image']!,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
                                 ),
-                              ],
-                            ),
-                            SizedBox(height: 20),
-                          ],
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                item['title']!.tr,
+                                style: AppFonts.regular12
+                              ),
+                              SizedBox(height: 5),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.shopping_cart_outlined,size: 12),
+                                  Text(
+                                    item['price']!.tr,
+                                    style: AppFonts.regular12,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 20),
+                            ],
+                          ),
                         ),
                         Positioned(
                           top: 0,
@@ -183,7 +188,7 @@ class _PostScreenState extends State<PostScreen> {
                               ),
                             ),
                             child: Text(
-                              item['status']!,
+                              item['status']!.tr,
                               style: AppFonts.regular12.copyWith(
                                 color: AppColors.whiteColor
                               )

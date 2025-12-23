@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:jibjab/core/routes/route_path.dart';
 
 import '../../../../../utils/app_colors/app_colors.dart';
@@ -42,7 +43,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
                   minimumSize: Size.zero,
                 ),
                 child: Text(
-                  AppStrings.cancelButton,
+                  AppStrings.cancelButton.tr,
                   style: AppFonts.regular16.copyWith(
                     color: AppColors.primaryColor
                   )
@@ -54,7 +55,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
               /// Title
               Center(
                 child: Text(
-                  AppStrings.selectTimeSlotTitle,
+                  AppStrings.selectTimeSlotTitle.tr,
                   style: AppFonts.medium18,
                   textAlign: TextAlign.center,
                 ),
@@ -68,7 +69,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
                   horizontal: Dimensions.w(32),
                 ),
                 child: Text(
-                  AppStrings.selectTimeSlotSubTitle,
+                  AppStrings.selectTimeSlotSubTitle.tr,
                   style: AppFonts.regular12,
                   textAlign: TextAlign.center,
                   softWrap: true,
@@ -95,7 +96,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
                     child: RSelectItem(
                       isSelected: selectedIndex == 1,
                       icon: Icons.assistant_photo,
-                      title: AppStrings.anyTime,
+                      title: AppStrings.anyTime.tr,
                       onTap: () {
                         setState(() => selectedIndex = 1);
                       },
@@ -109,7 +110,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
               /// Info Text
               Center(
                 child: Text(
-                  AppStrings.hideExactTimeSlot,
+                  AppStrings.hideExactTimeSlot.tr,
                   style: AppFonts.regular16.copyWith(
                     color: AppColors.primaryColor,
                   ),
@@ -124,7 +125,7 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
                   bottom: Dimensions.h(16),
                 ),
                 child: AppButton(
-                  text: AppStrings.continueButton,
+                  text: AppStrings.continueButton.tr,
                   onPressed: () {
                     Get.toNamed(RoutePath.rPickUp);
                   },

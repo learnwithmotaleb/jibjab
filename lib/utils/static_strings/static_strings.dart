@@ -308,6 +308,24 @@ class AppStrings {
   static const String transactionItemList = "Transaction List Items";
 
 
+  //====================================Waste Type=== =================
+
+  static const String wasteType = "Waste Type";
+  static const String allWasteIsSorted = "All waste is sorted";
+  static const String unsortedCollectionTakes = 'Unsorted collection takes longer to recycle and may cost more.';
+
+
+
+
+
+
+  //====================================Waste Type=== =================
+
+  static const String canHelpCarryAtPickUP =  "Can help carry at pick-up";
+  static const String promoteForVideoDescription =  "How JibJab Checks Recycling Verified Recycling for Peace of Mind. At JibJab, we ensure that every recycling task is fully verified with GPS, time stamps, and photos. This means you can trust that your items are being handled properly and responsibly. Safe. Transparent. Reliable.";
+
+
+
 
 
 

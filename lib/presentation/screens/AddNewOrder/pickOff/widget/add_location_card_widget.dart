@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 
 import '../../../../../utils/app_colors/app_colors.dart';
 import '../../../../../utils/app_fonts/app_fonts.dart';
@@ -34,7 +35,7 @@ Widget addLocationCardWidget({
           /// Left Text
           Expanded(
             child: Text(
-              title,
+              title.tr,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: AppFonts.regular16.copyWith(

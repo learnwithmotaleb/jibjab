@@ -1,8 +1,11 @@
 
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:jibjab/utils/device_utils/device_utils.dart';
 
 import 'core/routes/route_path.dart';
 import 'core/routes/routes.dart';
@@ -12,19 +15,23 @@ import 'global/language/controller/language_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark, // Android
-      statusBarBrightness: Brightness.light,    // iOS
-    ),
-  );
+  // SystemChrome.setSystemUIOverlayStyle(
+  //   const SystemUiOverlayStyle(
+  //     statusBarColor: Colors.transparent,
+  //     statusBarIconBrightness: Brightness.dark, // Android
+  //     statusBarBrightness: Brightness.light,    // iOS
+  //   ),
+  // );
+
+  // DevicePreview(
+  //   enabled: !kReleaseMode,
+  //   builder: (context) => MyApp(), // Wrap your app
+  // );
 
   initGetx();
-
   final LanguageController languageController = Get.put(LanguageController());
   await languageController.loadLanguage();
-
+  DeviceUtils.lockDevicePortrait();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -46,13 +53,24 @@ class MyApp extends StatelessWidget {
               : const Locale('ar', 'SA');
 
           return GetMaterialApp(
+
+            //========For Device Preview============
+            // useInheritedMediaQuery: true,
+            // locale: DevicePreview.locale(context),
+            // builder: DevicePreview.appBuilder,
+
+
+            //========For General Preview============
+
             debugShowCheckedModeBanner: false,
             theme: lightTheme,
-            locale: locale,
+           locale: locale,
             fallbackLocale: const Locale('en', 'US'),
             translations: Language(),
             getPages: AppRouter.pages,
             initialRoute: RoutePath.splash,
+
+
           );
         });
       },

@@ -63,7 +63,7 @@ class AccountSettingScreen extends StatelessWidget {
                 onTap: () {
                   CustomAlertDialog.show(
                     context: context,
-                    title: AppStrings.deleteAccount,
+                    title: AppStrings.deleteAccount.tr,
                     body: "Are you sure delete account?",
                     onYes: () {
                       Get.toNamed(RoutePath.login);

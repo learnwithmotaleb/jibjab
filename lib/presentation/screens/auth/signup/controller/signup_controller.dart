@@ -42,8 +42,8 @@ class SignupController extends GetxController {
 
   /// Signup action
   void login() {
-    // TODO: navigate to Signup screen
-    Get.toNamed(RoutePath.login);
+
+    Get.offAllNamed(RoutePath.login);
   }
 
   @override

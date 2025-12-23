@@ -67,7 +67,7 @@ class _RPickOffScreenState extends State<RPickOffScreen> {
                         SizedBox(height: Dimensions.h(0)),
                     itemBuilder: (context, index) {
                       return addLocationCardWidget(
-                        title: addresses[index],
+                        title: addresses[index].tr,
                         isSelected: selectedIndex == index,
                         onTap: () {
                           setState(() => selectedIndex = index);
@@ -87,7 +87,7 @@ class _RPickOffScreenState extends State<RPickOffScreen> {
                     child: Row(
                       children: [
                         Text(
-                          "Can help carry at pick-up",
+                         AppStrings.canHelpCarryAtPickUp.tr,
                           style: AppFonts.regular14.copyWith(
                             color: AppColors.blackColorOrginal,
                           ),

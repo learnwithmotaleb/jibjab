@@ -25,91 +25,93 @@ void showCategoryAlert(
       return Center(
         child: Container(
           width: Dimensions.w(346),
-          height: Dimensions.h(401),
+          height: Dimensions.h(500),
           padding: EdgeInsets.all(Dimensions.w(16)),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(0),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-
-              SizedBox(height: Dimensions.h(18)),
-
-              /// Title
-              Text(
-                data.topTitle,
-                style: AppFonts.regular12.copyWith(
-                    decoration: TextDecoration.none
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+            
+                SizedBox(height: Dimensions.h(18)),
+            
+                /// Title
+                Text(
+                  data.topTitle,
+                  style: AppFonts.regular12.copyWith(
+                      decoration: TextDecoration.none
+                  ),
                 ),
-              ),
-
-              SizedBox(height: Dimensions.h(20)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-
-                  Column(
-                    children: [
-                      Image.asset(data.icon1,),
-                      Text(data.text1,style:AppFonts.regular12.copyWith(
-                          decoration: TextDecoration.none
-                      )),
-
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(data.icon2),
-                      Text(data.text2,style:AppFonts.regular12.copyWith(
-                          decoration: TextDecoration.none
-                      )),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Image.asset(data.icon3),
-                      Text(data.text3,style:AppFonts.regular12.copyWith(
-                          decoration: TextDecoration.none
-                      )),
-                    ],
-                  ),
-
-                  Column(
-                    children: [
-                      Image.asset(data.icon4),
-                      Text(data.text4,style:AppFonts.regular12.copyWith(
-                          decoration: TextDecoration.none
-                      )),
-                    ],
+            
+                SizedBox(height: Dimensions.h(20)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+            
+                    Column(
+                      children: [
+                        Image.asset(data.icon1,),
+                        Text(data.text1,style:AppFonts.regular12.copyWith(
+                            decoration: TextDecoration.none
+                        )),
+            
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(data.icon2),
+                        Text(data.text2,style:AppFonts.regular12.copyWith(
+                            decoration: TextDecoration.none
+                        )),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Image.asset(data.icon3),
+                        Text(data.text3,style:AppFonts.regular12.copyWith(
+                            decoration: TextDecoration.none
+                        )),
+                      ],
+                    ),
+            
+                    Column(
+                      children: [
+                        Image.asset(data.icon4),
+                        Text(data.text4,style:AppFonts.regular12.copyWith(
+                            decoration: TextDecoration.none
+                        )),
+                      ],
+                    )
+            
+            
+            
+                  ],
+                ),
+            
+                SizedBox(height: Dimensions.h(20)),
+            
+                /// Center Title
+                Text(
+                  data.centerTitle,
+                  style: AppFonts.medium20.copyWith(
+                      decoration: TextDecoration.none
                   )
-
-
-
-                ],
-              ),
-
-              SizedBox(height: Dimensions.h(20)),
-
-              /// Center Title
-              Text(
-                data.centerTitle,
-                style: AppFonts.medium20.copyWith(
-                    decoration: TextDecoration.none
-                )
-              ),
-
-              SizedBox(height: Dimensions.h(20)),
-
-              /// Options
-              ...data.options.map((item) => _OptionItem(text: item)),
-
-              SizedBox(height: Dimensions.h(20)),
-              AppButton(text: AppStrings.continueButton, onPressed:data.onContinue)
-
-
-            ],
+                ),
+            
+                SizedBox(height: Dimensions.h(20)),
+            
+                /// Options
+                ...data.options.map((item) => _OptionItem(text: item)),
+            
+                SizedBox(height: Dimensions.h(20)),
+                AppButton(text: AppStrings.continueButton, onPressed:data.onContinue)
+            
+            
+              ],
+            ),
           ),
         ),
       );

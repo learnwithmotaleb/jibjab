@@ -55,7 +55,7 @@ class _InviteScreenState extends State<InviteScreen> {
 
                 /// ---------------- TITLE ----------------
                 Text(
-                  AppStrings.invite,
+                  AppStrings.invite.tr,
                   style: AppFonts.regular12.copyWith(
                     color: AppColors.blackColor,
                     fontWeight: FontWeight.w500,
@@ -65,14 +65,14 @@ class _InviteScreenState extends State<InviteScreen> {
                 SizedBox(height: Dimensions.h(20)),
 
                 Text(
-                  AppStrings.inviteSubTitle1,
+                  AppStrings.inviteSubTitle1.tr,
                   style: AppFonts.regular12,
                 ),
 
                 SizedBox(height: Dimensions.h(16)),
 
                 Text(
-                  AppStrings.inviteSubTitle2,
+                  AppStrings.inviteSubTitle2.tr,
                   style: AppFonts.regular12,
                 ),
 
@@ -86,7 +86,7 @@ class _InviteScreenState extends State<InviteScreen> {
                 /// ---------------- IMAGE TITLE ----------------
                 Center(
                   child: Text(
-                    AppStrings.inviteImageTile,
+                    AppStrings.inviteImageTile.tr,
                     style: AppFonts.regular20.copyWith(
                       color: AppColors.primaryColor,
                     ),
@@ -101,7 +101,7 @@ class _InviteScreenState extends State<InviteScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        AppStrings.inviteUrl,
+                        AppStrings.inviteUrl.tr,
                         style: AppFonts.regular16,
                       ),
                       SizedBox(width: Dimensions.w(8)),
@@ -122,7 +122,7 @@ class _InviteScreenState extends State<InviteScreen> {
                       horizontal: Dimensions.w(20),
                     ),
                     child: Text(
-                      AppStrings.inviteTextCenter,
+                      AppStrings.inviteTextCenter.tr,
                       textAlign: TextAlign.center,
                       style: AppFonts.regular16,
                     ),
@@ -133,7 +133,7 @@ class _InviteScreenState extends State<InviteScreen> {
 
                 /// ---------------- BUTTON ----------------
                 AppButton(
-                  text: AppStrings.inviteButton,
+                  text: AppStrings.inviteButton.tr,
                   onPressed: () {
                     Get.toNamed(RoutePath.adviser);
                   },

@@ -121,7 +121,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               /// User Button
               GestureDetector(
                 onTap: (){
-                  Get.toNamed(RoutePath.login);
+                  //Get.toNamed(RoutePath.login);
+                 Get.toNamed(RoutePath.language);
 
                 },
                 child: Container(

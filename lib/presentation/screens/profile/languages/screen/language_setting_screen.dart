@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:get/get.dart';
 import 'package:jibjab/presentation/widgets/app_button/app_button.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
-
 import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../../../utils/static_strings/static_strings.dart';
 import '../../../details/widget/top_bar.dart';
+import '../controller/language_setting_controller.dart';
 
-class LanguageSettingScreen extends StatefulWidget {
-  const LanguageSettingScreen({super.key});
 
-  @override
-  State<LanguageSettingScreen> createState() => _LanguageSettingScreenState();
-}
+class LanguageSettingScreen extends StatelessWidget {
+  LanguageSettingScreen({super.key});
 
-class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
-  String selectedLanguage = 'ar';
+  // Initialize the LanguageSettingController
+  final LanguageSettingController lsc =
+  Get.put(LanguageSettingController());
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,6 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
             children: [
               SizedBox(height: Dimensions.h(10)),
               TopBar(title: AppStrings.language.tr),
-
               SizedBox(height: Dimensions.h(32)),
 
               /// Language title
@@ -41,7 +38,6 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-
               SizedBox(height: Dimensions.h(16)),
 
               /// English
@@ -50,7 +46,6 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
                 title: AppStrings.english,
                 value: 'en',
               ),
-
               SizedBox(height: Dimensions.h(12)),
 
               /// Arabic
@@ -62,14 +57,13 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
 
               const Spacer(),
 
-              /// Submit button
+              /// Submit button (optional, can remove if instant update)
               AppButton(
                 text: AppStrings.submit,
                 onPressed: () {
-                  // 👈 existing language submit logic here
+                  Get.back();
                 },
               ),
-
               SizedBox(height: Dimensions.h(100)),
             ],
           ),
@@ -83,12 +77,8 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
     required String title,
     required String value,
   }) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedLanguage = value;
-        });
-      },
+    return Obx(() => GestureDetector(
+      onTap: () => lsc.changeLanguage(value),
       child: Container(
         width: Dimensions.w(356),
         height: Dimensions.h(48),
@@ -99,7 +89,7 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4),
           border: Border.all(
-            color: selectedLanguage == value
+            color: lsc.selectedLanguage.value == value
                 ? AppColors.primaryColor
                 : AppColors.primaryColor,
           ),
@@ -109,38 +99,32 @@ class _LanguageSettingScreenState extends State<LanguageSettingScreen> {
             /// Flag
             CircleAvatar(
               radius: 28,
-
-              backgroundImage: AssetImage(
-                flag
-
-              ),
+              backgroundImage: AssetImage(flag),
             ),
-
             SizedBox(width: Dimensions.w(15)),
 
             /// Text
             Expanded(
               child: Text(
                 title,
-                style: AppFonts.regular16.copyWith(
-                  fontWeight: FontWeight.w400
-                )
+                style: AppFonts.regular16
+                    .copyWith(fontWeight: FontWeight.w400),
               ),
             ),
 
             /// Select icon
             Icon(
-              selectedLanguage == value
+              lsc.selectedLanguage.value == value
                   ? Icons.check_circle
                   : Icons.radio_button_unchecked,
               size: 20,
-              color: selectedLanguage == value
-                  ?AppColors.primaryColor
+              color: lsc.selectedLanguage.value == value
+                  ? AppColors.primaryColor
                   : AppColors.languageSettingCheckUnCheckColor,
             ),
           ],
         ),
       ),
-    );
+    ));
   }
 }

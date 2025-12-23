@@ -17,9 +17,8 @@ class NavigationBarScreen extends StatelessWidget {
 
   final List<Widget> pages = [
     HomeScreen(),
-    MyPostScreen(),
+    PostScreen(),
     AllCategoriesScreen(),
-    //PostScreen(),
     ProfileScreen()
   ];
 
@@ -54,10 +53,10 @@ class NavigationBarScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  navItem(AppImages.home, "Home", 0, size: 40),
-                  navItem(AppImages.post, "Post", 1, size: 40),
-                  navItem(AppImages.addNewPost, "Add", 2, size: 40),
-                  navItem(AppImages.profile, "Profile", 3, size: 40),
+                  navItem(AppImages.home.tr, "Home", 0, size: 40),
+                  navItem(AppImages.post.tr, "Post", 1, size: 40),
+                  navItem(AppImages.addNewPost.tr, "Add", 2, size: 40),
+                  navItem(AppImages.profile.tr, "Profile", 3, size: 40),
                 ],
               ),
             ),

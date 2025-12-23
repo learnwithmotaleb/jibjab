@@ -172,7 +172,7 @@ class _GAddNewPostScreenState extends State<GAddNewPostScreen> {
 
               /// 🔹 Continue Button
               AppButton(
-                text: AppStrings.continueButton,
+                text: AppStrings.continueButton.tr,
                 onPressed: () {
                   Get.toNamed(RoutePath.gSelectTimeSlot);
                 },

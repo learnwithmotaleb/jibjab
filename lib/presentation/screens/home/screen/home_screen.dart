@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Map<String, String>> earnList = [
     {
-      "title": AppStrings.earnCreditsByInvitingFriends,
+      "title": AppStrings.earnCreditsByInvitingFriends.tr,
       "image": AppImages.earnImage,
     },
   ];
@@ -50,13 +50,12 @@ class _HomeScreenState extends State<HomeScreen> {
   final Map<String, dynamic> videoSectionData = {
     "videoPath": "assets/icons/video.mp4", // Later this can be a URL from server
     "title": AppStrings.howExplainIn20,
-    "description": "How JibJab Checks Recycling Verified Recycling for Peace of Mind. At JibJab, we ensure that every recycling task is fully verified with GPS, time stamps, and photos. This means you can trust that your items are being handled properly and responsibly. Safe. Transparent. Reliable."
+    "description": AppStrings.promoteForVideoDescription
   };
 
 
 
 
-  var description = "How JibJab Checks Recycling Verified Recycling for Peace of Mind At JibJab, we ensure that every recycling task is fully verified with GPS, time stamps, and photos. This means you can trust that your items are being handled properly and responsibly. Safe. Transparent. Reliable.";
 
 
   @override
@@ -116,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: size.height * 0.03),
 
                 /// --- Section Title ---
-                Text(AppStrings.activePostInYourArea, style: AppFonts.medium20),
+                Text(AppStrings.activePostInYourArea.tr, style: AppFonts.medium20),
                 SizedBox(height: size.height * 0.01),
 
                 /// --- Horizontal List ---
@@ -125,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: size.height * 0.05),
 
                 /// --- Latest News Section ---
-                Text(AppStrings.lastestNews, style: AppFonts.medium20),
+                Text(AppStrings.lastestNews.tr, style: AppFonts.medium20),
                 SizedBox(height: size.height * 0.02),
 
                 /// --- News List ---
@@ -153,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.toNamed(RoutePath.readMore);
                     },
                     child: Text(
-                      AppStrings.readMore,
+                      AppStrings.readMore.tr,
                       style: AppFonts.mediumBold18,
                     ),
                   ),
@@ -188,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {
                       Get.toNamed(RoutePath.invite);
                     },
-                    label: AppStrings.inviteAndEarn,
+                    label: AppStrings.inviteAndEarn.tr,
                   ),
                 ),
                 SizedBox(height: Dimensions.h(24)),
@@ -235,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           children: [
-            Text(title, style: AppFonts.regular12),
+            Text(title.tr, style: AppFonts.regular12),
             const SizedBox(height: 8),
             Row(
               children: [
@@ -247,7 +246,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(width: 5),
                 Expanded(
                   child: Text(
-                    subTitle,
+                    subTitle.tr,
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
@@ -361,9 +360,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         const SizedBox(height: 20),
-        Text(title, style: AppFonts.mediumPrimary16),
+        Text(title.tr, style: AppFonts.mediumPrimary16),
         const SizedBox(height: 20),
-        Text(subtitle, style: AppFonts.regularSubTitle12),
+        Text(subtitle.tr, style: AppFonts.regularSubTitle12),
       ],
     );
   }

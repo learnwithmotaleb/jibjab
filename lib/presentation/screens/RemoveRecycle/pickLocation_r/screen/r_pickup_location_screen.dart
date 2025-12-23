@@ -47,7 +47,7 @@ class _RPickUpLocationScreenState extends State<RPickUpLocationScreen> {
                 onChanged: controller.onSearchChanged,
                 style: AppFonts.regular16,
                 decoration: InputDecoration(
-                  hintText: AppStrings.searchAddress,
+                  hintText: AppStrings.searchAddress.tr,
                   hintStyle: AppFonts.regular16.copyWith(
                     color: AppColors.grayColorAddNewPostScreen,
                   ),
@@ -79,7 +79,7 @@ class _RPickUpLocationScreenState extends State<RPickUpLocationScreen> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  AppStrings.recentlyUsedAddresses,
+                  AppStrings.recentlyUsedAddresses.tr,
                   style: AppFonts.regular16.copyWith(
                     color: AppColors.primaryColor,
                   ),
@@ -93,7 +93,7 @@ class _RPickUpLocationScreenState extends State<RPickUpLocationScreen> {
                   itemCount: addresses.length,
                   itemBuilder: (context, index) {
                     return addressCard(
-                      title: addresses[index],
+                      title: addresses[index].tr,
                       isSelected: selectedIndex == index,
                       onTap: () {
                         setState(() {
@@ -108,7 +108,7 @@ class _RPickUpLocationScreenState extends State<RPickUpLocationScreen> {
               Padding(
                 padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                 child: AppButton(
-                  text: AppStrings.continueButton,
+                  text: AppStrings.continueButton.tr,
                   onPressed: () {
                     // if (selectedIndex != -1) {
                     //   // Do something with selected address

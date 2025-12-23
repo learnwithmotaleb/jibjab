@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:get/get_utils/src/get_utils/get_utils.dart';
@@ -11,6 +12,7 @@ import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
 import 'package:jibjab/utils/static_strings/static_strings.dart';
 
+import '../../../../../core/routes/route_path.dart';
 import '../../../../../utils/app_fonts/app_fonts.dart';
 import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../details/widget/top_bar.dart';
@@ -190,7 +192,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
 
               SizedBox(height: Dimensions.h(80)),
-              AppButton(text: AppStrings.update, onPressed: (){})
+              AppButton(text: AppStrings.update, onPressed: (){
+
+                Get.offAllNamed(RoutePath.login);
+              })
             ],
           ),
         )

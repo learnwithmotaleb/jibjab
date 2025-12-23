@@ -69,7 +69,7 @@ class _RDropOffScreenState extends State<RDropOffScreen> {
                         SizedBox(height: Dimensions.h(0)),
                     itemBuilder: (context, index) {
                       return addLocationCardWidget(
-                        title: addresses[index],
+                        title: addresses[index].tr,
                         isSelected: selectedIndex == index,
                         onTap: () {
                           setState(() => selectedIndex = index);
@@ -89,7 +89,7 @@ class _RDropOffScreenState extends State<RDropOffScreen> {
                     child: Row(
                       children: [
                         Text(
-                          "Can help carry at pick-up",
+                          AppStrings.canHelpCarryAtPickUp.tr,
                           style: AppFonts.regular14.copyWith(
                             color: AppColors.blackColorOrginal,
                           ),
@@ -129,7 +129,7 @@ class _RDropOffScreenState extends State<RDropOffScreen> {
                 Padding(
                   padding: EdgeInsets.only(bottom: Dimensions.h(16)),
                   child: AppButton(
-                    text: AppStrings.continueButton,
+                    text: AppStrings.continueButton.tr,
                     onPressed: () {
                       Get.toNamed(RoutePath.rDropOffMap);
                     },

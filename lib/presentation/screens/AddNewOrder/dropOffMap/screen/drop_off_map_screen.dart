@@ -66,7 +66,7 @@ class _DropOffMapScreenState extends State<DropOffMapScreen> {
                     ),
                     SizedBox(height: Dimensions.h(4)),
                     Text(
-                      AppStrings.dropOff,
+                      AppStrings.dropOff.tr,
                       style: AppFonts.regular14.copyWith(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,

@@ -83,8 +83,8 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
                     padding: EdgeInsets.only(bottom: Dimensions.h(20)),
                     child: buildInfoCard(
                       imageUrl: item["image"]!,
-                      title: item["title"]!,
-                      subtitle: item["subtitle"]!,
+                      title: item["title"]!.tr,
+                      subtitle: item["subtitle"]!.tr,
                     ),
                   );
                 },
@@ -120,7 +120,7 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
 
         /// Title
         Text(
-          title,
+          title.tr,
           style: AppFonts.medium20.copyWith(
             fontSize: Dimensions.f(20),
           ),
@@ -130,7 +130,7 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
 
         /// Subtitle / Paragraph
         Text(
-          subtitle,
+          subtitle.tr,
           style: AppFonts.regularSubTitle12,
         ),
       ],

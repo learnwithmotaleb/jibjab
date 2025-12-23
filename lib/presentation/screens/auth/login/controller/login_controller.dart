@@ -56,7 +56,6 @@ class LoginController extends GetxController {
 
   @override
   void onClose() {
-    // Dispose controllers & focus nodes to prevent memory leaks
     emailController.dispose();
     passwordController.dispose();
     emailFocus.dispose();

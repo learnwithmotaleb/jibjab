@@ -68,7 +68,7 @@ class _PickupLocationScreenState extends State<PickupLocationScreen> {
                     ),
                     SizedBox(height: Dimensions.h(4)),
                     Text(
-                      "Pick Up",
+                      "Pick Up".tr,
                       style: AppFonts.regular14.copyWith(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
@@ -85,7 +85,7 @@ class _PickupLocationScreenState extends State<PickupLocationScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
               child: AppButton(
-                text: AppStrings.continueButton,
+                text: AppStrings.continueButton.tr,
                 onPressed: () {
                   Get.toNamed(
                     RoutePath.dropLocation

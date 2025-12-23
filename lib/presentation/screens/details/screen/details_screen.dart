@@ -106,7 +106,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             fontSize: 16,
                           )
                       ),
-                      Text(" Gaming Chair",
+                      Text(" Gaming Chair".tr,
                           style: AppFonts.medium16.copyWith(
                             color: AppColors.blackColor,
                             fontSize: 16,
@@ -130,7 +130,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             fontSize: 16,
                           )
                       ),
-                      Text("Jibjab is your ",
+                      Text("Jibjab is your ".tr,
                         style: AppFonts.medium16.copyWith(
                           color: AppColors.blackColor,
                           fontSize: 16,
@@ -143,7 +143,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
                     ],
                   ),
-                  Text("your all-in-one delivery whether you need to move items.",
+                  Text("your all-in-one delivery whether you need to move items.".tr,
                     style: AppFonts.medium16.copyWith(
                       color: AppColors.blackColor,
                       fontSize: 16,
@@ -190,7 +190,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
               /// 🔹 Advertiser section
               Text(
-                AppStrings.advertiser,
+                AppStrings.advertiser.tr,
                 style: AppFonts.medium16.copyWith(
                   color: AppColors.primaryColor,
                   fontSize: 17,
@@ -268,7 +268,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       Icon(Icons.share, color: AppColors.primaryColor, size: 24),
                       SizedBox(width: 12),
                       Text(
-                        "Share",
+                        AppStrings.share.tr,
                         style: AppFonts.medium16.copyWith(fontSize: 16),
                       ),
                       Spacer(), // pushes the arrow icon to the far right
@@ -300,7 +300,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     Icon(Icons.info_outline, color: AppColors.primaryColor, size: 24),
                     SizedBox(width: 12),
                     Text(
-                      AppStrings.reportAdToJibjab,
+                      AppStrings.reportAdToJibjab.tr,
                       style: AppFonts.medium16.copyWith(fontSize: 16),
                     ),
                     Spacer(), // pushes the arrow icon to the far right
@@ -311,7 +311,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             ),
 
             SizedBox(height: Dimensions.h(60)),
-            AppButton(text: AppStrings.pickUp,
+            AppButton(text: AppStrings.pickUp.tr,
                 onPressed: (){
                   Get.toNamed(RoutePath.pay);
                 }

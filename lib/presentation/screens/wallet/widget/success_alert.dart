@@ -74,7 +74,8 @@ class SuccessAlert {
                   child: AppButton(text: "Ok",width: 78,height: 34,
                       borderRadius: 3,
                       onPressed: (){
-                    Get.toNamed(RoutePath.login);
+
+                        Get.offAllNamed(RoutePath.login);
                   }),
                 ),
               ],

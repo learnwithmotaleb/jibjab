@@ -75,12 +75,12 @@ class ImportantScreen extends StatelessWidget {
 
                 SizedBox(height: Dimensions.h(25)),
                 Text(
-                  AppStrings.importantTerms,
+                  AppStrings.importantTerms.tr,
                   style: AppFonts.medium16,
                 ),
                 SizedBox(height: Dimensions.h(15)),
                 Text(
-                  AppStrings.importantTermSubTitle,
+                  AppStrings.importantTermSubTitle.tr,
                   style: AppFonts.regular12,
                 ),
                 SizedBox(height: Dimensions.h(25)),
@@ -93,7 +93,7 @@ class ImportantScreen extends StatelessWidget {
                     child: Obx(
                           () => TermTile(
                         imagePath: terms[index]["image"]!,
-                        text: terms[index]["text"]!,
+                        text: terms[index]["text"]!.tr,
 
                         value: controller.checkedTerms[index] ?? false,
                         onChanged: (val) => controller.toggleCheck(index, val),
@@ -107,7 +107,7 @@ class ImportantScreen extends StatelessWidget {
                 SizedBox(height: Dimensions.h(50)),
 
                 AppButton(
-                  text: AppStrings.verifyWithBank,
+                  text: AppStrings.verifyWithBank.tr,
                   onPressed: () {
                     Get.toNamed(RoutePath.invite);
                   },

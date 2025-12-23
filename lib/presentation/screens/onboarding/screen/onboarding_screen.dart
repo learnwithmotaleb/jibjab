@@ -47,7 +47,7 @@ class OnboardingScreen extends GetView<OnboardingController> {
                             horizontal: Dimensions.w(20),
                           ),
                           child: Text(
-                            data["title"]!,
+                            data["title"]!.tr,
                             textAlign: TextAlign.center,
                             style: AppFonts.medium16.copyWith(
                               fontSize: Dimensions.f(18),

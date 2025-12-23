@@ -38,7 +38,7 @@ class CustomerReviewScreen extends StatelessWidget {
 
               /// 🔹 Reviews Title
               Text(
-                "Reviews",
+                AppStrings.reviews.tr,
                 style: AppFonts.regular20.copyWith(
                   fontSize: 25,
                   fontWeight: FontWeight.bold
@@ -85,7 +85,7 @@ class CustomerReviewScreen extends StatelessWidget {
                 height: Dimensions.h(48),
                 borderRadius: 12,
                 onPressed: () {},
-                label: AppStrings.viewMore,
+                label: AppStrings.viewMore.tr,
               ),
 
               SizedBox(height: Dimensions.h(24)),
@@ -108,7 +108,7 @@ class CustomerReviewScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "234 Ratings",
+              "234 Ratings".tr,
               style: AppFonts.medium16.copyWith(
                 color: AppColors.pendingBackground,
                 fontWeight: FontWeight.bold
@@ -175,7 +175,7 @@ class CustomerReviewScreen extends StatelessWidget {
               children: [
                 /// Name + Date
                       Text(
-                                      name,
+                                      name.tr,
                                       style: AppFonts.medium20,
                                     ),
                 Row(
@@ -187,7 +187,7 @@ class CustomerReviewScreen extends StatelessWidget {
 
 
                     Text(
-                      date,
+                      date.tr,
                       style: AppFonts.regular16.copyWith(
                         color: AppColors.blackColor,
                         fontWeight: FontWeight.bold
@@ -203,7 +203,7 @@ class CustomerReviewScreen extends StatelessWidget {
 
                 /// Review Text
                 Text(
-                  review,
+                  review.tr,
                   style: AppFonts.regular12.copyWith(
                     height: 1.4,
                   ),

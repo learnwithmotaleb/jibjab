@@ -100,7 +100,7 @@ class _GDetailsOrderScreenState extends State<GDetailsOrderScreen> {
                   ),
                   Expanded(
                     child: Text(
-                      "Remove 20 paint tine",
+                      "Remove 20 paint tine".tr,
                       style: AppFonts.medium16.copyWith(
                         color: AppColors.blackColor,
                       ),
@@ -122,7 +122,7 @@ class _GDetailsOrderScreenState extends State<GDetailsOrderScreen> {
               SizedBox(height: Dimensions.h(4)),
 
               Text(
-                "Jibjab is your all-in-one delivery whether you need to move items.",
+                "Jibjab is your all-in-one delivery whether you need to move items.".tr,
                 style: AppFonts.regular14.copyWith(
                   color: AppColors.blackColor,
                   height: 1.4,
@@ -221,32 +221,32 @@ class _GDetailsOrderScreenState extends State<GDetailsOrderScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "I hereby acknowledge that what is being picked up ",
+                          "I hereby acknowledge that what is being picked up ".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
                         SizedBox(height: Dimensions.h(16)),
 
                         Text(
-                          "corresponds with the picture (s) and ",
+                          "corresponds with the picture (s) and ".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
                         SizedBox(height: Dimensions.h(16)),
                         Text(
-                          "description in the post",
+                          "description in the post".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
                         SizedBox(height: Dimensions.h(16)),
                         Text(
-                          "Does not contain anything toxic or harmful",
+                          "Does not contain anything toxic or harmful".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
                         SizedBox(height: Dimensions.h(16)),
                         Text(
-                          "will be available at the time for pick up",
+                          "will be available at the time for pick up".tr,
                           style: AppFonts.regular14,
                           softWrap: true,
                         ),
@@ -261,7 +261,7 @@ class _GDetailsOrderScreenState extends State<GDetailsOrderScreen> {
 
               /// 🔹 Action Button
               AppButton(
-                text: AppStrings.publishPost,
+                text: AppStrings.publishPost.tr,
                 onPressed: () {
                   Get.toNamed(RoutePath.gWallet);
                 },
