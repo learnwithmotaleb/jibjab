@@ -64,15 +64,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: AppColors.whiteColor,
-        shadowColor: AppColors.whiteColor,
-        title: Text(
-          AppStrings.appName.tr,
-          style: AppFonts.mediumBold20.copyWith(fontSize: 22),
-        ),
-      ),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   backgroundColor: AppColors.whiteColor,
+      //   shadowColor: AppColors.whiteColor,
+      //   title: Text(
+      //     AppStrings.appName.tr,
+      //     style: AppFonts.mediumBold20.copyWith(fontSize: 22),
+      //   ),
+      // ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -80,13 +80,13 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // /// --- App Title ---
-                // Center(
-                //   child: Text(
-                //     AppStrings.appName.tr,
-                //     style: AppFonts.mediumBold20.copyWith(fontSize: 22),
-                //   ),
-                // ),
+                /// --- App Title ---
+                Center(
+                  child: Text(
+                    AppStrings.appName.tr,
+                    style: AppFonts.mediumBold20.copyWith(fontSize: 22),
+                  ),
+                ),
                 SizedBox(height: size.height * 0.03),
 
                 /// --- Stats Row ---
@@ -95,19 +95,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     _buildStatCard(
                       "15 sec.",
                       AppImages.timer,
-                      "Average\nResponse",
+                      "Average Response",
                     ),
                     const SizedBox(width: 8),
                     _buildStatCard(
                       "+1,27m.",
                       AppImages.deliver,
-                      "Deliveries\n& Pickups",
+                      "Deliveries & Pickups",
                     ),
                     const SizedBox(width: 8),
                     _buildStatCard(
                       "~774,000",
                       AppImages.reduced,
-                      "Reduced\nCar Rides",
+                      "Reduced Car Rides",
                     ),
                   ],
                 ),
@@ -216,39 +216,51 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /// --- Stat Card ---
   Widget _buildStatCard(String title, String? imagePath, String subTitle) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        padding: EdgeInsets.symmetric(
+          vertical: Dimensions.h(10),
+          horizontal: Dimensions.w(10),
+        ),
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(5),
+          borderRadius: BorderRadius.circular(Dimensions.r(5)),
           boxShadow: [
             BoxShadow(
               color: Colors.black12.withOpacity(0.05),
-              blurRadius: 8,
-              offset: const Offset(0, 3),
+              blurRadius: Dimensions.r(8),
+              offset: Offset(0, Dimensions.h(3)),
             ),
           ],
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title.tr, style: AppFonts.regular12),
-            const SizedBox(height: 8),
+            Text(
+              title.tr,
+              style: AppFonts.regular12.copyWith(
+                fontSize: Dimensions.f(12),
+              ),
+            ),
+            SizedBox(height: Dimensions.h(8)),
             Row(
               children: [
                 CircleAvatar(
-                  radius: 18,
+                  radius: Dimensions.r(18),
                   backgroundColor: AppColors.whiteColor,
-                  child: Image.asset(imagePath!),
+                  child: Image.asset(
+                    imagePath!,
+                    width: Dimensions.w(20),
+                    height: Dimensions.h(20),
+                  ),
                 ),
-                const SizedBox(width: 5),
+                SizedBox(width: Dimensions.w(5)),
                 Expanded(
                   child: Text(
                     subTitle.tr,
-                    style: const TextStyle(
-                      fontSize: 12,
+                    style: TextStyle(
+                      fontSize: Dimensions.f(10),
                       fontWeight: FontWeight.w400,
                       color: AppColors.primaryColor,
                     ),
@@ -261,6 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 
   /// --- Horizontal List of Items ---
   Widget buildHorizontalList(List<Map<String, dynamic>> items) {

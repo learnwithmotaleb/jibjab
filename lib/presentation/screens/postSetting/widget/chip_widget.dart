@@ -23,12 +23,19 @@ class TextChipWidget extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: backgroundColor ?? AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(2),
       ),
-      child: Text(
-        text,
-        style: AppFonts.regular12.copyWith(
-          color: textColor ?? AppColors.whiteColor,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: Center(
+          child: Text(
+            text,
+            softWrap: true,
+            style: TextStyle(
+              fontSize: 8,
+              color: AppColors.whiteColor
+            )
+          ),
         ),
       ),
     );

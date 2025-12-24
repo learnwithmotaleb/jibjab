@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
+import 'package:jibjab/utils/static_strings/static_strings.dart';
 
 class TimerWidget extends StatefulWidget {
   const TimerWidget({super.key, required this.onResendCode});
@@ -71,27 +73,31 @@ class _TimerWidgetState extends State<TimerWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Didn’t get a code? ',
-          ),
-          SizedBox(width: 10,),
-          InkWell(
-            onTap: () {
-              if (showResend) {
-                widget.onResendCode();
-                resetTimer();
-              }
-            },
-            child: Text(
-              showResend ? 'Resend Code' : formatTime(totalTimeInSeconds),
-              style: AppFonts.regular14,
-
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              AppStrings.dontGetCode.tr,style:
+                AppFonts.regular12,
             ),
-          ),
-        ],
+            SizedBox(width: 10,),
+            InkWell(
+              onTap: () {
+                if (showResend) {
+                  widget.onResendCode();
+                  resetTimer();
+                }
+              },
+              child: Text(
+                showResend ? AppStrings.resendCode.tr : formatTime(totalTimeInSeconds),
+                style: AppFonts.regular14,
+        
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -27,73 +27,75 @@ class _PickupLocationScreenState extends State<PickupLocationScreen> {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            /// 🔹 Top spacing
-            SizedBox(height: Dimensions.h(16)),
-
-            /// 🔹 App Bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: TopBar(title: AppStrings.pickUp.tr),
-            ),
-
-            SizedBox(height: Dimensions.h(16)),
-
-            /// 🔹 Map Section
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                /// Map Image
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
-                  child: Image.asset(
-                    AppImages.pickupLocationImage,
-                    width: double.infinity,
-                    height: 600,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-
-                /// Pick up marker
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      Icons.location_on,
-                      color: AppColors.redColor,
-                      size: 32,
-                    ),
-                    SizedBox(height: Dimensions.h(4)),
-                    Text(
-                      "Pick Up".tr,
-                      style: AppFonts.regular14.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.blackLightColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-
-            /// 🔹 Bottom Section
-            SizedBox(height: Dimensions.h(60)),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-              child: AppButton(
-                text: AppStrings.continueButton.tr,
-                onPressed: () {
-                  Get.toNamed(
-                    RoutePath.dropLocation
-                  );
-                },
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// 🔹 Top spacing
+              SizedBox(height: Dimensions.h(16)),
+          
+              /// 🔹 App Bar
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: TopBar(title: AppStrings.pickUp.tr),
               ),
-            ),
-          ],
+          
+              SizedBox(height: Dimensions.h(16)),
+          
+              /// 🔹 Map Section
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  /// Map Image
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: Image.asset(
+                      AppImages.pickupLocationImage,
+                      width: double.infinity,
+                      height: 500,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+          
+                  /// Pick up marker
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        color: AppColors.redColor,
+                        size: 32,
+                      ),
+                      SizedBox(height: Dimensions.h(4)),
+                      Text(
+                        "Pick Up".tr,
+                        style: AppFonts.regular14.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.blackLightColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+          
+              /// 🔹 Bottom Section
+              SizedBox(height: Dimensions.h(40)),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                child: AppButton(
+                  text: AppStrings.continueButton.tr,
+                  onPressed: () {
+                    Get.toNamed(
+                      RoutePath.dropLocation
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:jibjab/core/routes/route_path.dart';
 import 'package:jibjab/presentation/widgets/app_button/app_button.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
+import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
 
 class ConfirmDialog extends StatelessWidget {
@@ -29,7 +30,7 @@ class ConfirmDialog extends StatelessWidget {
 
       // TITLE
       title: Text(
-        title,
+        title,style: AppFonts.regular12,
       ),
 
 
@@ -41,8 +42,14 @@ class ConfirmDialog extends StatelessWidget {
             height: 200,
             fit: BoxFit.cover,
           ),
-          Text(
-            message
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                message,style: AppFonts.regular12,
+              ),
+            ),
           ),
         ],
       ),
@@ -50,12 +57,39 @@ class ConfirmDialog extends StatelessWidget {
       // BUTTONS
       actionsAlignment: MainAxisAlignment.spaceEvenly,
       actions: [
-        AppButton(text: "Cancel", borderRadius: 5, onPressed: (){
-          Get.back();
-        },width: 130, height: 40,),
-        AppButton(text: "Confirm", borderRadius: 5, onPressed: (){
-         Get.toNamed(RoutePath.shoppingList);
-        },width: 130, height: 40,),
+        GestureDetector(
+          onTap: (){
+            Get.back();
+          },
+          child: Container(
+            width: 100, height: 30,
+            decoration: BoxDecoration(
+              color: AppColors.primaryColor,
+              borderRadius: BorderRadius.circular(5)
+
+            ) ,
+            child:Center(child: Text("Cancel",style: AppFonts.regular14.copyWith(
+              color: AppColors.whiteColor
+            ),),)
+          ),
+        ),
+        GestureDetector(
+          onTap: (){
+            Get.back();
+            Get.toNamed(RoutePath.shoppingList);
+          },
+          child: Container(
+            width: 100, height: 30,
+            decoration: BoxDecoration(
+              color: AppColors.primaryColor,
+              borderRadius: BorderRadius.circular(5)
+
+            ) ,
+            child:Center(child: Text("Confirm",style: AppFonts.regular14.copyWith(
+              color: AppColors.whiteColor
+            ),),)
+          ),
+        ),
       ],
     );
   }

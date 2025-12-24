@@ -186,7 +186,7 @@ class LoginScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const SizedBox(
-                                  width: 100,
+                                  width: 50,
                                   child: Divider(thickness: 1, color: Colors.grey),
                                 ),
                                 Padding(
@@ -198,7 +198,7 @@ class LoginScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const SizedBox(
-                                  width: 100,
+                                  width: 50,
                                   child: Divider(thickness: 1, color: Colors.grey),
                                 ),
                               ],

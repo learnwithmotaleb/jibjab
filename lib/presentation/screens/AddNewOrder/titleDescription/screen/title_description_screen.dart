@@ -88,7 +88,7 @@ class _TitleDescriptionScreenState extends State<TitleDescriptionScreen> {
                 controller: controller.titleController,
                 maxLength: controller.titleMax,
                 decoration: InputDecoration(
-                  hintText: AppStrings.enterTitle,
+                  hintText: AppStrings.enterTitle.tr,
                   counterText: "",
                   border: _border(),
                   enabledBorder: _border(),

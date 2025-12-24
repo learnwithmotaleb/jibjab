@@ -7,6 +7,7 @@ import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/assets_image/app_images.dart';
 
+import '../../../../utils/dimensions/dimensions.dart';
 import '../../../../utils/static_strings/static_strings.dart';
 import '../../details/widget/top_bar.dart';
 import '../../postSetting/widget/chip_widget.dart';
@@ -36,8 +37,6 @@ class _PostScreenState extends State<PostScreen> {
     AppImages.homeItem3,
     AppImages.homeItem4,
   ];
-  String distance = "50 km";
-  String sortBy = "Newest";
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +52,7 @@ class _PostScreenState extends State<PostScreen> {
 
 
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8), // 🔹 row padding
+                padding: EdgeInsets.symmetric(horizontal: Dimensions.w(8)), // row padding
                 child: Row(
                   children: [
 
@@ -61,10 +60,10 @@ class _PostScreenState extends State<PostScreen> {
                     ...List.generate(
                       iconItems.length,
                           (index) => Padding(
-                        padding: const EdgeInsets.only(right: 6),
+                        padding: EdgeInsets.only(right: Dimensions.w(6)),
                         child: CircleIconWidget(
                           image: iconItems[index],
-                          size: 48, // 🔹 slightly bigger icon box
+                          size: Dimensions.w(48), // responsive icon box
                         ),
                       ),
                     ),
@@ -73,10 +72,10 @@ class _PostScreenState extends State<PostScreen> {
                     Expanded(
                       flex: 2,
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 6),
+                        padding: EdgeInsets.only(right: Dimensions.w(6)),
                         child: TextChipWidget(
-                          text: distance.tr,
-                          height: 30,
+                          text: AppStrings.distance.tr,
+                          height: Dimensions.h(30), // responsive chip height
                         ),
                       ),
                     ),
@@ -85,10 +84,10 @@ class _PostScreenState extends State<PostScreen> {
                     Expanded(
                       flex: 2,
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 6),
+                        padding: EdgeInsets.only(right: Dimensions.w(6)),
                         child: TextChipWidget(
-                          text: sortBy.tr,
-                          height: 30,
+                          text: AppStrings.sortedBy.tr,
+                          height: Dimensions.h(30), // responsive chip height
                         ),
                       ),
                     ),
@@ -99,25 +98,25 @@ class _PostScreenState extends State<PostScreen> {
                         Get.toNamed(RoutePath.postSetting);
                       },
                       child: Container(
-                      height: 48,
-                      width: 48,
-                      decoration: BoxDecoration(
-                        color: AppColors.whiteColor,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      padding: const EdgeInsets.all(8),
-                      child: Image.asset(
-                        AppImages.homeItem7,
-                        width: 16,
-                        height: 16,
-                        fit: BoxFit.contain,
+                        height: Dimensions.w(48), // responsive square
+                        width: Dimensions.w(48),
+                        decoration: BoxDecoration(
+                          color: AppColors.whiteColor,
+                          borderRadius: BorderRadius.circular(Dimensions.r(14)),
+                        ),
+                        padding: EdgeInsets.all(Dimensions.w(8)),
+                        child: Image.asset(
+                          AppImages.homeItem7,
+                          width: Dimensions.w(16),
+                          height: Dimensions.h(16),
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
-
-              ),
                   ],
                 ),
               ),
+
 
 
               //===================================================
