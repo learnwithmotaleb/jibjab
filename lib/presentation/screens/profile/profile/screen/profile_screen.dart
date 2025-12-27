@@ -78,7 +78,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
 
-                SizedBox(height: Dimensions.h(30)),
+                SizedBox(height: Dimensions.h(20)),
 
                 Container(
                   width: double.infinity,

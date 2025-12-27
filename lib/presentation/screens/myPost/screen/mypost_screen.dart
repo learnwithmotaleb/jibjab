@@ -29,7 +29,7 @@ class MyPostScreen extends StatelessWidget {
           child: Column(
             children: [
               TopBar(title: AppStrings.myPost.tr),
-              SizedBox(height: Dimensions.h(40)),
+              SizedBox(height: Dimensions.h(20)),
 
               /// 🔹 Tabs
               Obx(() => Row(
