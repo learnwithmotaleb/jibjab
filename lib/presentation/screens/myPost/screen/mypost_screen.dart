@@ -25,7 +25,7 @@ class MyPostScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 5),
           child: Column(
             children: [
               TopBar(title: AppStrings.myPost.tr),

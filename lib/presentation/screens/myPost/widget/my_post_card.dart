@@ -31,70 +31,69 @@ class PostCard extends StatelessWidget {
           Get.toNamed(RoutePath.details);
         }
       },
-      child: Container(
-        margin: const EdgeInsets.all(2),
-        child: Stack(
-          children: [
-            Card(
-              color: AppColors.whiteColor,
-              elevation: 1,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
+      child: Stack(
+        children: [
+          Card(
+            color: AppColors.whiteColor,
+            elevation: 1,
+            margin: EdgeInsets.symmetric(vertical: 5),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(2),
+            ),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(2),
+                  child: Padding(
+                    padding: const EdgeInsets.all(3.0),
                     child: Image.asset(
                       data["image"],
-                      width: 104,
-                      height: 112,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _row("Title", data["title"]),
-                        _row("Price", data["price"]),
-                        _row("Priority", data["priority"]),
-                        _row("Size", data["size"]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _row("Title", data["title"]),
+                      _row("Price", data["price"]),
+                      _row("Priority", data["priority"]),
+                      _row("Size", data["size"]),
 
-                        if (isCompleted)
-                          Row(
-                            children: [
-                              _completedBtn("Add Photo", true),
-                              const SizedBox(width: 8),
-                              _reviewBtn("Add Review", false),
-                            ],
-                          ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            if (!isCompleted)
-              Positioned(
-                top: 10,
-                right: 14,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: _statusColor(data["status"]),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Text(
-                    data["status"],
-                    style: AppFonts.regular12.copyWith(color: AppColors.whiteColor),
+                      if (isCompleted)
+                        Row(
+                          children: [
+                            _completedBtn("Add Photo", true),
+                            const SizedBox(width: 8),
+                            _reviewBtn("Add Review", false),
+                          ],
+                        ),
+                    ],
                   ),
                 ),
+              ],
+            ),
+          ),
+
+          if (!isCompleted)
+            Positioned(
+              top: 7,
+              right: 2,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                decoration: BoxDecoration(
+                  color: _statusColor(data["status"]),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Text(
+                  data["status"],
+                  style: AppFonts.regular12.copyWith(color: AppColors.whiteColor),
+                ),
               ),
-          ],
-        ),
+            ),
+        ],
       ),
     );
   }
