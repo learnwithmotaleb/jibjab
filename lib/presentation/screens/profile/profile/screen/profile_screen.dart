@@ -77,14 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                SizedBox(height: Dimensions.h(30)),
-                AppButton(
-                  text: AppStrings.login.tr,
-                  onPressed: () {
-                    Get.toNamed(RoutePath.login);
-                  },
-                  borderRadius: 20,
-                ),
+
                 SizedBox(height: Dimensions.h(30)),
 
                 Container(

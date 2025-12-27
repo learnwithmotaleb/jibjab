@@ -1,23 +1,36 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:jibjab/presentation/screens/myPost/widget/rating_popup_widget.dart';
+import 'package:jibjab/presentation/widgets/customAlertDialog/custome_alert_dialog.dart';
 
 import '../../../../core/routes/route_path.dart';
 import '../../../../utils/app_colors/app_colors.dart';
 import '../../../../utils/app_fonts/app_fonts.dart';
+import '../../../widgets/image_picker/image_picker_controller.dart';
+import 'image_bottom_sheet.dart';
 
 class PostCard extends StatelessWidget {
   final Map<String, dynamic> data;
 
-  const PostCard({super.key, required this.data});
+   PostCard({super.key, required this.data});
+
+  final ImagePickerController controllerImage =
+  Get.put(ImagePickerController());
+
 
   @override
   Widget build(BuildContext context) {
     final bool isCompleted = data["status"] == "Completed";
 
     return InkWell(
-      onTap: () => Get.toNamed(RoutePath.details),
+      onTap: () {
+        if (data["status"] != "Completed") {
+          Get.toNamed(RoutePath.details);
+        }
+      },
       child: Container(
         margin: const EdgeInsets.all(2),
         child: Stack(
@@ -54,7 +67,7 @@ class PostCard extends StatelessWidget {
                             children: [
                               _completedBtn("Add Photo", true),
                               const SizedBox(width: 8),
-                              _completedBtn("Add Review", false),
+                              _reviewBtn("Add Review", false),
                             ],
                           ),
                       ],
@@ -97,20 +110,57 @@ class PostCard extends StatelessWidget {
   }
 
   Widget _completedBtn(String text, bool filled) {
-    return Container(
-      width: 65,
-      height: 22,
-      decoration: BoxDecoration(
-        color: filled ? AppColors.completedBackground : AppColors.whiteColor,
-        border: filled ? null : Border.all(color: AppColors.primaryColor),
-        borderRadius: BorderRadius.circular(5),
+    return GestureDetector(
+      onTap: (){
+
+        ImagePickerBottomSheet.show(controllerImage);
+
+      },
+      child: Container(
+        width: 65,
+        height: 22,
+        decoration: BoxDecoration(
+          color: filled ? AppColors.completedBackground : AppColors.whiteColor,
+          border: filled ? null : Border.all(color: AppColors.primaryColor),
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: AppFonts.regular12.copyWith(
+              fontSize: 9,
+              color: filled ? AppColors.whiteColor : AppColors.primaryColor,
+            ),
+          ),
+        ),
       ),
-      child: Center(
-        child: Text(
-          text,
-          style: AppFonts.regular12.copyWith(
-            fontSize: 9,
-            color: filled ? AppColors.whiteColor : AppColors.primaryColor,
+    );
+  }
+
+  Widget _reviewBtn(String text, bool filled) {
+    return GestureDetector(
+      onTap: (){
+
+        Get.dialog(
+            RatingPopup());
+
+
+      },
+      child: Container(
+        width: 65,
+        height: 22,
+        decoration: BoxDecoration(
+          color: filled ? AppColors.completedBackground : AppColors.whiteColor,
+          border: filled ? null : Border.all(color: AppColors.primaryColor),
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: AppFonts.regular12.copyWith(
+              fontSize: 9,
+              color: filled ? AppColors.whiteColor : AppColors.primaryColor,
+            ),
           ),
         ),
       ),

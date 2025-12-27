@@ -25,9 +25,89 @@ class MyPostController extends GetxController {
       "status": "Pending",
       "image": AppImages.homeScreenAllStatus,
     },
+    {
+      "title": "Car Wash",
+      "price": "\$15",
+      "priority": "Medium",
+      "size": "S",
+      "status": "Pending",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Car Wash",
+      "price": "\$15",
+      "priority": "Medium",
+      "size": "S",
+      "status": "Pending",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Car Wash",
+      "price": "\$15",
+      "priority": "Medium",
+      "size": "S",
+      "status": "Pending",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Car Wash",
+      "price": "\$15",
+      "priority": "Medium",
+      "size": "S",
+      "status": "Pending",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Car Wash",
+      "price": "\$15",
+      "priority": "Medium",
+      "size": "S",
+      "status": "Pending",
+      "image": AppImages.homeScreenAllStatus,
+    },
   ];
 
   final acceptedPosts = <Map<String, dynamic>>[
+    {
+      "title": "Plumbing Work",
+      "price": "\$50",
+      "priority": "High",
+      "size": "S",
+      "status": "Accepted",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Plumbing Work",
+      "price": "\$50",
+      "priority": "High",
+      "size": "S",
+      "status": "Accepted",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Plumbing Work",
+      "price": "\$50",
+      "priority": "High",
+      "size": "S",
+      "status": "Accepted",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Plumbing Work",
+      "price": "\$50",
+      "priority": "High",
+      "size": "S",
+      "status": "Accepted",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "Plumbing Work",
+      "price": "\$50",
+      "priority": "High",
+      "size": "S",
+      "status": "Accepted",
+      "image": AppImages.homeScreenAllStatus,
+    },
     {
       "title": "Plumbing Work",
       "price": "\$50",
@@ -47,6 +127,55 @@ class MyPostController extends GetxController {
       "status": "Completed",
       "image": AppImages.homeScreenAllStatus,
     },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+    {
+      "title": "AC Repair",
+      "price": "\$80",
+      "priority": "Low",
+      "size": "S",
+      "status": "Completed",
+      "image": AppImages.homeScreenAllStatus,
+    },
+
   ];
 
   void onTabChange(int index) {
@@ -57,6 +186,7 @@ class MyPostController extends GetxController {
       curve: Curves.easeInOut,
     );
   }
+
 
   void onPageChanged(int index) {
     selectedIndex.value = index;

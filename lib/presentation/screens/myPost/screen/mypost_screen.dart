@@ -9,6 +9,7 @@ import '../../../../utils/app_colors/app_colors.dart';
 import '../../../../utils/app_fonts/app_fonts.dart';
 import '../../../../utils/dimensions/dimensions.dart';
 import '../../../../utils/static_strings/static_strings.dart';
+import '../../../widgets/image_picker/image_picker_controller.dart';
 import '../../details/widget/top_bar.dart';
 import '../controller/mypost_controller.dart';
 import '../widget/my_post_card.dart';
@@ -17,6 +18,7 @@ class MyPostScreen extends StatelessWidget {
   MyPostScreen({super.key});
 
   final controller = Get.put(MyPostController());
+
 
   @override
   Widget build(BuildContext context) {
