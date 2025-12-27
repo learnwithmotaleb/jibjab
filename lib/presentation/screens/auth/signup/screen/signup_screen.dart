@@ -116,6 +116,38 @@ class SignupScreen extends StatelessWidget {
                         },
                       ),
                       const SizedBox(height: 14),
+                      Text(AppStrings.phoneNumber.tr, style: AppFonts.medium16),
+                      const SizedBox(height: 14),
+                      TextFormField(
+                        controller: controller.phoneController,
+                        focusNode: controller.phoneFocus,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          hintText: AppStrings.enterYourPhone.tr,
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 14,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide:
+                            BorderSide(color: AppColors.primaryColor),
+                          ),
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Email cannot be empty";
+                          }
+                          if (!GetUtils.isEmail(value)) {
+                            return "Enter a valid email";
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 14),
                       /// Password
                       Text(AppStrings.password.tr, style: AppFonts.medium16),
                       const SizedBox(height: 14),

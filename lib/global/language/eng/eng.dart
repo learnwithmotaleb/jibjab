@@ -23,6 +23,11 @@ Map<String, String> english = {
   AppStrings.signInSubTitle: "Welcome Back, You've been missed.",
   AppStrings.enterYourEmail: "Enter your email",
   AppStrings.enterYourPassword: "Enter your password",
+
+  AppStrings.phone: "Phone",
+  AppStrings.enterYourPhone: "Enter your Phone",
+
+
   AppStrings.forgotPassword: "Forgot password?",
   AppStrings.signInWith: "Sign In with",
 

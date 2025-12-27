@@ -22,6 +22,68 @@ class GSelectTimeSlotScreen extends StatefulWidget {
 
 class _GSelectTimeSlotScreenState extends State<GSelectTimeSlotScreen> {
   int selectedIndex = 0;
+  Future<void> showDateTime(BuildContext context) async {
+    /// 🔹 Date Picker
+    final DateTime? pickedDate = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2100),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: ColorScheme.light(
+              primary: AppColors.primaryColor,
+              onPrimary: Colors.white,
+              onSurface: AppColors.blackColor,
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
+
+    if (pickedDate == null) return;
+
+    /// 🔹 Time Picker
+    final TimeOfDay? pickedTime = await showTimePicker(
+      context: context,
+      barrierColor: AppColors.primaryColor.withOpacity(0.3),
+      initialTime: TimeOfDay.now(),
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: ColorScheme.light(
+              primary: AppColors.primaryColor,
+              onPrimary: Colors.white,
+              onSurface: AppColors.blackColor,
+            ),
+            timePickerTheme: const TimePickerThemeData(
+              hourMinuteTextColor: AppColors.blackColorOrginal,
+              dialHandColor: AppColors.whiteColor,
+              dialBackgroundColor: Color(0xFFEFEFEF),
+            ),
+          ),
+          child: child!,
+        );
+      },
+    );
+
+    if (pickedTime == null) return;
+
+    /// 🔹 Combine Date + Time
+    final DateTime finalDateTime = DateTime(
+      pickedDate.year,
+      pickedDate.month,
+      pickedDate.day,
+      pickedTime.hour,
+      pickedTime.minute,
+    );
+
+    /// 🔹 Console Output
+    print("Selected DateTime: $finalDateTime");
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +150,7 @@ class _GSelectTimeSlotScreenState extends State<GSelectTimeSlotScreen> {
                       title: AppStrings.asSoonAsPossible.tr,
                       onTap: () {
                         setState(() => selectedIndex = 0);
+
                       },
                     ),
                   ),
@@ -99,6 +162,7 @@ class _GSelectTimeSlotScreenState extends State<GSelectTimeSlotScreen> {
                       title: AppStrings.anyTime.tr,
                       onTap: () {
                         setState(() => selectedIndex = 1);
+                        showDateTime(context);
                       },
                     ),
                   ),

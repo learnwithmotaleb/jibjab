@@ -7,12 +7,14 @@ class SignupController extends GetxController {
 
   final fullNameController = TextEditingController();
   final emailController = TextEditingController();
+  final phoneController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
 
   /// Focus nodes
   final fullNameFocus = FocusNode();
   final emailFocus = FocusNode();
+  final phoneFocus = FocusNode();
   final passwordFocus = FocusNode();
   final confirmPasswordFocus = FocusNode();
 
@@ -51,7 +53,10 @@ class SignupController extends GetxController {
     // Dispose controllers & focus nodes to prevent memory leaks
     emailController.dispose();
     passwordController.dispose();
+    phoneController.dispose();
+
     emailFocus.dispose();
+    phoneFocus.dispose();
     passwordFocus.dispose();
     super.onClose();
   }

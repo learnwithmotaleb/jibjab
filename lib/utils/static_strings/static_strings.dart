@@ -23,6 +23,8 @@ class AppStrings {
   static const String signInSubTitle = "Welcome Back, You’ve been missed.";
   static const String email = "Email";
   static const String enterYourEmail = "Enter your email";
+  static const String phone = "Phone";
+  static const String enterYourPhone = "Enter your Phone";
   static const String password = "Password";
   static const String enterYourPassword = "Enter your password";
   static const String forgotPassword = "Forgot password?";

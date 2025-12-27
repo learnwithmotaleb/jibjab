@@ -22,6 +22,9 @@ Map<String, String> arabic = {
   AppStrings.email: "البريد الإلكتروني",
   AppStrings.enterYourEmail: "أدخل بريدك الإلكتروني",
   AppStrings.password: "كلمة المرور",
+  AppStrings.phone: "هاتف",
+  AppStrings.enterYourPhone: "أدخل هاتفك",
+
   AppStrings.enterYourPassword: "أدخل كلمة المرور",
   AppStrings.forgotPassword: "هل نسيت كلمة المرور؟",
   AppStrings.signInWith: "تسجيل الدخول باستخدام",

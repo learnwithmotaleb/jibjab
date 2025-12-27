@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 
-class SettingRow extends StatelessWidget {
-  final IconData icon;
+class WestedSwitchRow extends StatelessWidget {
+  final IconData? icon;
   final String label;
   final bool isActive;
   final ValueChanged<bool>? onChanged;
 
-  const SettingRow({
+  const WestedSwitchRow({
     super.key,
-    required this.icon,
+     this.icon,
     required this.label,
     required this.isActive,
     this.onChanged,
@@ -22,13 +22,14 @@ class SettingRow extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Row(
         children: [
-          Icon(icon, size: 19, color: AppColors.blackColorOrginal),
+
           SizedBox(width: 12),
           Text(
             label,
-            style: AppFonts.regular12,
+            style: AppFonts.regular16,
           ),
           Spacer(),
+
           SizedBox(width: 8),
           Switch(
             value: isActive,

@@ -8,6 +8,9 @@ import 'package:jibjab/utils/app_fonts/app_fonts.dart';
 import 'package:jibjab/utils/dimensions/dimensions.dart';
 import 'package:jibjab/utils/static_strings/static_strings.dart';
 
+import '../../../postSetting/widget/setting_row_widget.dart';
+import '../widget/wested_switch_button_widget.dart';
+
 class WasteTypeScreen extends StatefulWidget {
   const WasteTypeScreen({super.key});
 
@@ -17,9 +20,10 @@ class WasteTypeScreen extends StatefulWidget {
 
 class _WasteTypeScreenState extends State<WasteTypeScreen> {
   bool isSelected = false;
+  bool isWested = false;
 
   final Map<String, List<String>> wasteCategories = {
-    'Recyclables': ['Glass packaging', 'Plastic bottles', 'Paper', 'Metal cans', 'Cardboard'],
+    'Recyclables': ['Glass packaging', 'Paper packaging cardboard ','Newspapers', 'Plastic bottles',"Newspapers", 'Paper', 'Metal cans', 'Cardboard'],
     'Food waste': ['Vegetable scraps', 'Fruit scraps', 'Cooked food', 'Eggshells', 'Coffee grounds'],
     'Household hazardous waste': ['Batteries', 'Paint', 'Cleaning chemicals', 'Light bulbs'],
   };
@@ -45,7 +49,8 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
                     Expanded(
                       child: Text(
                         'Select all relevant waste types. Select at least one category to continue.'.tr,
-                        style: AppFonts.regular12,
+                        style: AppFonts.regular14,
+                        softWrap: true,
                       ),
                     ),
                   ],
@@ -75,27 +80,14 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
                TopBar(title: AppStrings.wasteType.tr),
               SizedBox(height: Dimensions.h(16)),
               const Divider(),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: Dimensions.w(18)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(AppStrings.allWasteIsSorted.tr, style: AppFonts.regular16),
-                    Switch(
-                      thumbColor: MaterialStateProperty.all(AppColors.grayColor),
-                      activeTrackColor: AppColors.primaryColor,
-                      activeThumbColor: AppColors.primaryColor,
-                      inactiveTrackColor: AppColors.inactiveTrackerSwitchColor,
-                      inactiveThumbColor: AppColors.inactiveTrackerSwitchColor,
-                      value: isSelected,
-                      onChanged: (value) {
-                        setState(() {
-                          isSelected = value;
-                        });
-                      },
-                    ),
-                  ],
-                ),
+              WestedSwitchRow(
+                label: AppStrings.allWasteIsSorted.tr,
+                isActive: isWested,
+                onChanged: (value) {
+                  setState(() {
+                    isWested = value;
+                  });
+                },
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: Dimensions.w(18), vertical: Dimensions.h(5)),
@@ -107,29 +99,64 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
               const Divider(),
               SizedBox(height: Dimensions.h(10)),
 
-              // Dynamic categories
-              ...wasteCategories.entries.map((entry) {
-                return Padding(
-                  padding: EdgeInsets.only(bottom: Dimensions.h(20)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(entry.key, style: AppFonts.medium20.copyWith(color: AppColors.blackColorOrginal)),
-                      SizedBox(height: Dimensions.h(10)),
-                      ...entry.value.map((item) => Padding(
-                        padding: EdgeInsets.symmetric(vertical: Dimensions.h(6)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Expanded(child: Text(item, style: AppFonts.regular16)),
-                            Icon(Icons.info_outline_rounded, color: AppColors.primaryColor, size: Dimensions.h(20)),
-                          ],
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: wasteCategories.entries.map((entry) {
+                  return Padding(
+                    padding: EdgeInsets.only(bottom: Dimensions.h(24)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        /// 🔹 Category Title
+                        Text(
+                          entry.key,
+                          style: AppFonts.medium18.copyWith(
+                            color: AppColors.blackColorOrginal,
+                          ),
                         ),
-                      )),
-                    ],
-                  ),
-                );
-              }).toList(),
+
+                        SizedBox(height: Dimensions.h(12)),
+
+                        /// 🔹 Items List
+                        ...entry.value.asMap().entries.map((itemEntry) {
+                          final index = itemEntry.key;
+                          final item = itemEntry.value;
+                          final isLastItem = index == entry.value.length - 1;
+                          final isLastTwoItem = index == entry.value.length - 2;
+
+                          return Padding(
+                            padding: EdgeInsets.symmetric(
+                              vertical: Dimensions.h(8),
+                            ),
+                            child: Row(
+                              children: [
+                                /// 🔹 Item Text
+                                Expanded(
+                                  child: Text(
+                                    item,
+                                    style: AppFonts.regular16,
+                                  ),
+                                ),
+
+                                /// 🔹 Show icon ONLY for last item
+                                if (isLastItem)
+                                  Icon(
+                                    Icons.info_outline_rounded,
+                                    size: Dimensions.h(18),
+                                    color: AppColors.primaryColor,
+                                  ),
+                              ],
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              )
+
+
+
             ],
           ),
         ),
