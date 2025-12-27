@@ -6,5 +6,6 @@ class WelcomeBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<WelcomeController>(() => WelcomeController());
+    //hello i'm Abdul Motaleb
   }
 }
