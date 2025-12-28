@@ -12,7 +12,7 @@ import '../../../../widgets/app_button/app_button.dart';
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
-  final controller = Get.put(LoginController(), permanent: true);
+  final controller = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +122,6 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(height: 8),
                             TextFormField(
                               controller: controller.passwordController,
-                              focusNode: controller.passwordFocus,
                               obscureText: controller.isPasswordHidden.value,
                               decoration: InputDecoration(
                                 hintText: AppStrings.enterYourPassword.tr,

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:jibjab/core/routes/route_path.dart';
 import 'package:jibjab/presentation/screens/adviser/widget/info_row.dart';
+import 'package:jibjab/presentation/widgets/app_button/app_button.dart';
 
 import '../../../../utils/app_colors/app_colors.dart';
 import '../../../../utils/app_fonts/app_fonts.dart';
@@ -134,7 +136,10 @@ class AdviserScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: Dimensions.h(24)),
+              SizedBox(height: Dimensions.h(30)),
+              AppButton(text: "Back Home", onPressed: (){
+                Get.toNamed(RoutePath.navigation);
+              })
             ],
           ),
         ),

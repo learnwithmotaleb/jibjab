@@ -184,6 +184,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: 10,
                     width: 303,
                     height: 48,
+                    textStyle: AppFonts.medium16.copyWith(
+                      color: AppColors.primaryColor
+                    ),
                     onPressed: () {
                       Get.toNamed(RoutePath.invite);
                     },

@@ -64,10 +64,7 @@ class AppOutlinedButton extends StatelessWidget {
           child: Text(
             label,
             overflow: TextOverflow.ellipsis,
-            style: AppFonts.semiBold20.copyWith(
-              color: AppColors.primaryColor,
-
-            ),
+            style: textStyle,
           ),
         ),
       ],

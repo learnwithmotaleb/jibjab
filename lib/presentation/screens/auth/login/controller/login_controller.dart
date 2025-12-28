@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jibjab/core/routes/route_path.dart';
+import 'package:jibjab/utils/app_colors/app_colors.dart';
 
 class LoginController extends GetxController {
   /// Text controllers
@@ -24,17 +25,16 @@ class LoginController extends GetxController {
 
   /// Login action
   void login() {
-    // if (formKey.currentState?.validate() ?? false) {
-    //   Get.snackbar(
-    //     "Success",
-    //     "Logged in successfully!",
-    //     snackPosition: SnackPosition.BOTTOM,
-    //     backgroundColor: Colors.green.withOpacity(0.8),
-    //     colorText: Colors.white,
-    //   );
-    // }
 
     Get.toNamed(RoutePath.navigation);
+      Get.snackbar(
+        "Success",
+        "Logged in successfully!",
+        snackPosition: SnackPosition.TOP,
+        backgroundColor: AppColors.whiteColor.withOpacity(0.8),
+        colorText: AppColors.blackColor,
+
+      );
 
   }
 
@@ -43,9 +43,9 @@ class LoginController extends GetxController {
     Get.snackbar(
       "Forgot Password",
       "Redirecting to forgot password screen...",
-      snackPosition: SnackPosition.BOTTOM,
-      backgroundColor: Colors.blue.withOpacity(0.8),
-      colorText: Colors.white,
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: AppColors.whiteColor.withOpacity(0.8),
+      colorText: AppColors.blackColor,
     );
   }
 
