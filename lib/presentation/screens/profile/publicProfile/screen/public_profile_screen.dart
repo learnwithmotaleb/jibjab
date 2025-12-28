@@ -5,6 +5,7 @@ import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:jibjab/core/routes/route_path.dart';
 
 import '../../../../../utils/app_colors/app_colors.dart';
 import '../../../../../utils/app_fonts/app_fonts.dart';
@@ -13,6 +14,7 @@ import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../../../utils/static_strings/static_strings.dart';
 import '../../../../widgets/app_button/app_button.dart';
 import '../controller/public_profile_controller.dart';
+import '../widget/infoField_widget.dart';
 import '../widget/row_info_public_profile.dart';
 
 class PublicProfileScreen extends StatefulWidget {
@@ -66,7 +68,9 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
               /// ================= SAVE BUTTON =================
               AppButton(
                 text: AppStrings.save.tr,
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(RoutePath.login);
+                },
               ),
             ],
           ),
@@ -189,27 +193,33 @@ class _PublicProfileScreenState extends State<PublicProfileScreen> {
 
   /// ================= MORE INFO BOX =================
   Widget _buildMoreInfoBox() {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(Dimensions.w(12)),
-      constraints: BoxConstraints(
-        minHeight: Dimensions.h(120),
-      ),
-      decoration: BoxDecoration(
-        color: AppColors.whiteColor,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(
-          width: 1,
-          color: AppColors.blackColor.withOpacity(.15),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        InfoField(
+          label: "Registration Date",
+          hint: "12 Aug 2025",
         ),
-      ),
-      child: Text(
-        AppStrings.moreInfoAdviser.tr,
-        style: AppFonts.regular14.copyWith(
-          color: AppColors.blackColor,
-          height: 1.5,
+        SizedBox(height: Dimensions.h(12)),
+
+        InfoField(
+          label: "Campaigns",
+          hint: "24",
         ),
-      ),
+        SizedBox(height: Dimensions.h(12)),
+
+        InfoField(
+          label: "Completed Campaigns",
+          hint: "21",
+        ),
+        SizedBox(height: Dimensions.h(12)),
+
+        InfoField(
+          label: "Total Earn",
+          hint: "\$15,200",
+        ),
+      ],
     );
   }
+
 }
