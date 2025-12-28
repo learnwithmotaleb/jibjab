@@ -84,7 +84,9 @@ class CustomerReviewScreen extends StatelessWidget {
                 width: double.infinity,
                 height: Dimensions.h(48),
                 borderRadius: 12,
-                textStyle: AppFonts.medium16,
+                textStyle: AppFonts.medium16.copyWith(
+                  color: AppColors.primaryColor
+                ),
                 onPressed: () {},
                 label: AppStrings.viewMore.tr,
               ),
