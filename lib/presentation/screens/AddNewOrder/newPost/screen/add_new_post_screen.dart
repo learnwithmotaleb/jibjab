@@ -32,16 +32,15 @@ class _AddNewPostScreenState extends State<AddNewPostScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(Dimensions.w(16)),
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: Dimensions.h(16)),
 
               /// 🔹 App Bar
               TopBar(title: AppStrings.addNewPost.tr),
 
-              SizedBox(height: Dimensions.h(32)),
+              SizedBox(height: Dimensions.h(16)),
 
               /// 🔹 Main Image Preview
               LayoutBuilder(
@@ -125,7 +124,7 @@ class _AddNewPostScreenState extends State<AddNewPostScreen> {
                 }),
               ),
 
-              SizedBox(height: Dimensions.h(28)),
+              SizedBox(height: Dimensions.h(20)),
 
               /// 🔹 Bottom Action Icons
               Padding(
@@ -168,7 +167,8 @@ class _AddNewPostScreenState extends State<AddNewPostScreen> {
                 ),
               ),
 
-              const Spacer(),
+              SizedBox(height: Dimensions.h(30)),
+
 
               /// 🔹 Continue Button
               AppButton(
@@ -178,7 +178,7 @@ class _AddNewPostScreenState extends State<AddNewPostScreen> {
                 },
               ),
 
-              SizedBox(height: Dimensions.h(16)),
+              SizedBox(height: Dimensions.h(10)),
             ],
           ),
         ),
