@@ -92,7 +92,7 @@ class _TimerWidgetState extends State<TimerWidget> {
               },
               child: Text(
                 showResend ? AppStrings.resendCode.tr : formatTime(totalTimeInSeconds),
-                style: AppFonts.regular14,
+                style: AppFonts.regular14
         
               ),
             ),

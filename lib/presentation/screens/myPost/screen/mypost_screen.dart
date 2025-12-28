@@ -36,7 +36,7 @@ class MyPostScreen extends StatelessWidget {
                 children: [
                   _tabItem("Pending Post".tr, 0),
                   const SizedBox(width: 10),
-                  _tabItem("Accepted Post".tr, 1),
+                  _tabItem("Active Post".tr, 1),
                   const SizedBox(width: 10),
                   _tabItem("Completed Post".tr, 2),
                 ],

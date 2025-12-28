@@ -141,6 +141,10 @@ class AppImages {
   static const String recommendImage = "assets/icons/recommend_image.png";
 
 
+  //==============================verified===============
+  static const String verified = "assets/icons/verified.png";
+
+
 
 
 

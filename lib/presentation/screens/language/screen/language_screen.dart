@@ -183,7 +183,7 @@ class LanguageScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: Dimensions.f(18),
               fontWeight: FontWeight.bold,
-              color:  isActive ? AppColors.whiteColor : AppColors.blackColor,
+              color:  isActive ? AppColors.whiteColor : AppColors.primaryColor,
             ),
           ),
         ),

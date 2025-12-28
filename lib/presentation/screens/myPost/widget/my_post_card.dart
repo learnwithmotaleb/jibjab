@@ -103,7 +103,9 @@ class PostCard extends StatelessWidget {
       children: [
         Text("$label: ",
             style: AppFonts.medium16.copyWith(color: AppColors.primaryColor)),
-        Text(value, style: AppFonts.regular12),
+        Text(value, style: AppFonts.regular12.copyWith(
+          color: AppColors.blackColor.withOpacity(0.5)
+        )),
       ],
     );
   }
@@ -170,7 +172,7 @@ class PostCard extends StatelessWidget {
     switch (status) {
       case "Pending":
         return AppColors.pendingBackground;
-      case "Accepted":
+      case "Active":
         return AppColors.activeBackground;
       case "Completed":
         return AppColors.completedBackground;

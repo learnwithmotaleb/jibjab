@@ -6,6 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:jibjab/core/routes/route_path.dart';
+import 'package:jibjab/utils/assets_image/app_images.dart';
 
 import '../../../../core/theme/light_theme.dart' as Colors;
 import '../../../../utils/app_colors/app_colors.dart';
@@ -28,6 +29,8 @@ class _RatingPopupState extends State<RatingPopup> {
   Widget build(BuildContext context) {
 
     return Dialog(
+      backgroundColor: AppColors.whiteColor,
+
       insetPadding: EdgeInsets.symmetric(
         horizontal: Dimensions.w(20),
       ),
@@ -37,26 +40,14 @@ class _RatingPopupState extends State<RatingPopup> {
       child: SingleChildScrollView(
 
         child: Padding(
-          padding: EdgeInsets.all(Dimensions.r(16)),
+          padding: EdgeInsets.all(Dimensions.r(20)),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
 
               SizedBox(height: Dimensions.h(8)),
 
-              /// ✅ Success Icon
-              Container(
-                padding: EdgeInsets.all(Dimensions.r(14)),
-                decoration: const BoxDecoration(
-                  color: AppColors.primaryColor,
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  Icons.check,
-                  color: Colors.white,
-                  size: Dimensions.r(28),
-                ),
-              ),
+              Icon(Icons.verified,size: 80,color: AppColors.primaryColor,),
 
               SizedBox(height: Dimensions.h(8)),
 
@@ -71,7 +62,6 @@ class _RatingPopupState extends State<RatingPopup> {
 
               SizedBox(height: Dimensions.h(8)),
 
-              /// ⭐ Star Rating
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(5, (index) {
@@ -115,7 +105,9 @@ class _RatingPopupState extends State<RatingPopup> {
                 maxLines: 3,
                 decoration: InputDecoration(
                   hintText: "Write your feedback",
-                  hintStyle: AppFonts.regular14,
+                  hintStyle: AppFonts.regular14.copyWith(
+                    color: AppColors.blackColor.withOpacity(0.5)
+                  ),
                   contentPadding: EdgeInsets.symmetric(
                     horizontal: Dimensions.w(12),
                     vertical: Dimensions.h(10),
@@ -156,7 +148,7 @@ class _RatingPopupState extends State<RatingPopup> {
                         Get.toNamed(RoutePath.customerReview);
                       },
                       child: Container(
-                        height: Dimensions.h(44),
+                        height: Dimensions.h(40),
                         decoration: BoxDecoration(
                           color: AppColors.primaryColor,
                           borderRadius: BorderRadius.circular(
@@ -166,7 +158,7 @@ class _RatingPopupState extends State<RatingPopup> {
                         child: Center(
                           child: Text(
                             AppStrings.submit.tr,
-                            style: AppFonts.regular16.copyWith(
+                            style: AppFonts.regular14.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
@@ -176,14 +168,14 @@ class _RatingPopupState extends State<RatingPopup> {
                     ),
                   ),
 
-                  SizedBox(width: Dimensions.w(12)),
+                  SizedBox(width: Dimensions.w(24)),
 
                   /// Cancel
                   Expanded(
                     child: GestureDetector(
                       onTap: Get.back,
                       child: Container(
-                        height: Dimensions.h(44),
+                        height: Dimensions.h(40),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(
@@ -196,7 +188,7 @@ class _RatingPopupState extends State<RatingPopup> {
                         child: Center(
                           child: Text(
                             AppStrings.cancelButton.tr,
-                            style: AppFonts.regular16.copyWith(
+                            style: AppFonts.regular14.copyWith(
                               color: AppColors.primaryColor,
                               fontWeight: FontWeight.bold,
                             ),
@@ -206,9 +198,11 @@ class _RatingPopupState extends State<RatingPopup> {
                     ),
                   ),
 
+
+
                 ],
               ),
-              SizedBox(width: Dimensions.w(5)),
+              SizedBox(height: Dimensions.h(20)),
             ],
           ),
         ),

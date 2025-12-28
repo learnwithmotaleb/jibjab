@@ -1,4 +1,3 @@
-
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -23,23 +22,18 @@ void main() async {
   //   ),
   // );
 
-  // DevicePreview(
-  //   enabled: !kReleaseMode,
-  //   builder: (context) => MyApp(), // Wrap your app
-  // );
-
   initGetx();
   final LanguageController languageController = Get.put(LanguageController());
   await languageController.loadLanguage();
   DeviceUtils.lockDevicePortrait();
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     final LanguageController lc = Get.put(LanguageController());
 
     return ScreenUtilInit(
@@ -53,24 +47,13 @@ class MyApp extends StatelessWidget {
               : const Locale('ar', 'SA');
 
           return GetMaterialApp(
-
-            //========For Device Preview============
-            // useInheritedMediaQuery: true,
-            // locale: DevicePreview.locale(context),
-            // builder: DevicePreview.appBuilder,
-
-
-            //========For General Preview============
-
             debugShowCheckedModeBanner: false,
             theme: lightTheme,
-           locale: locale,
+            locale: locale,
             fallbackLocale: const Locale('en', 'US'),
             translations: Language(),
             getPages: AppRouter.pages,
             initialRoute: RoutePath.splash,
-
-
           );
         });
       },

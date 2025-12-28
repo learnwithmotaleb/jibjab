@@ -73,7 +73,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
     {
@@ -81,7 +81,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
     {
@@ -89,7 +89,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
     {
@@ -97,7 +97,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
     {
@@ -105,7 +105,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
     {
@@ -113,7 +113,7 @@ class MyPostController extends GetxController {
       "price": "\$50",
       "priority": "High",
       "size": "S",
-      "status": "Accepted",
+      "status": "Active",
       "image": AppImages.homeScreenAllStatus,
     },
   ];
