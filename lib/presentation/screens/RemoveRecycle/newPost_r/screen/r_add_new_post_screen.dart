@@ -32,16 +32,15 @@ class _RAddNewPostScreenState extends State<RAddNewPostScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(Dimensions.w(16)),
+          padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: Dimensions.h(16)),
 
               /// 🔹 App Bar
               TopBar(title: AppStrings.addNewPost.tr),
 
-              SizedBox(height: Dimensions.h(32)),
+              SizedBox(height: Dimensions.h(16)),
 
               /// 🔹 Main Image Preview
               LayoutBuilder(
@@ -125,7 +124,7 @@ class _RAddNewPostScreenState extends State<RAddNewPostScreen> {
                 }),
               ),
 
-              SizedBox(height: Dimensions.h(28)),
+              SizedBox(height: Dimensions.h(20)),
 
               /// 🔹 Bottom Action Icons
               Padding(
@@ -168,17 +167,18 @@ class _RAddNewPostScreenState extends State<RAddNewPostScreen> {
                 ),
               ),
 
-              const Spacer(),
+              SizedBox(height: Dimensions.h(30)),
+
 
               /// 🔹 Continue Button
               AppButton(
-                text: AppStrings.continueButton.tr,
+                text: AppStrings.continueButton,
                 onPressed: () {
                   Get.toNamed(RoutePath.rSelectTimeSlot);
                 },
               ),
 
-              SizedBox(height: Dimensions.h(16)),
+              SizedBox(height: Dimensions.h(10)),
             ],
           ),
         ),

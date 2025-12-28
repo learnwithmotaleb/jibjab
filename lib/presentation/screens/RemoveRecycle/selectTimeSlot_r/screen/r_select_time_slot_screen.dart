@@ -55,13 +55,13 @@ class _RSelectTimeSlotScreenState extends State<RSelectTimeSlotScreen> {
           data: Theme.of(context).copyWith(
             colorScheme: ColorScheme.light(
               primary: AppColors.primaryColor,
-              onPrimary: Colors.white,
+              onPrimary: AppColors.primaryColor,
               onSurface: AppColors.blackColor,
             ),
             timePickerTheme: const TimePickerThemeData(
               hourMinuteTextColor: AppColors.blackColorOrginal,
-              dialHandColor: AppColors.whiteColor,
-              dialBackgroundColor: Color(0xFFEFEFEF),
+              dialHandColor: AppColors.blackColor,
+              dialBackgroundColor: AppColors.grayColor,
             ),
           ),
           child: child!,
