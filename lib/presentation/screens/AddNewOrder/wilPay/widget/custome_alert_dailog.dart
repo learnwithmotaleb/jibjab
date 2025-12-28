@@ -74,7 +74,7 @@ class CustomInputDialog {
                 const SizedBox(height: 40),
 
                 // OK Button
-                AppButton(text: AppStrings.redeem, onPressed: (){
+                AppButton(text: AppStrings.submit, onPressed: (){
                   Navigator.pop(context);
                 },
                 borderRadius: 0,),

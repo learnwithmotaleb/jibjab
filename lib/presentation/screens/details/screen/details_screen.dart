@@ -11,6 +11,7 @@ import '../../../../utils/static_strings/static_strings.dart';
 import '../../../../utils/assets_image/app_images.dart';
 
 import '../../../widgets/app_button/app_button.dart';
+import '../../AddNewOrder/wilPay/widget/custome_alert_dailog.dart';
 import '../widget/info_row.dart';
 import '../widget/image_with_price.dart';
 import '../widget/top_bar.dart';
@@ -279,33 +280,49 @@ class _DetailsScreenState extends State<DetailsScreen> {
               ),
             ),
             SizedBox(height: Dimensions.h(10)),
-            Container(
-              width: double.infinity,
-              height: 70,
-              decoration: BoxDecoration(
-                color: AppColors.whiteColor,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 4,
-                    offset: Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Row(
-                  children: [
-                    Icon(Icons.info_outline, color: AppColors.primaryColor, size: 24),
-                    SizedBox(width: 12),
-                    Text(
-                      AppStrings.reportAdToJibjab.tr,
-                      style: AppFonts.medium16.copyWith(fontSize: 16),
+            GestureDetector(
+              onTap: ()async{
+                String? input = await CustomInputDialog.show(
+                  context: context,
+                  title: "Report",
+                  body: "Enter Your Report",
+                  hintText: "Enter Here......",
+                );
+
+                if (input != null && input.isNotEmpty) {
+                  print("User entered: $input");
+                }
+
+              },
+
+              child: Container(
+                width: double.infinity,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: AppColors.whiteColor,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 4,
+                      offset: Offset(0, 2),
                     ),
-                    Spacer(), // pushes the arrow icon to the far right
-                    Icon(Icons.arrow_forward_ios_rounded, color: AppColors.primaryColor, size: 20,fontWeight: FontWeight.bold,),
                   ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info_outline, color: AppColors.primaryColor, size: 24),
+                      SizedBox(width: 12),
+                      Text(
+                        AppStrings.reportAdToJibjab.tr,
+                        style: AppFonts.medium16.copyWith(fontSize: 16),
+                      ),
+                      Spacer(), // pushes the arrow icon to the far right
+                      Icon(Icons.arrow_forward_ios_rounded, color: AppColors.primaryColor, size: 20,fontWeight: FontWeight.bold,),
+                    ],
+                  ),
                 ),
               ),
             ),
