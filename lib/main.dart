@@ -25,7 +25,7 @@ void main() async {
   initGetx();
   final LanguageController languageController = Get.put(LanguageController());
   await languageController.loadLanguage();
-  DeviceUtils.lockDevicePortrait();
+  // DeviceUtils.lockDevicePortrait();
   runApp(const MyApp());
 }
 
