@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:jibjab/utils/app_colors/app_colors.dart';
 import 'package:jibjab/utils/device_utils/device_utils.dart';
 
 import 'core/routes/route_path.dart';
@@ -14,18 +15,18 @@ import 'global/language/controller/language_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setSystemUIOverlayStyle(
-  //   const SystemUiOverlayStyle(
-  //     statusBarColor: Colors.transparent,
-  //     statusBarIconBrightness: Brightness.dark, // Android
-  //     statusBarBrightness: Brightness.light,    // iOS
-  //   ),
-  // );
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: AppColors.whiteColor,
+      statusBarIconBrightness: Brightness.dark, // Android
+      statusBarBrightness: Brightness.light,    // iOS
+    ),
+  );
 
   initGetx();
   final LanguageController languageController = Get.put(LanguageController());
   await languageController.loadLanguage();
-  // DeviceUtils.lockDevicePortrait();
+  DeviceUtils.lockDevicePortrait();
   runApp(const MyApp());
 }
 
