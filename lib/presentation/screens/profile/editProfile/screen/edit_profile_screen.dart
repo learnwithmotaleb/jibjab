@@ -32,6 +32,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),

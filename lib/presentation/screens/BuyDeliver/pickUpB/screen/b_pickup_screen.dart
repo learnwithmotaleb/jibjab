@@ -38,7 +38,9 @@ class _BPickupScreenState extends State<BPickupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
+
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),
           child: Column(

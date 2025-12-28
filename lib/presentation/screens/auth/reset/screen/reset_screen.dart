@@ -27,6 +27,7 @@ class _ResetScreenState extends State<ResetScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

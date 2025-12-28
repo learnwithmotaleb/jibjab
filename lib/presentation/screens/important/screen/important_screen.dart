@@ -39,6 +39,7 @@ class ImportantScreen extends StatelessWidget {
     ];
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(Dimensions.w(10)),

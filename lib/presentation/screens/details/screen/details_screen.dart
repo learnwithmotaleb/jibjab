@@ -75,6 +75,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(14),

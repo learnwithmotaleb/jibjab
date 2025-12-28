@@ -37,6 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final lc = LanguageController.to;
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

@@ -23,6 +23,7 @@ class MyPostScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 5),

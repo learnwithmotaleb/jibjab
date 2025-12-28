@@ -27,6 +27,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),

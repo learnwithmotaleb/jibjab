@@ -44,6 +44,7 @@ class _RTitleDescriptionScreenState extends State<RTitleDescriptionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(

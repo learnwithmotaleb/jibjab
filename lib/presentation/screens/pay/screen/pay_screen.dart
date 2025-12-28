@@ -23,6 +23,7 @@ class _PayScreenState extends State<PayScreen> {
 
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SingleChildScrollView(
         child: Column(
           children: [

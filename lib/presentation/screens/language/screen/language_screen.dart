@@ -16,6 +16,7 @@ class LanguageScreen extends StatelessWidget {
     final lc = LanguageController.to;
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Dimensions.w(24),

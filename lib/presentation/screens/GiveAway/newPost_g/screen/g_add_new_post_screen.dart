@@ -30,6 +30,7 @@ class _GAddNewPostScreenState extends State<GAddNewPostScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Dimensions.w(16)),

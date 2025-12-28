@@ -64,15 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   backgroundColor: AppColors.whiteColor,
-      //   shadowColor: AppColors.whiteColor,
-      //   title: Text(
-      //     AppStrings.appName.tr,
-      //     style: AppFonts.mediumBold20.copyWith(fontSize: 22),
-      //   ),
-      // ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),

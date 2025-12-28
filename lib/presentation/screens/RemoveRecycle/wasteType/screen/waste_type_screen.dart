@@ -32,6 +32,7 @@ class _WasteTypeScreenState extends State<WasteTypeScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       bottomNavigationBar: Container(
         height: Dimensions.h(180),
         decoration: BoxDecoration(color: const Color(0xffF2F2F7)),

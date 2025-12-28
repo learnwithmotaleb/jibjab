@@ -5,6 +5,7 @@ import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:jibjab/core/routes/route_path.dart';
 import 'package:jibjab/presentation/widgets/app_button/app_button.dart';
 
+import '../../../../../utils/app_colors/app_colors.dart';
 import '../../../../../utils/dimensions/dimensions.dart';
 import '../../../../../utils/static_strings/static_strings.dart';
 import '../../../details/widget/top_bar.dart';
@@ -21,6 +22,7 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
 
       body: SafeArea(
         child: Padding(

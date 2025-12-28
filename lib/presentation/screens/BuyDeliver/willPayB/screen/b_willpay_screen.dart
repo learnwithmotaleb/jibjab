@@ -33,6 +33,7 @@ class _BWillPayScreenState extends State<BWillPayScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: AppColors.whiteColor,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(Dimensions.pMedium),

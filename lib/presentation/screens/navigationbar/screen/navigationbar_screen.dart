@@ -25,6 +25,7 @@ class NavigationBarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: AppColors.whiteColor,
 
       // BODY SWITCHING
       body: Obx(() => pages[navController.currentIndex.value]),

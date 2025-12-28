@@ -89,6 +89,7 @@ class _SelectTimeSlotScreenState extends State<SelectTimeSlotScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(

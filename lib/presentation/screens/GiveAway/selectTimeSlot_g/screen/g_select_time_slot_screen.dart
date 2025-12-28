@@ -88,6 +88,7 @@ class _GSelectTimeSlotScreenState extends State<GSelectTimeSlotScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(

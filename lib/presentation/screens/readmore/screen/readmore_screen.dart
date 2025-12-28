@@ -34,6 +34,7 @@ class _ReadMoreScreenState extends State<ReadMoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(Dimensions.pMedium),

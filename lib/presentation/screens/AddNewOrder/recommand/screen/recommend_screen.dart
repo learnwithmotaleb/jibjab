@@ -22,6 +22,7 @@ class _RecommendScreenState extends State<RecommendScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

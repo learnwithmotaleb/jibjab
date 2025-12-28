@@ -59,6 +59,7 @@ class _RDetailsOrderScreenState extends State<RDetailsOrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
