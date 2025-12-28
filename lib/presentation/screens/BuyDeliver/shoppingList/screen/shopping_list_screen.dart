@@ -22,39 +22,41 @@ class _ShoppingListScreenState extends State<ShoppingListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            SizedBox(height: Dimensions.h(24)),
-            TopBar(title: AppStrings.shoppingList.tr),
-            SizedBox(height: Dimensions.h(24)),
-            shoppingItem(
-              index: 1,
-              quantity: '- 1 pc +',
-              onAdd: () {
-                setState(() {
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            children: [
+              SizedBox(height: Dimensions.h(24)),
+              TopBar(title: AppStrings.shoppingList.tr),
+              SizedBox(height: Dimensions.h(24)),
+              shoppingItem(
+                index: 1,
+                quantity: '- 1 pc +',
+                onAdd: () {
+                  setState(() {
 
-                });
+                  });
 
-              },
-            ),
-            shoppingItem(
-              index: 2,
-              quantity: '- 1 pc +',
-              onAdd: () {},
-            ),
-            Spacer(),
-            AppButton(text: AppStrings.continueButton.tr, onPressed: (){
+                },
+              ),
+              shoppingItem(
+                index: 2,
+                quantity: '- 1 pc +',
+                onAdd: () {},
+              ),
+              Spacer(),
+              AppButton(text: AppStrings.continueButton.tr, onPressed: (){
 
-              Get.toNamed(RoutePath.bTitleDescription);
-
-
-            }),
-            SizedBox(height: Dimensions.h(100)),
+                Get.toNamed(RoutePath.bTitleDescription);
 
 
-          ],
+              }),
+              SizedBox(height: Dimensions.h(100)),
+
+
+            ],
+          ),
         ),
       ),
     );
