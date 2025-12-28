@@ -38,7 +38,7 @@ Map<String, String> english = {
   AppStrings.verifyYourAccount: "Verify Your Account",
   AppStrings.verifyYourAccountSubTitle:
       "We've sent a verification code to your email/phone. Please check and enter it below.",
-  AppStrings.dontGetCode: "Didn't get a code?  Resend Code",
+  AppStrings.dontGetCode: "Didn't get a code?",
   AppStrings.resendCode: "Resend Code",
   AppStrings.verifyCode: "Verify Code",
   AppStrings.forgetPasswordSubTitle:

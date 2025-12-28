@@ -40,7 +40,7 @@ Map<String, String> arabic = {
   AppStrings.verifyYourAccount: "تحقق من حسابك",
   AppStrings.verifyYourAccountSubTitle:
       "لقد أرسلنا رمز التحقق إلى بريدك الإلكتروني أو هاتفك. يرجى إدخاله أدناه.",
-  AppStrings.dontGetCode: "لم يصلك الرمز؟ أعد الإرسال",
+  AppStrings.dontGetCode: "ألم تحصل على رمز؟",
   AppStrings.resendCode: "إعادة إرسال الرمز",
   AppStrings.verifyCode: "تأكيد الرمز",
   AppStrings.forgetPassword: "نسيت كلمة المرور",

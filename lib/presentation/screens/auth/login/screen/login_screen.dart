@@ -164,7 +164,7 @@ class LoginScreen extends StatelessWidget {
                                 child: Text(
                                   AppStrings.forgotPassword.tr,
                                   style: TextStyle(
-                                    color: AppColors.blackColorOrginal
+                                    color: AppColors.blackColor
                                         .withOpacity(0.5),
                                   ),
                                 ),
