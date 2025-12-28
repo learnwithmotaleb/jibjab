@@ -205,14 +205,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     radius: 36,
                     backgroundImage: AssetImage(AppImages.motalebProfile),
                   ),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Text(
-                      AppStrings.positiveRating.tr,
-                      style: AppFonts.regular12,
-                    ),
-                  ),
-                  CircleRatingWidget(rating: 3.5,),
+
+                  Spacer(),
+                  CircleRatingWidget(rating: 2.5,),
+                  const SizedBox(width: 20),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("2.5",style: AppFonts.medium16,),
+                  )
                 ],
               ),
 

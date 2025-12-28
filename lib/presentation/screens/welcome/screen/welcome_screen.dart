@@ -22,46 +22,54 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: Dimensions.w(20),
-            vertical: Dimensions.h(16),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
               /// Back Icon
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Icon(
-                  Icons.arrow_back_ios_outlined,
-                  color: AppColors.primaryColor,
-                  size: Dimensions.f(22),
-                ),
-              ),
-
-              SizedBox(height: Dimensions.h(16)),
-
-              /// Welcome Text
-              Center(
-                child: RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    text: AppStrings.welcomeTo.tr,
-                    style: AppFonts.medium24.copyWith(
-                      fontSize: Dimensions.f(24),
-                    ),
-                    children: [
-                      TextSpan(
-                        text: AppStrings.appName.tr,
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: Dimensions.f(24),
-                        ),
+              Row(
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: GestureDetector(
+                      onTap: (){
+                        Get.back();
+                      },
+                      child: Icon(
+                        Icons.arrow_back_ios_outlined,
+                        color: AppColors.primaryColor,
+                        size: Dimensions.f(18),
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                  SizedBox(width: Dimensions.w(50)),
+
+                  /// Welcome Text
+                  Center(
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        text: AppStrings.welcomeTo.tr,
+                        style: AppFonts.medium18.copyWith(
+                        ),
+                        children: [
+                          TextSpan(
+                            text: AppStrings.appName.tr,
+                            style: TextStyle(
+                              color: AppColors.primaryColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: Dimensions.f(18),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                ],
               ),
+
 
               SizedBox(height: Dimensions.h(30)),
 
