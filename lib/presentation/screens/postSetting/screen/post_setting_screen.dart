@@ -50,28 +50,32 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
               SizedBox(height: Dimensions.h(18)),
               Divider(height: 1, color: AppColors.grayColor),
               SizedBox(height: Dimensions.h(8)),
-              Row(
-                children: [
-                  ...List.generate(
-                    iconItems.length,
-                        (index) => Padding(
-                      padding: EdgeInsets.only(right: Dimensions.w(6)),
-                      child: CircleIconWidget(
-                        image: iconItems[index],
-                        size: Dimensions.w(48),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Row(
+                  children: [
+                    ...List.generate(
+                      iconItems.length,
+                          (index) => Padding(
+                        padding: EdgeInsets.only(right: Dimensions.w(6)),
+                        child: CircleIconWidget(
+                          image: iconItems[index],
+                          size: Dimensions.w(35),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: TextChipWidget(text: AppStrings.distance.tr),
-                  ),
-                  SizedBox(width: Dimensions.w(6)),
-                  Expanded(
-                    flex: 2,
-                    child: TextChipWidget(text: AppStrings.sortedBy.tr),
-                  ),
-                ],
+                    SizedBox(width: Dimensions.w(8)),
+                    Expanded(
+                      flex: 1,
+                      child: TextChipWidget(text: distance.tr),
+                    ),
+                    SizedBox(width: Dimensions.w(5)),
+                    Expanded(
+                      flex: 1,
+                      child: TextChipWidget(text: sortBy.tr),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: Dimensions.h(18)),
               Divider(height: 1, color: AppColors.grayColor),
@@ -108,7 +112,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        AppStrings.distance.tr,
+                       distance.tr,
                         style: AppFonts.regular12.copyWith(
                           color: AppColors.blackColor,
                           fontSize: Dimensions.f(12),
@@ -131,7 +135,7 @@ class _PostSettingScreenState extends State<PostSettingScreen> {
                     ),
                     child: Center(
                       child: Text(
-                        AppStrings.sortedBy,
+                        sortBy,
                         style: AppFonts.regular12.copyWith(
                           color: AppColors.whiteColor,
                           fontSize: Dimensions.f(12),

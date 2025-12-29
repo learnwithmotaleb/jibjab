@@ -12,7 +12,7 @@ Widget distanceChip(String text, {bool isSelected = false}) {
       color: isSelected ? AppColors.primaryColor : AppColors.whiteColor,
       borderRadius: BorderRadius.circular(8),
       border: Border.all(
-        color: isSelected ? AppColors.primaryColor :  AppColors.grayColor,
+        color: isSelected ? AppColors.primaryColor :  AppColors.primaryColor,
         width: 1,
       ),
     ),

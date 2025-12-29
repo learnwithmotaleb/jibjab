@@ -38,6 +38,9 @@ class _PostScreenState extends State<PostScreen> {
     AppImages.homeItem4,
   ];
 
+  String distance50K = "50km";
+  String newest = "Newest";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,35 +66,35 @@ class _PostScreenState extends State<PostScreen> {
                         padding: EdgeInsets.only(right: Dimensions.w(6)),
                         child: CircleIconWidget(
                           image: iconItems[index],
-                          size: Dimensions.w(48), // responsive icon box
+                          size: Dimensions.w(35), // responsive icon box
                         ),
                       ),
                     ),
 
                     /// 5 : Distance chip
                     Expanded(
-                      flex: 2,
+                      flex: 3,
                       child: Padding(
-                        padding: EdgeInsets.only(right: Dimensions.w(6)),
+                        padding: EdgeInsets.only(right: Dimensions.w(5)),
                         child: TextChipWidget(
-                          text: AppStrings.distance.tr,
-                          height: Dimensions.h(30), // responsive chip height
+                          text: distance50K,
+                          height: Dimensions.h(25), // responsive chip height
                         ),
                       ),
                     ),
 
                     /// 6 : Sort chip
                     Expanded(
-                      flex: 2,
+                      flex: 3,
                       child: Padding(
-                        padding: EdgeInsets.only(right: Dimensions.w(6)),
+                        padding: EdgeInsets.only(right: Dimensions.w(5)),
                         child: TextChipWidget(
-                          text: AppStrings.sortedBy.tr,
-                          height: Dimensions.h(30), // responsive chip height
+                          text: newest.tr,
+                          height: Dimensions.h(25), // responsive chip height
                         ),
                       ),
                     ),
-
+                    SizedBox(width: Dimensions.w(5)),
                     /// 7 : Clickable icon
                     GestureDetector(
                       onTap: () {
@@ -102,14 +105,11 @@ class _PostScreenState extends State<PostScreen> {
                         width: Dimensions.w(48),
                         decoration: BoxDecoration(
                           color: AppColors.whiteColor,
-                          borderRadius: BorderRadius.circular(Dimensions.r(14)),
+                          borderRadius: BorderRadius.circular(Dimensions.r(5)),
                         ),
                         padding: EdgeInsets.all(Dimensions.w(8)),
                         child: Image.asset(
                           AppImages.homeItem7,
-                          width: Dimensions.w(16),
-                          height: Dimensions.h(16),
-                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
@@ -149,19 +149,24 @@ class _PostScreenState extends State<PostScreen> {
                                   width: double.infinity,
                                 ),
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 10),
                               Text(
                                 item['title']!.tr,
-                                style: AppFonts.regular12
+                                style: AppFonts.regular14.copyWith(
+
+                                )
                               ),
-                              SizedBox(height: 5),
+                              SizedBox(height: 8),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.shopping_cart_outlined,size: 12),
+                                  Icon(Icons.shopping_cart_outlined,size: 12,color: AppColors.primaryColor,fontWeight: FontWeight.bold,),
+                                  SizedBox(width: 10),
                                   Text(
                                     item['price']!.tr,
-                                    style: AppFonts.regular12,
+                                    style: AppFonts.regular12.copyWith(
+                                      color: AppColors.primaryColor,
+                                    ),
                                   ),
                                 ],
                               ),
