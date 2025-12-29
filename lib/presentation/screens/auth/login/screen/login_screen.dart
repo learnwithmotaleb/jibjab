@@ -91,6 +91,9 @@ class LoginScreen extends StatelessWidget {
                                 focusNode: controller.emailFocus,
                                 keyboardType: TextInputType.emailAddress,
                                 decoration: InputDecoration(
+                                  hintStyle: AppFonts.regular14.copyWith(
+                                      color: AppColors.blackColorOrginal.withOpacity(0.5)
+                                  ),
                                   hintText: AppStrings.enterYourEmail.tr,
                                   contentPadding: const EdgeInsets.symmetric(
                                     horizontal: 16,
@@ -119,38 +122,52 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(height: 16),
 
                             /// Password
+                            /// Password
                             Text(AppStrings.password.tr, style: AppFonts.medium16),
                             const SizedBox(height: 8),
-                            TextFormField(
-                              controller: controller.passwordController,
-                              obscureText: controller.isPasswordHidden.value,
-                              decoration: InputDecoration(
-                                hintText: AppStrings.enterYourPassword.tr,
-                                suffixIcon: Obx(() => IconButton(
-                                  icon: Icon(
-                                    controller.isPasswordHidden.value
-                                        ? Icons.visibility_off
-                                        : Icons.visibility,
-                                    color: AppColors.primaryColor,
+                            Obx(
+                                  () => TextFormField(
+                                controller: controller.passwordController,
+                                focusNode: controller.passwordFocus,
+                                obscureText: controller.isPasswordHidden.value, // reactive here
+                                decoration: InputDecoration(
+                                  hintStyle: AppFonts.regular14.copyWith(
+                                    color: AppColors.blackColorOrginal.withOpacity(0.5),
                                   ),
-                                  onPressed: controller.togglePassword,
-                                )),
-
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 14,
+                                  hintText: AppStrings.enterYourPassword.tr,
+                                  suffixIcon: IconButton(
+                                    icon: Icon(
+                                      controller.isPasswordHidden.value
+                                          ? Icons.visibility_off
+                                          : Icons.visibility,
+                                      color: AppColors.primaryColor,
+                                    ),
+                                    onPressed: controller.togglePassword,
+                                  ),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                    vertical: 14,
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: AppColors.primaryColor),
+                                  ),
                                 ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide:
-                                  BorderSide(color: AppColors.primaryColor),
-                                ),
-
+                                validator: (value) {
+                                  if (value == null || value.isEmpty) {
+                                    return "Password cannot be empty";
+                                  }
+                                  if (value.length < 6) {
+                                    return "Password must be at least 6 characters";
+                                  }
+                                  return null;
+                                },
                               ),
                             ),
+
 
                             const SizedBox(height: 4),
 

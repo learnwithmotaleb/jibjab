@@ -62,6 +62,9 @@ class SignupScreen extends StatelessWidget {
                         focusNode: controller.fullNameFocus,
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
+                          hintStyle: AppFonts.regular14.copyWith(
+                            color: AppColors.blackColorOrginal.withOpacity(0.5)
+                          ),
                           hintText: AppStrings.enterYourName.tr,
                           contentPadding: const EdgeInsets.symmetric(
                             horizontal: 16,
@@ -92,6 +95,9 @@ class SignupScreen extends StatelessWidget {
                         focusNode: controller.emailFocus,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
+                          hintStyle: AppFonts.regular14.copyWith(
+                              color: AppColors.blackColorOrginal.withOpacity(0.5)
+                          ),
                           hintText: AppStrings.enterYourEmail.tr,
                           contentPadding: const EdgeInsets.symmetric(
                             horizontal: 16,
@@ -124,6 +130,9 @@ class SignupScreen extends StatelessWidget {
                         focusNode: controller.phoneFocus,
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
+                          hintStyle: AppFonts.regular14.copyWith(
+                              color: AppColors.blackColorOrginal.withOpacity(0.5)
+                          ),
                           hintText: AppStrings.enterYourPhone.tr,
                           contentPadding: const EdgeInsets.symmetric(
                             horizontal: 16,
@@ -156,6 +165,9 @@ class SignupScreen extends StatelessWidget {
                           controller: controller.passwordController,
                           focusNode: controller.passwordFocus,
                           decoration: InputDecoration(
+                            hintStyle: AppFonts.regular14.copyWith(
+                                color: AppColors.blackColorOrginal.withOpacity(0.5)
+                            ),
                             hintText: AppStrings.enterYourPassword.tr,
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 14),
@@ -189,6 +201,9 @@ class SignupScreen extends StatelessWidget {
                         controller: controller.confirmPasswordController,
                         focusNode: controller.confirmPasswordFocus,
                         decoration: InputDecoration(
+                          hintStyle: AppFonts.regular14.copyWith(
+                              color: AppColors.blackColorOrginal.withOpacity(0.5)
+                          ),
                           hintText: AppStrings.enterYourPassword.tr,
                           contentPadding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 14),
