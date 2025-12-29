@@ -11,7 +11,7 @@ class TextChipWidget extends StatelessWidget {
   const TextChipWidget({
     super.key,
     required this.text,
-    this.height = 32,
+    this.height = 30,
     this.backgroundColor,
     this.textColor,
   });
@@ -23,7 +23,7 @@ class TextChipWidget extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: backgroundColor ?? AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(2),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: Padding(
         padding: const EdgeInsets.all(2.0),
@@ -32,7 +32,7 @@ class TextChipWidget extends StatelessWidget {
             text,
             softWrap: true,
             style: TextStyle(
-              fontSize: 8,
+              fontSize: 12,
               color: AppColors.whiteColor
             )
           ),
